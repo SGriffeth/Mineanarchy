@@ -1,0 +1,3 @@
+/home/sebastian/prototypevulkangame/vulkantutorial/imageviewschapter/build/CMakeFiles/imageviewschapter.dir
+/home/sebastian/prototypevulkangame/vulkantutorial/imageviewschapter/build/CMakeFiles/edit_cache.dir
+/home/sebastian/prototypevulkangame/vulkantutorial/imageviewschapter/build/CMakeFiles/rebuild_cache.dir

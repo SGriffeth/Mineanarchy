@@ -1,0 +1,3 @@
+/home/sebastian/prototypevulkangame/vulkantutorial/shadermoduleschapter/build/CMakeFiles/shadermoduleschapter.dir
+/home/sebastian/prototypevulkangame/vulkantutorial/shadermoduleschapter/build/CMakeFiles/edit_cache.dir
+/home/sebastian/prototypevulkangame/vulkantutorial/shadermoduleschapter/build/CMakeFiles/rebuild_cache.dir
