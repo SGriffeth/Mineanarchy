@@ -3,6 +3,9 @@
 #include <ma_UtilityFunctions.h>
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
+#include <glm/mat4x4.hpp>
+#include <ma_Vertex.h>
+#include <ma_OzzModel.h>
 
 class SwapChain;
 class CommandPool;
@@ -10,6 +13,11 @@ class CommandBuffer;
 class RenderPass;
 class LogicalDevice;
 class GraphicsPipeline;
+class DescriptorSet;
+class DescriptorSetLayout;
+class UniformBuffer;
+class Camera;
+class Buffer;
 
 class Instance {
 
@@ -50,6 +58,9 @@ class Instance {
     SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device);
     void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
     void setupDebugMessenger();
+    void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory);
+    void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
+    uint32_t findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties);
     struct QueueFamilyIndices {
         std::optional<uint32_t> graphicsFamily;
         std::optional<uint32_t> presentFamily;
@@ -57,6 +68,11 @@ class Instance {
         bool isComplete() {
             return graphicsFamily.has_value() && presentFamily.has_value();
         }
+    };
+    struct mvpMat {
+        glm::mat4 model;
+        glm::mat4 view;
+        glm::mat4 proj;
     };
     QueueFamilyIndices findQueueFamilies();
     Instance::SwapChainSupportDetails querySwapChainSupport();
@@ -70,11 +86,13 @@ class Instance {
     void createLogicalDevice(VkDevice* dev, VkDeviceCreateInfo* createInfo);
 
     void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
+    void createMvpUbo();
 
     private:
     const int MAX_FRAMES_IN_FLIGHT = 2;
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
     GLFWwindow* window;
+    void* mvpData;
 
     VkInstance instance;
     VkDebugUtilsMessengerEXT debugMessenger;
@@ -91,12 +109,26 @@ class Instance {
     RenderPass* renderPass;
     CommandBuffer* commandBuffer;
     CommandPool* commandPool;
+    std::vector<UniformBuffer*> uniformBuffers;
+    ma_OzzModel model;
+    std::vector<glm::mat4> boneTransforms;
+    /*ma_VkBuffer* vertexBuffer;
+    ma_VkBuffer* indexBuffer;*/
+    Camera* camera;
+    std::vector<DescriptorSetLayout*> descriptorSetLayouts;
+    std::vector<DescriptorSet*> descriptorSets;
 
+    std::vector<ma_Vertex> vertices;
+    std::vector<uint16_t> indices;
     VkDevice device;
     VkRenderPass vkRenderPass;
     VkCommandBuffer vkCommandBuffer;
     VkCommandPool vkCommandPool;
     VkSwapchainKHR vkSwapChain;
+    Buffer* vertexBuffer;
+    Buffer* indexBuffer;
+    std::vector<VkDescriptorSetLayout> vkDescriptorSetLayouts;
+    std::vector<VkDescriptorSet> vkDescriptorSets;
 
     VkExtent2D swapChainExtent;
     std::vector<VkFramebuffer> swapChainFramebuffers;
@@ -112,7 +144,16 @@ class Instance {
     Instance(const Instance&) = delete;
 
     void drawFrame();
+    void createUniformBuffers();
+    void createDescriptorSetLayouts();
+    void createDescriptorSets();
     void createSyncObjects();
+    void createCamera();
+    void createVertexBuffers();
+    void createIndexBuffers();
+    void createModels();
+
+    void updateUniformBuffers();
 
     friend class SwapChain;
 };

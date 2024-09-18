@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test_fuse_geometry.dir/skinning_job_tests.cc.o CMakeFiles/test_fuse_geometry.dir/__/__/__/src_fused/ozz_geometry.cc.o -o test_fuse_geometry  ../../../src/base/libozz_base_d.a ../../gtest/libgtest_d.a

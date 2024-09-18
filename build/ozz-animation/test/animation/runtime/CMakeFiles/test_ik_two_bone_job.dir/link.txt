@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test_ik_two_bone_job.dir/ik_two_bone_job_tests.cc.o -o test_ik_two_bone_job  ../../../src/animation/runtime/libozz_animation_d.a ../../gtest/libgtest_d.a ../../../src/base/libozz_base_d.a

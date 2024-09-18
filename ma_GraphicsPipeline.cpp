@@ -1,10 +1,11 @@
 #include <ma_GraphicsPipeline.h>
 #include <ma_UtilityFunctions.h>
 #include <stdexcept>
+#include <ma_Vertex.h>
 
 GraphicsPipeline::GraphicsPipeline(VkDevice dev) : logDevice(dev) {}
 
-void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* fragSpv, VkRenderPass renderPass) {
+void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* fragSpv, std::vector<VkDescriptorSetLayout> layouts, VkRenderPass renderPass) {
     std::vector<char> vertShaderCode;
     std::vector<char> fragShaderCode;
     if(!UtilityFunctions::readFile(vertSpv, vertShaderCode)) {
@@ -31,10 +32,15 @@ void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* f
 
     VkPipelineShaderStageCreateInfo shaderStages[] = {vertShaderStageInfo, fragShaderStageInfo};
 
+    auto bindingDescription = ma_Vertex::getBindingDescription();
+    auto attributeDescriptions = ma_Vertex::getAttributeDescriptions();
+
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
-    vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
-    vertexInputInfo.vertexBindingDescriptionCount = 0;
-    vertexInputInfo.vertexAttributeDescriptionCount = 0;
+    vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;    
+    vertexInputInfo.vertexBindingDescriptionCount = 1;
+    vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(attributeDescriptions.size());
+    vertexInputInfo.pVertexBindingDescriptions = &bindingDescription;
+    vertexInputInfo.pVertexAttributeDescriptions = attributeDescriptions.data();
 
     VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
     inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
@@ -52,8 +58,8 @@ void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* f
     rasterizer.rasterizerDiscardEnable = VK_FALSE;
     rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
     rasterizer.lineWidth = 1.0f;
-    rasterizer.cullMode = VK_CULL_MODE_BACK_BIT;
-    rasterizer.frontFace = VK_FRONT_FACE_CLOCKWISE;
+    rasterizer.cullMode = VK_CULL_MODE_NONE;
+    rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
     rasterizer.depthBiasEnable = VK_FALSE;
 
     VkPipelineMultisampleStateCreateInfo multisampling{};
@@ -87,7 +93,8 @@ void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* f
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-    pipelineLayoutInfo.setLayoutCount = 0;
+    pipelineLayoutInfo.setLayoutCount = layouts.size();
+    pipelineLayoutInfo.pSetLayouts = layouts.data();
     pipelineLayoutInfo.pushConstantRangeCount = 0;
 
     if (vkCreatePipelineLayout(logDevice, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS) {

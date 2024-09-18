@@ -1,0 +1,2 @@
+/usr/bin/ar qc libassimpskeletalanimation.a CMakeFiles/assimpskeletalanimation.dir/SkeletalAnimation/SkeletalModel.cpp.o CMakeFiles/assimpskeletalanimation.dir/SkeletalAnimation/SkeletalModelSerializer.cpp.o CMakeFiles/assimpskeletalanimation.dir/AssimpConverter/AssimpConverter.cpp.o
+/usr/bin/ranlib libassimpskeletalanimation.a

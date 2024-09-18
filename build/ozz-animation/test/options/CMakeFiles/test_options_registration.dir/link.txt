@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test_options_registration.dir/options_registration_tests.cc.o -o test_options_registration  ../../src/options/libozz_options_d.a ../gtest/libgtest_d.a ../../src/base/libozz_base_d.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/vulkantutorial.dir/23_descriptor_sets.cpp.o -o vulkantutorial  /lib/libvulkan.so /usr/lib/libglfw.so.3.4

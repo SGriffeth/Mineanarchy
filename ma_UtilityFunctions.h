@@ -19,7 +19,11 @@ class UtilityFunctions {
     static void createConfig();
     static void getConfig();
     static void getGameDirectory(std::string& gameDir);
+    static std::string getConfigValue(const char* name);
     static void setGameDirectory(const char* name);
+    static void setMeshFile(const char* name);
+    static void setSkeletonFile(const char* name);
+    static void setAnimationFile(const char* name);
     static void writeToConfig();
     static const int CONFIG_INEXISTENT = 2;
     static const int CONFIG_INVALIDLY_FORMATTED = 1;

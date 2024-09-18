@@ -7,6 +7,7 @@
 #include <limits>
 #include <optional>
 #include <set>
+#include <chrono>
 
 
 #include <ma_Instance.h>
@@ -17,7 +18,14 @@
 #include <ma_GraphicsPipeline.h>
 #include <ma_UtilityFunctions.h>
 #include <ma_SwapChain.h>
+#include <ma_DescriptorSetLayout.h>
+#include <ma_Camera.h>
+#include <ma_Vertex.h>
+#include <ma_VkBuffer2.h>
 #include <cstring>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <sstream>    // For std::stringstream
 
     void Instance::run() {
         initWindow();
@@ -37,6 +45,11 @@
         glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
         window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan", nullptr, nullptr);
+        // Set the callback function for mouse movement
+        glfwSetCursorPosCallback(window, Camera::mouse_callback);
+        glfwSetKeyCallback(window, Camera::key_callback);
+
+        //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     }
 
     void Instance::initVulkan() {
@@ -57,22 +70,99 @@
         graphicsPipeline = new GraphicsPipeline(logDevice->device);
         std::cout << gameD + std::string("/shaders/vert.spv").data() << std::endl;
         vkRenderPass = renderPass->renderPass;
-        graphicsPipeline->createGraphicsPipeline((gameD + std::string("/shaders/vert.spv")).data(), (gameD + "/shaders/frag.spv").data(), vkRenderPass);
+        createDescriptorSetLayouts();
+        vkDescriptorSetLayouts.resize(descriptorSetLayouts.size());
+        for(uint i = 0; i < descriptorSetLayouts.size(); i++) {
+            vkDescriptorSetLayouts[i] = descriptorSetLayouts[i]->descriptorSetLayout;
+        }
+        graphicsPipeline->createGraphicsPipeline((gameD + std::string("/shaders/vert.spv")).data(), (gameD + "/shaders/frag.spv").data(), vkDescriptorSetLayouts, vkRenderPass);
         swapChain->createFramebuffers(vkRenderPass);
         swapChainExtent = swapChain->swapChainExtent;
         swapChainFramebuffers = swapChain->swapChainFramebuffers;
         vkSwapChain = swapChain->swapChain;
         commandPool = new CommandPool(device);
         commandPool->createCommandPool(*this);
+        vkCommandPool = commandPool->pool;
+        createModels();
+        createVertexBuffers();
+        createIndexBuffers();
+        createDescriptorSets();
+        createUniformBuffers();
         commandBuffer = new CommandBuffer(commandPool);
         commandBuffer->createCommandBuffer();
         vkCommandBuffer = commandBuffer->commandBuffer;
         createSyncObjects();
+
+        vkDescriptorSets.resize(descriptorSets.size());
+        for(uint i = 0; i < descriptorSets.size(); i++) {
+            vkDescriptorSets[i] = descriptorSets[i]->descriptorSet;
+        }
+        createCamera();
+        /*UtilityFunctions::addDeletor([&]() {
+            vkDestroyBuffer(device, vkVertexBuffer, nullptr);
+            vkFreeMemory(device, vertexBuffer->bufferMemory, nullptr);
+            vkDestroyBuffer(device, vkIndexBuffer, nullptr);
+            vkFreeMemory(device, indexBuffer->bufferMemory, nullptr);
+        });*/
+    }
+
+    void Instance::createModels() {
+        //model = ma_OzzModel();
+        /*UtilityFunctions::addDeletor([this]{
+            delete this->model;
+        });*/
+        std::string gameDir;
+        UtilityFunctions::getGameDirectory(gameDir);
+        model.LoadAnimation(gameDir + std::string("/") + UtilityFunctions::getConfigValue("animationFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("skeletonFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("meshFile"), vertices, indices);
+        model.UpdateBoneTransforms(boneTransforms, 0);
+        if(boneTransforms.size() > 300) {
+            std::stringstream ss;
+            ss << "Error: boneTransforms size is " << boneTransforms.size()
+               << ", which is more than the max size.";
+            throw std::runtime_error(ss.str());
+        }
+        bool first0 = true;
+        for(uint i = 0; i < vertices.size(); i++) {
+            if(vertices[i].pos[0] == 0 && vertices[i].pos[1] == 0 && vertices[i].pos[2] == 0 && !first0) {
+                continue;
+            }
+            if(vertices[i].pos[0] == 0 && vertices[i].pos[1] == 0 && vertices[i].pos[2] == 0) first0 = false;
+
+            std::cout << "vertices(" << i << ") = " << "(" << vertices[i].pos[0] << "," << vertices[i].pos[1] << "," << vertices[i].pos[2] << ")" << std::endl;
+        }
+
+        for(uint i = 0; i < indices.size(); i++) {
+            std::cout << "indices(" << i << ") = " << indices[i] << std::endl;
+        }
+    }
+
+    void Instance::createVertexBuffers() {
+        vertexBuffer = new Buffer(device, sizeof(vertices[0]) * vertices.size());
+        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        //vertexBuffer->updateBuffer(vertices);
+        /*UtilityFunctions::addDeletor([this]() {
+            vkDestroyBuffer(device, vkVertexBuffer, nullptr);
+            vkFreeMemory(device, vertexBufferMemory, nullptr);
+        });*/
+    }
+
+    void Instance::createIndexBuffers() {
+        indexBuffer = new Buffer(device, sizeof(indices[0]) * indices.size());
+        indexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, indices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        //indexBuffer->updateBuffer(indices);
+         /*UtilityFunctions::addDeletor([this]() {
+            vkDestroyBuffer(device, indexBuffer, nullptr);
+            vkFreeMemory(device, indexBufferMemory, nullptr);
+        });*/
     }
 
     void Instance::mainLoop() {
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
+            camera->updateViewMat(glm::vec3(0, -1, 0));
+            //camera->printTransformations();
+            mvpData = new char[sizeof(Camera::mvpMat)];
+            camera->copyMvpTo(mvpData);
             drawFrame();
         }
 
@@ -137,6 +227,17 @@
         if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
             throw std::runtime_error("failed to create instance!");
         }
+    }
+
+    void Instance::createCamera() {
+        camera = new Camera();
+        camera->updateModelMat(glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), glm::vec3(0, 1, 0), 0);
+        camera->updateViewMat(glm::vec3(0, -1, 0));
+        camera->updateProjectionMat(45.0f, swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 100.0f);
+        camera->printTransformations();
+        mvpData = new char[sizeof(Camera::mvpMat)];
+        camera->copyMvpTo(mvpData);
+        updateUniformBuffers();
     }
 
     Instance::SwapChainSupportDetails Instance::querySwapChainSupport(VkPhysicalDevice device) {
@@ -378,9 +479,24 @@
             VkRect2D scissor{};
             scissor.offset = {0, 0};
             scissor.extent = swapChainExtent;
-            vkCmdSetScissor(commandBuffer, 0, 1, &scissor);            
+            vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+            updateUniformBuffers();
+            vkCmdBindDescriptorSets(commandBuffer,
+            VK_PIPELINE_BIND_POINT_GRAPHICS,
+            graphicsPipeline->pipelineLayout,
+            0,
+            1,
+            &vkDescriptorSets[0],
+            0,
+            nullptr);
 
-            vkCmdDraw(commandBuffer, 3, 1, 0, 0);
+            VkBuffer vertexBuffers[] = {vertexBuffer->buffer};
+            VkDeviceSize offsets[] = {0};
+            vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
+
+            vkCmdBindIndexBuffer(commandBuffer, indexBuffer->buffer, 0, VK_INDEX_TYPE_UINT16);
+
+            vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
 
@@ -390,6 +506,7 @@
     }
 
 void Instance::drawFrame() {
+    static auto start = std::chrono::steady_clock::now();
     vkWaitForFences(device, 1, &inFlightFence, VK_TRUE, UINT64_MAX);
     vkResetFences(device, 1, &inFlightFence);
 
@@ -397,6 +514,14 @@ void Instance::drawFrame() {
     vkAcquireNextImageKHR(device, vkSwapChain, UINT64_MAX, imageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex);
 
     vkResetCommandBuffer(vkCommandBuffer, /*VkCommandBufferResetFlagBits*/ 0);
+    // Record the end time
+    auto end = std::chrono::steady_clock::now();
+    
+    // Calculate the elapsed time
+    std::chrono::duration<float> elapsed = end - start;
+    //std::cout << elapsed.count() << std::endl;
+    vertexBuffer->updateBuffer(vertices.data());
+    indexBuffer->updateBuffer(indices.data());
     recordCommandBuffer(vkCommandBuffer, imageIndex);
 
     VkSubmitInfo submitInfo{};
@@ -432,6 +557,7 @@ void Instance::drawFrame() {
     presentInfo.pImageIndices = &imageIndex;
 
     vkQueuePresentKHR(presentQueue, &presentInfo);
+    start = std::chrono::steady_clock::now();
 }
 
 void Instance::createSyncObjects() {
@@ -454,22 +580,139 @@ void Instance::createSyncObjects() {
         vkDestroyFence(device, inFlightFence, nullptr);
     });
 }
+
+void Instance::createUniformBuffers() {
+    uniformBuffers.push_back(new UniformBuffer(*descriptorSets[0], sizeof(mvpMat)));
+    uniformBuffers[0]->createUniformBuffer(physicalDevice);
+
+    uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], boneTransforms.size()));
+    uniformBuffers[1]->createUniformBuffer(physicalDevice);
+}
+
+void Instance::updateUniformBuffers() {
+    VkWriteDescriptorSet descriptorWrite = {};
+    descriptorWrite.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+    descriptorWrite.dstSet = vkDescriptorSets[0]; // Descriptor set to update
+    descriptorWrite.dstBinding = 0; // Binding number in the descriptor set layout
+    descriptorWrite.dstArrayElement = 0; // Starting element in the array (if an array)
+    descriptorWrite.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
+    descriptorWrite.descriptorCount = 1; // Number of descriptors to update
+    descriptorWrite.pBufferInfo = nullptr; // Buffer information to update with
+    uniformBuffers[0]->updateUniformBuffer(mvpData, descriptorWrite);
+
+    VkWriteDescriptorSet descriptorWrite2 = {};
+    descriptorWrite2.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+    descriptorWrite2.dstSet = vkDescriptorSets[1]; // Descriptor set to update
+    descriptorWrite2.dstBinding = 0; // Binding number in the descriptor set layout
+    descriptorWrite2.dstArrayElement = 0; // Starting element in the array (if an array)
+    descriptorWrite2.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
+    descriptorWrite2.descriptorCount = 1; // Number of descriptors to update
+    descriptorWrite2.pBufferInfo = nullptr; // Buffer information to update with
+    uniformBuffers[1]->updateUniformBuffer(boneTransforms.data(), descriptorWrite2);
+}
+
+void Instance::createDescriptorSetLayouts() {
+    // Define descriptor set layout binding
+    VkDescriptorSetLayoutBinding binding = {};
+    binding.binding = 0;
+    binding.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    binding.descriptorCount = 1;
+    binding.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    binding.pImmutableSamplers = nullptr;
     
+    // Create descriptor set layout
+    VkDescriptorSetLayoutCreateInfo layoutInfo = {};
+    layoutInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+    layoutInfo.bindingCount = 1;
+    layoutInfo.pBindings = &binding;
+
+    VkDescriptorSetLayoutBinding binding2 = {};
+    binding2.binding = 0;
+    binding2.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    binding2.descriptorCount = 1;
+    binding2.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    binding2.pImmutableSamplers = nullptr;
+    
+    // Create descriptor set layout
+    VkDescriptorSetLayoutCreateInfo layoutInfo2 = {};
+    layoutInfo2.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+    layoutInfo2.bindingCount = 1;
+    layoutInfo2.pBindings = &binding2;
+
+    descriptorSetLayouts.resize(2);
+
+    descriptorSetLayouts[0] = new DescriptorSetLayout(device, binding, layoutInfo);
+    descriptorSetLayouts[0]->createDescriptorSetLayout();
+
+    descriptorSetLayouts[1] = new DescriptorSetLayout(device, binding2, layoutInfo2);
+    descriptorSetLayouts[1]->createDescriptorSetLayout();
+}
+
+void Instance::createDescriptorSets() {
+    descriptorSets.resize(2);
+
+    descriptorSets[0] = new DescriptorSet(descriptorSetLayouts[0]);
+    descriptorSets[0]->createDescriptorSet();
+
+    descriptorSets[1] = new DescriptorSet(descriptorSetLayouts[1]);
+    descriptorSets[1]->createDescriptorSet();
+}
+
+uint32_t Instance::findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties) {
+    VkPhysicalDeviceMemoryProperties memProperties;
+    vkGetPhysicalDeviceMemoryProperties(physicalDevice, &memProperties);
+
+    for (uint32_t i = 0; i < memProperties.memoryTypeCount; i++) {
+        if ((typeFilter & (1 << i)) && (memProperties.memoryTypes[i].propertyFlags & properties) == properties) {
+            return i;
+        }
+    }
+
+    throw std::runtime_error("failed to find suitable memory type!");
+}
 
 int main(int argc, char** argv) {
     int configState = UtilityFunctions::queryConfigState();
     if(configState == UtilityFunctions::CONFIG_INEXISTENT || configState == UtilityFunctions::CONFIG_INVALIDLY_FORMATTED) {
-        if(argc < 2) {
-            throw std::runtime_error("You must specify a path for the game directory");
+        if(argc < 5) {
+            throw std::runtime_error("You must specify a path for the game directory, mesh file, skeleton file, and animation file");
         } else {
             UtilityFunctions::createConfig();
             UtilityFunctions::setGameDirectory(argv[1]);
+            UtilityFunctions::setMeshFile(argv[2]);
+            UtilityFunctions::setSkeletonFile(argv[3]);
+            UtilityFunctions::setAnimationFile(argv[4]);
             UtilityFunctions::writeToConfig();
         }
-    } else if(argc >= 2) {
-        UtilityFunctions::createConfig();
-        UtilityFunctions::setGameDirectory(argv[1]);
-        UtilityFunctions::writeToConfig();
+    } else {
+        switch(argc) {
+            case 2:
+                UtilityFunctions::createConfig();
+                UtilityFunctions::setGameDirectory(argv[1]);
+                UtilityFunctions::writeToConfig();
+                break;
+            case 3:
+                UtilityFunctions::createConfig();
+                UtilityFunctions::setGameDirectory(argv[1]);
+                UtilityFunctions::setMeshFile(argv[2]);
+                UtilityFunctions::writeToConfig();
+                break;
+            case 4:
+                UtilityFunctions::createConfig();
+                UtilityFunctions::setGameDirectory(argv[1]);
+                UtilityFunctions::setMeshFile(argv[2]);
+                UtilityFunctions::setSkeletonFile(argv[3]);
+                UtilityFunctions::writeToConfig();
+                break;
+            case 5:
+                UtilityFunctions::createConfig();
+                UtilityFunctions::setGameDirectory(argv[1]);
+                UtilityFunctions::setMeshFile(argv[2]);
+                UtilityFunctions::setSkeletonFile(argv[3]);
+                UtilityFunctions::setAnimationFile(argv[4]);
+                UtilityFunctions::writeToConfig();
+                break;
+        }
     }
     
     UtilityFunctions::getConfig();

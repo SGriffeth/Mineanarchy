@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test_animation_builder.dir/animation_builder_tests.cc.o -o test_animation_builder  ../../../src/animation/offline/libozz_animation_offline_d.a ../../gtest/libgtest_d.a ../../../src/animation/runtime/libozz_animation_d.a ../../../src/base/libozz_base_d.a

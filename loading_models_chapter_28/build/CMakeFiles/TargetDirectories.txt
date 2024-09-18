@@ -1,0 +1,3 @@
+/home/sebastiang/prototypevulkangame/vulkantutorial/loading_models_chapter_28/build/CMakeFiles/shadermoduleschapter.dir
+/home/sebastiang/prototypevulkangame/vulkantutorial/loading_models_chapter_28/build/CMakeFiles/edit_cache.dir
+/home/sebastiang/prototypevulkangame/vulkantutorial/loading_models_chapter_28/build/CMakeFiles/rebuild_cache.dir

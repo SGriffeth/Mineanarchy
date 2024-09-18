@@ -8,7 +8,7 @@ class RenderPass;
 class GraphicsPipeline {
     public:
     GraphicsPipeline(VkDevice logDevice);
-    void createGraphicsPipeline(const char* vertSpv, const char* fragSpv, VkRenderPass renderPass);
+    void createGraphicsPipeline(const char* vertSpv, const char* fragSpv, std::vector<VkDescriptorSetLayout> layouts, VkRenderPass renderPass);
     VkShaderModule createShaderModule(const std::vector<char>& code);
 
     friend void Instance::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);

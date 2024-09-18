@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test_soa_math.dir/soa_float_tests.cc.o CMakeFiles/test_soa_math.dir/soa_quaternion_tests.cc.o CMakeFiles/test_soa_math.dir/soa_transform_tests.cc.o CMakeFiles/test_soa_math.dir/soa_float4x4_tests.cc.o -o test_soa_math  ../../../src/base/libozz_base_d.a ../../gtest/libgtest_d.a

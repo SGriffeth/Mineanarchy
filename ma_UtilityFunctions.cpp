@@ -26,6 +26,10 @@ void UtilityFunctions::getGameDirectory(std::string& gameDir) {
     gameDir = config["gameDir"];
 }
 
+std::string UtilityFunctions::getConfigValue(const char* name) {
+    return config[name];
+}
+
 void UtilityFunctions::getConfig() {
     std::ifstream configFile(CONFIG_NAME);
     if (!configFile) {
@@ -47,6 +51,9 @@ void UtilityFunctions::getConfig() {
 void UtilityFunctions::createConfig() {
     nlohmann::json myObject = {
         {"gameDir", ""},
+        {"meshFile" , ""},
+        {"skeletonFile" , ""},
+        {"animationFile" , ""}
     };
     std::ofstream configFile(CONFIG_NAME);
     configFile << myObject.dump(); // Write data to the file
@@ -59,6 +66,18 @@ void UtilityFunctions::setGameDirectory(const char* name) {
     std::filesystem::create_directory(std::string(name) + "/shaders");
     config["gameDir"] = name;
 }
+
+void UtilityFunctions::setMeshFile(const char* name) {
+    config["meshFile"] = name;
+} 
+
+void UtilityFunctions::setSkeletonFile(const char* name) {
+    config["skeletonFile"] = name;  
+} 
+
+void UtilityFunctions::setAnimationFile(const char* name) {
+    config["animationFile"] = name;
+} 
 
 void UtilityFunctions::writeToConfig() {
     std::ofstream configFile(CONFIG_NAME);

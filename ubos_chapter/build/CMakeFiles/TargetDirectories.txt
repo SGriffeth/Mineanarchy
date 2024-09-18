@@ -1,0 +1,3 @@
+/home/sebastiang/prototypevulkangame/vulkantutorial/ubos_chapter/build/CMakeFiles/vulkantutorial.dir
+/home/sebastiang/prototypevulkangame/vulkantutorial/ubos_chapter/build/CMakeFiles/edit_cache.dir
+/home/sebastiang/prototypevulkangame/vulkantutorial/ubos_chapter/build/CMakeFiles/rebuild_cache.dir
