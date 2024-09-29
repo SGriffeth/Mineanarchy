@@ -57,6 +57,7 @@ void UtilityFunctions::createConfig() {
     };
     std::ofstream configFile(CONFIG_NAME);
     configFile << myObject.dump(); // Write data to the file
+    configFile << std::endl;
     configFile.close(); // Close the file
     config = myObject;
 }
