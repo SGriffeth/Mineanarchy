@@ -1,10 +1,10 @@
 #include <ma_VkBuffer2.h>
 
-Buffer::Buffer(VkDevice dev, size_t bufferSize) : device(dev), bufferSize(bufferSize) {
+Mineanarchy::Buffer::Buffer(VkDevice dev, size_t bufferSize) : device(dev), bufferSize(bufferSize) {
 
 }
 
-void Buffer::createBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkPhysicalDevice physicalDevice, void* vertices, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
+void Mineanarchy::Buffer::createBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkPhysicalDevice physicalDevice, void* vertices, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties) {
     //VkDeviceSize bufferSize = sizeof(vertices[0]) * numVertices;
     this->graphicsQueue = graphicsQueue;
     this->physicalDevice = physicalDevice;
@@ -29,7 +29,7 @@ void Buffer::createBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, Vk
         });
 }
 
-void Buffer::createBuffer(VkPhysicalDevice physicalDevice, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory) {
+void Mineanarchy::Buffer::createBuffer(VkPhysicalDevice physicalDevice, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory) {
     VkBufferCreateInfo bufferInfo{};
     bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
     bufferInfo.size = size;
@@ -55,7 +55,7 @@ void Buffer::createBuffer(VkPhysicalDevice physicalDevice, VkDeviceSize size, Vk
     vkBindBufferMemory(device, buffer, bufferMemory, 0);
 }
 
-void Buffer::copyBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkBuffer& srcBuffer, VkBuffer& dstBuffer, VkDeviceSize size) {
+void Mineanarchy::Buffer::copyBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkBuffer& srcBuffer, VkBuffer& dstBuffer, VkDeviceSize size) {
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
@@ -88,7 +88,7 @@ void Buffer::copyBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkBu
     vkFreeCommandBuffers(device, vkCommandPool, 1, &command);
 }
 
-uint32_t Buffer::findMemoryType(VkPhysicalDevice physicalDevice, uint32_t typeFilter, VkMemoryPropertyFlags properties) {
+uint32_t Mineanarchy::Buffer::findMemoryType(VkPhysicalDevice physicalDevice, uint32_t typeFilter, VkMemoryPropertyFlags properties) {
     VkPhysicalDeviceMemoryProperties memProperties;
     vkGetPhysicalDeviceMemoryProperties(physicalDevice, &memProperties);
 
@@ -101,7 +101,7 @@ uint32_t Buffer::findMemoryType(VkPhysicalDevice physicalDevice, uint32_t typeFi
     throw std::runtime_error("failed to find suitable memory type!");
 }
 
-void Buffer::updateBuffer(void* data2) {
+void Mineanarchy::Buffer::updateBuffer(void* data2) {
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
     createBuffer(physicalDevice, bufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);

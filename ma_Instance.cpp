@@ -27,7 +27,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <sstream>    // For std::stringstream
 
-    void Instance::run() {
+    void Mineanarchy::Instance::run() {
         initWindow();
         initVulkan();
         mainLoop();
@@ -38,7 +38,7 @@
 
     
 
-    void Instance::initWindow() {
+    void Mineanarchy::Instance::initWindow() {
         glfwInit();
 
         glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
@@ -52,7 +52,7 @@
         //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     }
 
-    void Instance::initVulkan() {
+    void Mineanarchy::Instance::initVulkan() {
         createInstance();
         setupDebugMessenger();
         createSurface();
@@ -106,7 +106,7 @@
         });*/
     }
 
-    void Instance::createModels() {
+    void Mineanarchy::Instance::createModels() {
         //model = ma_OzzModel();
         /*UtilityFunctions::addDeletor([this]{
             delete this->model;
@@ -136,7 +136,7 @@
         }
     }
 
-    void Instance::createVertexBuffers() {
+    void Mineanarchy::Instance::createVertexBuffers() {
         vertexBuffer = new Buffer(device, sizeof(vertices[0]) * vertices.size());
         vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //vertexBuffer->updateBuffer(vertices);
@@ -146,7 +146,7 @@
         });*/
     }
 
-    void Instance::createIndexBuffers() {
+    void Mineanarchy::Instance::createIndexBuffers() {
         indexBuffer = new Buffer(device, sizeof(indices[0]) * indices.size());
         indexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, indices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //indexBuffer->updateBuffer(indices);
@@ -156,7 +156,7 @@
         });*/
     }
 
-    void Instance::mainLoop() {
+    void Mineanarchy::Instance::mainLoop() {
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
             camera->updateViewMat(glm::vec3(0, -1, 0));
@@ -169,7 +169,7 @@
         vkDeviceWaitIdle(device);
     }
 
-    void Instance::cleanup() {
+    void Mineanarchy::Instance::cleanup() {
         //vkDestroySwapchainKHR(device, swapChain, nullptr);
         //Deletion queue
         UtilityFunctions::runDeletors();
@@ -190,7 +190,7 @@
         delete logDevice;
     }
 
-    void Instance::createInstance() {
+    void Mineanarchy::Instance::createInstance() {
         if (enableValidationLayers && !checkValidationLayerSupport()) {
             throw std::runtime_error("validation layers requested, but not available!");
         }
@@ -229,7 +229,7 @@
         }
     }
 
-    void Instance::createCamera() {
+    void Mineanarchy::Instance::createCamera() {
         camera = new Camera();
         camera->updateModelMat(glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), glm::vec3(0, 1, 0), 0);
         camera->updateViewMat(glm::vec3(0, -1, 0));
@@ -240,7 +240,7 @@
         updateUniformBuffers();
     }
 
-    Instance::SwapChainSupportDetails Instance::querySwapChainSupport(VkPhysicalDevice device) {
+    Mineanarchy::Instance::SwapChainSupportDetails Mineanarchy::Instance::querySwapChainSupport(VkPhysicalDevice device) {
         SwapChainSupportDetails details;
 
         vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
@@ -264,11 +264,11 @@
         return details;
     }
 
-    Instance::SwapChainSupportDetails Instance::querySwapChainSupport() {
+    Mineanarchy::Instance::SwapChainSupportDetails Mineanarchy::Instance::querySwapChainSupport() {
         return querySwapChainSupport(this->physicalDevice);
     }
 
-    bool Instance::checkDeviceExtensionSupport(VkPhysicalDevice device) {
+    bool Mineanarchy::Instance::checkDeviceExtensionSupport(VkPhysicalDevice device) {
         uint32_t extensionCount;
         vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);
 
@@ -284,11 +284,11 @@
         return requiredExtensions.empty();
     }
 
-    Instance::QueueFamilyIndices Instance::findQueueFamilies() {
+    Mineanarchy::Instance::QueueFamilyIndices Mineanarchy::Instance::findQueueFamilies() {
         return findQueueFamilies(physicalDevice);
     }
 
-    Instance::QueueFamilyIndices Instance::findQueueFamilies(VkPhysicalDevice device) {
+    Mineanarchy::Instance::QueueFamilyIndices Mineanarchy::Instance::findQueueFamilies(VkPhysicalDevice device) {
         QueueFamilyIndices indices;
 
         uint32_t queueFamilyCount = 0;
@@ -321,7 +321,7 @@
     }
 
 
-    bool Instance::isDeviceSuitable(VkPhysicalDevice device) {
+    bool Mineanarchy::Instance::isDeviceSuitable(VkPhysicalDevice device) {
         QueueFamilyIndices indices = findQueueFamilies(device);
 
         bool extensionsSupported = checkDeviceExtensionSupport(device);
@@ -335,7 +335,7 @@
         return indices.isComplete() && extensionsSupported && swapChainAdequate;
     }
 
-    void Instance::pickPhysicalDevice() {
+    void Mineanarchy::Instance::pickPhysicalDevice() {
         uint32_t deviceCount = 0;
         vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
 
@@ -358,7 +358,7 @@
         }
     }
 
-    std::vector<const char*> Instance::getRequiredExtensions() {
+    std::vector<const char*> Mineanarchy::Instance::getRequiredExtensions() {
         uint32_t glfwExtensionCount = 0;
         const char** glfwExtensions;
         glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
@@ -372,7 +372,7 @@
         return extensions;
     }
 
-    bool Instance::checkValidationLayerSupport() {
+    bool Mineanarchy::Instance::checkValidationLayerSupport() {
         uint32_t layerCount;
         vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
 
@@ -397,7 +397,7 @@
         return true;
     }
 
-    void Instance::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
+    void Mineanarchy::Instance::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
         createInfo = {};
         createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
         createInfo.messageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT;
@@ -405,7 +405,7 @@
         createInfo.pfnUserCallback = UtilityFunctions::debugCallback;
     }
 
-    VkResult Instance::CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {
+    VkResult Mineanarchy::Instance::CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {
         auto func = (PFN_vkCreateDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
         if (func != nullptr) {
             return func(instance, pCreateInfo, pAllocator, pDebugMessenger);
@@ -414,14 +414,14 @@
         }
     }
 
-    void Instance::DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks* pAllocator) {
+    void Mineanarchy::Instance::DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks* pAllocator) {
         auto func = (PFN_vkDestroyDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT");
         if (func != nullptr) {
             func(instance, debugMessenger, pAllocator);
         }
     }
 
-    void Instance::setupDebugMessenger() {
+    void Mineanarchy::Instance::setupDebugMessenger() {
         if (!enableValidationLayers) return;
 
         VkDebugUtilsMessengerCreateInfoEXT createInfo;
@@ -432,19 +432,19 @@
         }
     }
 
-    void Instance::createSurface() {
+    void Mineanarchy::Instance::createSurface() {
         if (glfwCreateWindowSurface(instance, window, nullptr, &surface) != VK_SUCCESS) {
             throw std::runtime_error("failed to create window surface!");
         }
     }
 
-    void Instance::createLogicalDevice(VkDevice* dev, VkDeviceCreateInfo* createInfo) {
+    void Mineanarchy::Instance::createLogicalDevice(VkDevice* dev, VkDeviceCreateInfo* createInfo) {
         if (vkCreateDevice(physicalDevice, createInfo, nullptr, dev) != VK_SUCCESS) {
             throw std::runtime_error("failed to create logical device!");
         }
     }
 
-    void Instance::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex) {
+    void Mineanarchy::Instance::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex) {
         VkCommandBufferBeginInfo beginInfo{};
         beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 
@@ -505,7 +505,7 @@
         }
     }
 
-void Instance::drawFrame() {
+void Mineanarchy::Instance::drawFrame() {
     static auto start = std::chrono::steady_clock::now();
     vkWaitForFences(device, 1, &inFlightFence, VK_TRUE, UINT64_MAX);
     vkResetFences(device, 1, &inFlightFence);
@@ -560,7 +560,7 @@ void Instance::drawFrame() {
     start = std::chrono::steady_clock::now();
 }
 
-void Instance::createSyncObjects() {
+void Mineanarchy::Instance::createSyncObjects() {
     VkSemaphoreCreateInfo semaphoreInfo{};
     semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
 
@@ -581,7 +581,7 @@ void Instance::createSyncObjects() {
     });
 }
 
-void Instance::createUniformBuffers() {
+void Mineanarchy::Instance::createUniformBuffers() {
     uniformBuffers.push_back(new UniformBuffer(*descriptorSets[0], sizeof(mvpMat)));
     uniformBuffers[0]->createUniformBuffer(physicalDevice);
 
@@ -589,7 +589,7 @@ void Instance::createUniformBuffers() {
     uniformBuffers[1]->createUniformBuffer(physicalDevice);
 }
 
-void Instance::updateUniformBuffers() {
+void Mineanarchy::Instance::updateUniformBuffers() {
     VkWriteDescriptorSet descriptorWrite = {};
     descriptorWrite.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
     descriptorWrite.dstSet = vkDescriptorSets[0]; // Descriptor set to update
@@ -611,7 +611,7 @@ void Instance::updateUniformBuffers() {
     uniformBuffers[1]->updateUniformBuffer(boneTransforms.data(), descriptorWrite2);
 }
 
-void Instance::createDescriptorSetLayouts() {
+void Mineanarchy::Instance::createDescriptorSetLayouts() {
     // Define descriptor set layout binding
     VkDescriptorSetLayoutBinding binding = {};
     binding.binding = 0;
@@ -648,7 +648,7 @@ void Instance::createDescriptorSetLayouts() {
     descriptorSetLayouts[1]->createDescriptorSetLayout();
 }
 
-void Instance::createDescriptorSets() {
+void Mineanarchy::Instance::createDescriptorSets() {
     descriptorSets.resize(2);
 
     descriptorSets[0] = new DescriptorSet(descriptorSetLayouts[0]);
@@ -658,7 +658,7 @@ void Instance::createDescriptorSets() {
     descriptorSets[1]->createDescriptorSet();
 }
 
-uint32_t Instance::findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties) {
+uint32_t Mineanarchy::Instance::findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties) {
     VkPhysicalDeviceMemoryProperties memProperties;
     vkGetPhysicalDeviceMemoryProperties(physicalDevice, &memProperties);
 
@@ -672,52 +672,52 @@ uint32_t Instance::findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags pro
 }
 
 int main(int argc, char** argv) {
-    int configState = UtilityFunctions::queryConfigState();
-    if(configState == UtilityFunctions::CONFIG_INEXISTENT || configState == UtilityFunctions::CONFIG_INVALIDLY_FORMATTED) {
+    int configState = Mineanarchy::UtilityFunctions::queryConfigState();
+    if(configState == Mineanarchy::UtilityFunctions::CONFIG_INEXISTENT || configState == Mineanarchy::UtilityFunctions::CONFIG_INVALIDLY_FORMATTED) {
         if(argc < 5) {
             throw std::runtime_error("You must specify a path for the game directory, mesh file, skeleton file, and animation file");
         } else {
-            UtilityFunctions::createConfig();
-            UtilityFunctions::setGameDirectory(argv[1]);
-            UtilityFunctions::setMeshFile(argv[2]);
-            UtilityFunctions::setSkeletonFile(argv[3]);
-            UtilityFunctions::setAnimationFile(argv[4]);
-            UtilityFunctions::writeToConfig();
+            Mineanarchy::UtilityFunctions::createConfig();
+            Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+            Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+            Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
+            Mineanarchy::UtilityFunctions::setAnimationFile(argv[4]);
+            Mineanarchy::UtilityFunctions::writeToConfig();
         }
     } else {
         switch(argc) {
             case 2:
-                UtilityFunctions::createConfig();
-                UtilityFunctions::setGameDirectory(argv[1]);
-                UtilityFunctions::writeToConfig();
+                Mineanarchy::UtilityFunctions::createConfig();
+                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                Mineanarchy::UtilityFunctions::writeToConfig();
                 break;
             case 3:
-                UtilityFunctions::createConfig();
-                UtilityFunctions::setGameDirectory(argv[1]);
-                UtilityFunctions::setMeshFile(argv[2]);
-                UtilityFunctions::writeToConfig();
+                Mineanarchy::UtilityFunctions::createConfig();
+                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+                Mineanarchy::UtilityFunctions::writeToConfig();
                 break;
             case 4:
-                UtilityFunctions::createConfig();
-                UtilityFunctions::setGameDirectory(argv[1]);
-                UtilityFunctions::setMeshFile(argv[2]);
-                UtilityFunctions::setSkeletonFile(argv[3]);
-                UtilityFunctions::writeToConfig();
+                Mineanarchy::UtilityFunctions::createConfig();
+                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+                Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
+                Mineanarchy::UtilityFunctions::writeToConfig();
                 break;
             case 5:
-                UtilityFunctions::createConfig();
-                UtilityFunctions::setGameDirectory(argv[1]);
-                UtilityFunctions::setMeshFile(argv[2]);
-                UtilityFunctions::setSkeletonFile(argv[3]);
-                UtilityFunctions::setAnimationFile(argv[4]);
-                UtilityFunctions::writeToConfig();
+                Mineanarchy::UtilityFunctions::createConfig();
+                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+                Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
+                Mineanarchy::UtilityFunctions::setAnimationFile(argv[4]);
+                Mineanarchy::UtilityFunctions::writeToConfig();
                 break;
         }
     }
     
-    UtilityFunctions::getConfig();
+    Mineanarchy::UtilityFunctions::getConfig();
     
-    Instance app;
+    Mineanarchy::Instance app;
 
     try {
         app.run();

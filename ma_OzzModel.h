@@ -23,14 +23,16 @@
 
 #include <ma_Vertex.h>
 
-class ma_OzzModel {
-    public:
-    void UpdateBoneTransforms(std::vector<glm::mat4>& matrices, float time);
-    void LoadAnimation(const std::string& animation_file, const std::string& skeleton_file, const std::string& mesh_file, std::vector<ma_Vertex>& vertices, std::vector<uint16_t>& indices);
-    private:
-    ozz::animation::Animation animation;
-    ozz::animation::Skeleton skeleton;
-    ozz::sample::PlaybackController controller_;
-    ozz::animation::SamplingJob::Context context_;
-    std::vector<glm::mat4> ConvertAllSoATransformsToMatrices(const std::vector<ozz::math::SoaTransform>& soa_transforms);
-};
+namespace Mineanarchy {
+    class ma_OzzModel {
+        public:
+        void UpdateBoneTransforms(std::vector<glm::mat4>& matrices, float time);
+        void LoadAnimation(const std::string& animation_file, const std::string& skeleton_file, const std::string& mesh_file, std::vector<ma_Vertex>& vertices, std::vector<uint16_t>& indices);
+        private:
+        ozz::animation::Animation animation;
+        ozz::animation::Skeleton skeleton;
+        ozz::sample::PlaybackController controller_;
+        ozz::animation::SamplingJob::Context context_;
+        std::vector<glm::mat4> ConvertAllSoATransformsToMatrices(const std::vector<ozz::math::SoaTransform>& soa_transforms);
+    };
+}

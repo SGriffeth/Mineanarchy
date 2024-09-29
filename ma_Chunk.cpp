@@ -3,9 +3,10 @@
 namespace Mineanarchy {
     class Chunk {
         private:
-        std::byte voxelMap[16*16*16];
+        uint x, y, z;
+        std::byte voxelMap[32*32*32];
         char
         public:
-
+        Chunk(uint x, uint y, uint z);
     };
 }

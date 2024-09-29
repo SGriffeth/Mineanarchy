@@ -3,9 +3,9 @@
 #include <stdexcept>
 #include <ma_Vertex.h>
 
-GraphicsPipeline::GraphicsPipeline(VkDevice dev) : logDevice(dev) {}
+Mineanarchy::GraphicsPipeline::GraphicsPipeline(VkDevice dev) : logDevice(dev) {}
 
-void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* fragSpv, std::vector<VkDescriptorSetLayout> layouts, VkRenderPass renderPass) {
+void Mineanarchy::GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* fragSpv, std::vector<VkDescriptorSetLayout> layouts, VkRenderPass renderPass) {
     std::vector<char> vertShaderCode;
     std::vector<char> fragShaderCode;
     if(!UtilityFunctions::readFile(vertSpv, vertShaderCode)) {
@@ -130,7 +130,7 @@ void GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, const char* f
     vkDestroyShaderModule(logDevice, vertShaderModule, nullptr);
 }
 
-VkShaderModule GraphicsPipeline::createShaderModule(const std::vector<char>& code) {
+VkShaderModule Mineanarchy::GraphicsPipeline::createShaderModule(const std::vector<char>& code) {
     VkShaderModuleCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
     createInfo.codeSize = code.size();

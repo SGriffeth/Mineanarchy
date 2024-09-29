@@ -2,15 +2,19 @@
 #include <vulkan/vulkan.h>
 #include <ma_Instance.h>
 
-class CommandPool;
+namespace Mineanarchy {
+    class CommandPool;
+}
 
-class CommandBuffer {
-    private:
-    VkCommandBuffer commandBuffer;
-    CommandPool* commandPool;
-    public:
-    CommandBuffer(CommandPool* pool);
-    void createCommandBuffer();
+namespace Mineanarchy {
+    class CommandBuffer {
+        private:
+        VkCommandBuffer commandBuffer;
+        CommandPool* commandPool;
+        public:
+        CommandBuffer(CommandPool* pool);
+        void createCommandBuffer();
 
-    friend void Instance::initVulkan();
-};
+        friend void Instance::initVulkan();
+    };
+}

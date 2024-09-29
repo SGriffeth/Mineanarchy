@@ -1,11 +1,11 @@
 #include <ma_CommandBuffer.h>
 #include <ma_CommandPool.h>
 
-CommandBuffer::CommandBuffer(CommandPool* pool) : commandPool(pool) {
+Mineanarchy::CommandBuffer::CommandBuffer(CommandPool* pool) : commandPool(pool) {
 
 }
 
-void CommandBuffer::createCommandBuffer() {
+void Mineanarchy::CommandBuffer::createCommandBuffer() {
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
     allocInfo.commandPool = commandPool->pool;

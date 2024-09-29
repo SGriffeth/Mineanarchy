@@ -5,30 +5,30 @@
 #include <iostream>
 #include <cmath>
 
-glm::vec3 Camera::cameraFront = glm::vec3(0, 0, 0);
-glm::vec3 Camera::cameraPosition = glm::vec3(0, 0, 1);
-glm::vec3 Camera::cameraUp = glm::vec3(0, -1, 0);
+glm::vec3 Mineanarchy::Camera::cameraFront = glm::vec3(0, 0, 0);
+glm::vec3 Mineanarchy::Camera::cameraPosition = glm::vec3(0, 0, 1);
+glm::vec3 Mineanarchy::Camera::cameraUp = glm::vec3(0, -1, 0);
 
-void Camera::updateModelMat(glm::vec3 translation, glm::vec3 scale, glm::vec3 rotationAxis, float rotationAngle) {
+void Mineanarchy::Camera::updateModelMat(glm::vec3 translation, glm::vec3 scale, glm::vec3 rotationAxis, float rotationAngle) {
     _mvpMat.model = glm::mat4(1.0f);
     _mvpMat.model = glm::translate(_mvpMat.model, translation); // Translate
     _mvpMat.model = glm::rotate(_mvpMat.model, glm::radians(rotationAngle), rotationAxis); // Rotate
     _mvpMat.model = glm::scale(_mvpMat.model, glm::vec3(scale)); // Scale
 }
 
-void Camera::updateViewMat(glm::vec3 up) {
+void Mineanarchy::Camera::updateViewMat(glm::vec3 up) {
     cameraUp = up;
     _mvpMat.view = glm::lookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
 }
 
-void Camera::updateProjectionMat(float fov, float aspectRatio, float nearPlane, float farPlane) {
+void Mineanarchy::Camera::updateProjectionMat(float fov, float aspectRatio, float nearPlane, float farPlane) {
     _mvpMat.proj = glm::perspective(glm::radians(fov), aspectRatio, nearPlane, farPlane);
 //    _mvpMat.proj[1][1] *= -1;
     // Print the matrix
     
 }
 
-void Camera::printTransformations() {
+void Mineanarchy::Camera::printTransformations() {
     std::cout << "Matrix:" << std::endl;
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
@@ -61,11 +61,11 @@ void Camera::printTransformations() {
     std::cout << std::endl;
 }
 
-void Camera::copyMvpTo(void* buffer) {
+void Mineanarchy::Camera::copyMvpTo(void* buffer) {
     memcpy(buffer, &_mvpMat, sizeof(mvpMat));
 }
 
-void Camera::mouse_callback(GLFWwindow* window, double xpos, double ypos)
+void Mineanarchy::Camera::mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
     static float lastX = 0;
     static float lastY = 0;
@@ -121,7 +121,7 @@ void Camera::mouse_callback(GLFWwindow* window, double xpos, double ypos)
 }
 
 // GLFW callback function for keyboard input
-void Camera::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void Mineanarchy::Camera::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
     float cameraSpeed = 2.5f;
     if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);

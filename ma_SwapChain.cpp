@@ -4,9 +4,9 @@
 #include <algorithm>
 #include <limits>
 
-SwapChain::SwapChain(VkDevice dev) : logDevice(dev) { }
+Mineanarchy::SwapChain::SwapChain(VkDevice dev) : logDevice(dev) { }
 
-void SwapChain::createSwapChain(Instance& instance) {
+void Mineanarchy::SwapChain::createSwapChain(Instance& instance) {
     Instance::SwapChainSupportDetails swapChainSupport = instance.querySwapChainSupport();
 
         VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
@@ -63,11 +63,11 @@ void SwapChain::createSwapChain(Instance& instance) {
         });
 }
 
-VkFormat SwapChain::getImageFormat() {
+VkFormat Mineanarchy::SwapChain::getImageFormat() {
     return swapChainImageFormat;
 }
 
-    VkSurfaceFormatKHR SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats) {
+    VkSurfaceFormatKHR Mineanarchy::SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats) {
         for (const auto& availableFormat : availableFormats) {
             if (availableFormat.format == VK_FORMAT_B8G8R8A8_SRGB && availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
                 return availableFormat;
@@ -77,7 +77,7 @@ VkFormat SwapChain::getImageFormat() {
         return availableFormats[0];
     }
 
-    VkPresentModeKHR SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes) {
+    VkPresentModeKHR Mineanarchy::SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes) {
         for (const auto& availablePresentMode : availablePresentModes) {
             if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
                 return availablePresentMode;
@@ -87,7 +87,7 @@ VkFormat SwapChain::getImageFormat() {
         return VK_PRESENT_MODE_FIFO_KHR;
     }
 
-    VkExtent2D SwapChain::chooseSwapExtent(Instance& instance, const VkSurfaceCapabilitiesKHR& capabilities) {
+    VkExtent2D Mineanarchy::SwapChain::chooseSwapExtent(Instance& instance, const VkSurfaceCapabilitiesKHR& capabilities) {
         if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max()) {
             return capabilities.currentExtent;
         } else {
@@ -106,7 +106,7 @@ VkFormat SwapChain::getImageFormat() {
         }
     }
 
-    void SwapChain::createImageViews() {
+    void Mineanarchy::SwapChain::createImageViews() {
         swapChainImageViews.resize(swapChainImages.size());
 
         for (size_t i = 0; i < swapChainImages.size(); i++) {
@@ -136,7 +136,7 @@ VkFormat SwapChain::getImageFormat() {
     }
 
 
-void SwapChain::createFramebuffers(VkRenderPass renderPass) {
+void Mineanarchy::SwapChain::createFramebuffers(VkRenderPass renderPass) {
     swapChainFramebuffers.resize(swapChainImageViews.size());
 
     for (size_t i = 0; i < swapChainImageViews.size(); i++) {

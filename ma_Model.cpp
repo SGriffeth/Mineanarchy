@@ -6,11 +6,11 @@
 #include <AssimpConverter/AssimpConverter.h>
 #include <iostream>
 
-Model::Model(const std::string& file, std::vector<ma_Vertex>* vertices, std::vector<uint16_t>* indices) : fileName(file), vertices(vertices), indices(indices) {
+Mineanarchy::Model::Model(const std::string& file, std::vector<ma_Vertex>* vertices, std::vector<uint16_t>* indices) : fileName(file), vertices(vertices), indices(indices) {
 
 }
 
-void Model::createModel() {
+void Mineanarchy::Model::createModel() {
     Assimp::Importer Importer;
     std::string gameDir;
     UtilityFunctions::getGameDirectory(gameDir);
@@ -37,7 +37,7 @@ void Model::createModel() {
     }
 }
 
-void Model::createModel(unsigned int i) {
+void Mineanarchy::Model::createModel(unsigned int i) {
     saModel = SA::SkeletalModel();
     Assimp::Importer Importer;
     std::string gameDir;
@@ -89,7 +89,7 @@ void Model::createModel(unsigned int i) {
     this->indices = indices;
 }*/
 
-void Model::update(float time) {
+void Mineanarchy::Model::update(float time) {
     saModel.Update(time);
     size_t numVerts = 0;
     for (unsigned int i = 0; i < saModel.GetNumMeshes(); ++i)

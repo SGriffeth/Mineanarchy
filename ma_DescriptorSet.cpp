@@ -1,9 +1,9 @@
 #include <ma_DescriptorSetLayout.h>
 #include <ma_UtilityFunctions.h>
 
-DescriptorSet::DescriptorSet(DescriptorSetLayout* layout) : layout(layout->descriptorSetLayout), device(layout->device) {}
+Mineanarchy::DescriptorSet::DescriptorSet(DescriptorSetLayout* layout) : layout(layout->descriptorSetLayout), device(layout->device) {}
 
-void DescriptorSet::createDescriptorPool() {
+void Mineanarchy::DescriptorSet::createDescriptorPool() {
     VkDescriptorPoolSize poolSize = {};
     poolSize.type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
     poolSize.descriptorCount = 1; // Number of descriptor sets (in this case, we're only creating one)
@@ -24,7 +24,7 @@ void DescriptorSet::createDescriptorPool() {
     });
 }
 
-void DescriptorSet::createDescriptorSet() {
+void Mineanarchy::DescriptorSet::createDescriptorSet() {
     createDescriptorPool();
     VkDescriptorSetLayout layouts[] = { layout };
 

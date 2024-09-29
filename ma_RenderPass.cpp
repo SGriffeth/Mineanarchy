@@ -1,7 +1,7 @@
 #include <ma_RenderPass.h>
 #include <ma_UtilityFunctions.h>
 
-void RenderPass::createRenderPass(VkDevice logDevice, VkFormat swapChainImageFormat) {
+void Mineanarchy::RenderPass::createRenderPass(VkDevice logDevice, VkFormat swapChainImageFormat) {
     VkAttachmentDescription colorAttachment{};
     colorAttachment.format = swapChainImageFormat;
     colorAttachment.samples = VK_SAMPLE_COUNT_1_BIT;

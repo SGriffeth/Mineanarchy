@@ -1,12 +1,12 @@
 #include <ma_DescriptorSet.h>
 #include <stdexcept>
 
-UniformBuffer::UniformBuffer(DescriptorSet& set, size_t size) : bufferSize(size) {
+Mineanarchy::UniformBuffer::UniformBuffer(DescriptorSet& set, size_t size) : bufferSize(size) {
     descriptorSet = set.descriptorSet;
     device = set.device;
 }
 
-void UniformBuffer::createUniformBuffer(VkPhysicalDevice physicalDevice) {
+void Mineanarchy::UniformBuffer::createUniformBuffer(VkPhysicalDevice physicalDevice) {
     // Create the buffer
     VkBufferCreateInfo bufferInfo = {};
     bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
@@ -39,7 +39,7 @@ void UniformBuffer::createUniformBuffer(VkPhysicalDevice physicalDevice) {
     });
 }
 
-void UniformBuffer::updateUniformBuffer(void* uboData, VkWriteDescriptorSet descriptorWrite) {
+void Mineanarchy::UniformBuffer::updateUniformBuffer(void* uboData, VkWriteDescriptorSet descriptorWrite) {
     void* data;
     vkMapMemory(device, uniformBufferMemory, 0, bufferSize, 0, &data);
     memcpy(data, uboData, bufferSize);
@@ -56,7 +56,7 @@ void UniformBuffer::updateUniformBuffer(void* uboData, VkWriteDescriptorSet desc
     vkUpdateDescriptorSets(device, 1, &descriptorWrite, 0, nullptr);
 }
 
-uint32_t UniformBuffer::findMemoryType(VkPhysicalDevice dev, uint32_t typeFilter, VkMemoryPropertyFlags properties) {
+uint32_t Mineanarchy::UniformBuffer::findMemoryType(VkPhysicalDevice dev, uint32_t typeFilter, VkMemoryPropertyFlags properties) {
     VkPhysicalDeviceMemoryProperties memProperties;
     vkGetPhysicalDeviceMemoryProperties(dev, &memProperties);
 

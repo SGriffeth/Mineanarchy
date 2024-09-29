@@ -3,11 +3,11 @@
 #include <ma_Instance.h>
 #include <set>
 
-LogicalDevice::LogicalDevice(Instance* inst) : instance(inst) {
+Mineanarchy::LogicalDevice::LogicalDevice(Instance* inst) : instance(inst) {
 
 }
 
-void LogicalDevice::createLogicalDevice(VkQueue* pQueue, VkQueue* gQueue) {
+void Mineanarchy::LogicalDevice::createLogicalDevice(VkQueue* pQueue, VkQueue* gQueue) {
     Instance::QueueFamilyIndices indices = instance->findQueueFamilies();
 
     std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
@@ -49,6 +49,6 @@ void LogicalDevice::createLogicalDevice(VkQueue* pQueue, VkQueue* gQueue) {
     vkGetDeviceQueue(device, indices.presentFamily.value(), 0, pQueue);
 }
 
-void LogicalDevice::destroy() {
+void Mineanarchy::LogicalDevice::destroy() {
     vkDestroyDevice(device, nullptr);
 }

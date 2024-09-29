@@ -2,11 +2,11 @@
 #include <ma_CommandPool.h>
 #include <ma_UtilityFunctions.h>
 
-CommandPool::CommandPool(VkDevice dev) : device(dev) {
+Mineanarchy::CommandPool::CommandPool(VkDevice dev) : device(dev) {
 
 }
 
-void CommandPool::createCommandPool(Instance& instance) {
+void Mineanarchy::CommandPool::createCommandPool(Instance& instance) {
     Instance::QueueFamilyIndices queueFamilyIndices = instance.findQueueFamilies();
 
     VkCommandPoolCreateInfo poolInfo{};

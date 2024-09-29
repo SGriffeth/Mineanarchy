@@ -3,15 +3,17 @@
 
 #include <ma_Instance.h>
 
-class RenderPass {
-    private:
-    VkRenderPass renderPass;
-    public:
-    RenderPass() = default;
-    void createRenderPass(VkDevice device, VkFormat imageFormat);
+namespace Mineanarchy {
+    class RenderPass {
+        private:
+        VkRenderPass renderPass;
+        public:
+        RenderPass() = default;
+        void createRenderPass(VkDevice device, VkFormat imageFormat);
 
-    RenderPass& operator=(const RenderPass&) = delete;
-    RenderPass(const RenderPass&) = delete;
+        RenderPass& operator=(const RenderPass&) = delete;
+        RenderPass(const RenderPass&) = delete;
 
-    friend void Instance::initVulkan();
-};
+        friend void Instance::initVulkan();
+    };
+}

@@ -4,11 +4,11 @@
 #include <cstring>
 #include <stdexcept>
 
-std::stack<std::function<void()>> UtilityFunctions::deletors;
-const char* UtilityFunctions::CONFIG_NAME = "maConf.json";
-nlohmann::json UtilityFunctions::config;
+std::stack<std::function<void()>> Mineanarchy::UtilityFunctions::deletors;
+const char* Mineanarchy::UtilityFunctions::CONFIG_NAME = "maConf.json";
+nlohmann::json Mineanarchy::UtilityFunctions::config;
 
-int UtilityFunctions::queryConfigState() {
+int Mineanarchy::UtilityFunctions::queryConfigState() {
     std::vector<char> buffer;
     if(!readFile(std::string(CONFIG_NAME), buffer)) { // Determine if the file exists
         return CONFIG_INEXISTENT;
@@ -22,15 +22,15 @@ int UtilityFunctions::queryConfigState() {
     return CONFIG_READABLE;
 }
 
-void UtilityFunctions::getGameDirectory(std::string& gameDir) {
+void Mineanarchy::UtilityFunctions::getGameDirectory(std::string& gameDir) {
     gameDir = config["gameDir"];
 }
 
-std::string UtilityFunctions::getConfigValue(const char* name) {
+std::string Mineanarchy::UtilityFunctions::getConfigValue(const char* name) {
     return config[name];
 }
 
-void UtilityFunctions::getConfig() {
+void Mineanarchy::UtilityFunctions::getConfig() {
     std::ifstream configFile(CONFIG_NAME);
     if (!configFile) {
         throw std::runtime_error("unable to open config");
@@ -48,7 +48,7 @@ void UtilityFunctions::getConfig() {
     configFile.close();
 }
 
-void UtilityFunctions::createConfig() {
+void Mineanarchy::UtilityFunctions::createConfig() {
     nlohmann::json myObject = {
         {"gameDir", ""},
         {"meshFile" , ""},
@@ -62,48 +62,48 @@ void UtilityFunctions::createConfig() {
     config = myObject;
 }
 
-void UtilityFunctions::setGameDirectory(const char* name) {
+void Mineanarchy::UtilityFunctions::setGameDirectory(const char* name) {
     std::filesystem::create_directories(name);
     std::filesystem::create_directory(std::string(name) + "/shaders");
     config["gameDir"] = name;
 }
 
-void UtilityFunctions::setMeshFile(const char* name) {
+void Mineanarchy::UtilityFunctions::setMeshFile(const char* name) {
     config["meshFile"] = name;
 } 
 
-void UtilityFunctions::setSkeletonFile(const char* name) {
+void Mineanarchy::UtilityFunctions::setSkeletonFile(const char* name) {
     config["skeletonFile"] = name;  
 } 
 
-void UtilityFunctions::setAnimationFile(const char* name) {
+void Mineanarchy::UtilityFunctions::setAnimationFile(const char* name) {
     config["animationFile"] = name;
 } 
 
-void UtilityFunctions::writeToConfig() {
+void Mineanarchy::UtilityFunctions::writeToConfig() {
     std::ofstream configFile(CONFIG_NAME);
     configFile << config.dump() << std::endl;
     configFile.close();
 }
 
-VKAPI_ATTR VkBool32 VKAPI_CALL UtilityFunctions::debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData) {
+VKAPI_ATTR VkBool32 VKAPI_CALL Mineanarchy::UtilityFunctions::debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData) {
     std::cerr << "validation layer: " << pCallbackData->pMessage << std::endl;
 
     return VK_FALSE;
 }
 
-void UtilityFunctions::addDeletor(std::function<void()> deletor) {
+void Mineanarchy::UtilityFunctions::addDeletor(std::function<void()> deletor) {
     deletors.push(deletor);
 }
 
-void UtilityFunctions::runDeletors() {
+void Mineanarchy::UtilityFunctions::runDeletors() {
     while(!deletors.empty()) {
         deletors.top()();
         deletors.pop();
     }
 }
 
-bool UtilityFunctions::readFile(const std::string& filename, std::vector<char>& buffer) {
+bool Mineanarchy::UtilityFunctions::readFile(const std::string& filename, std::vector<char>& buffer) {
     std::ifstream file(filename, std::ios::ate | std::ios::binary);
 
     if (!file.is_open()) {

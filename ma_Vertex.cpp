@@ -1,7 +1,7 @@
 #include <ma_Vertex.h>
 //const size_t NUM_OF_BONES_PER_VERTEX = 4;
 
-VkVertexInputBindingDescription ma_Vertex::getBindingDescription() {
+VkVertexInputBindingDescription Mineanarchy::ma_Vertex::getBindingDescription() {
     VkVertexInputBindingDescription bindingDescription{};
     bindingDescription.binding = 0;
     bindingDescription.stride = sizeof(ma_Vertex);
@@ -10,7 +10,7 @@ VkVertexInputBindingDescription ma_Vertex::getBindingDescription() {
     return bindingDescription;
 }
  
-std::array<VkVertexInputAttributeDescription, 3> ma_Vertex::getAttributeDescriptions() {
+std::array<VkVertexInputAttributeDescription, 3> Mineanarchy::ma_Vertex::getAttributeDescriptions() {
     std::array<VkVertexInputAttributeDescription, 3> attributeDescriptions{};
 
     attributeDescriptions[0].binding = 0;
