@@ -1,5 +1,5 @@
 CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Instance.cpp \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14.2.1/iostream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -162,13 +162,13 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: \
  /usr/include/c++/14.2.1/bits/chrono.h /usr/include/c++/14.2.1/ratio \
  /usr/include/c++/14.2.1/ctime \
  /usr/include/c++/14.2.1/bits/parse_numbers.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Instance.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.h \
  /usr/include/c++/14.2.1/vector \
  /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/14.2.1/bits/stl_vector.h \
  /usr/include/c++/14.2.1/bits/stl_bvector.h \
  /usr/include/c++/14.2.1/bits/vector.tcc \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.h \
  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
  /usr/include/vulkan/vulkan_core.h \
  /usr/include/vk_video/vulkan_video_codec_h264std.h \
@@ -419,59 +419,59 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: \
  /usr/include/glm/ext/matrix_double4x4_precision.hpp \
  /usr/include/glm/ext/matrix_float4x4.hpp \
  /usr/include/glm/ext/matrix_float4x4_precision.hpp \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Vertex.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_OzzModel.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/runtime/skeleton.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/runtime/export.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/io/archive_traits.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/platform.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/export.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/span.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/runtime/skeleton_utils.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/transform.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/quaternion.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/math_constant.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/math_ex.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/vec_float.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/runtime/animation.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/runtime/animation_utils.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/offline/animation_builder.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/offline/export.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/memory/unique_ptr.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/memory/allocator.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/offline/skeleton_builder.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/offline/raw_skeleton.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/containers/string.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/containers/std_allocator.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/containers/vector.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/offline/raw_animation.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/soa_transform.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/soa_float.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/simd_math.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/internal/simd_math_config.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Vertex.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/skeleton.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/export.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/io/archive_traits.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/platform.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/export.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/span.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/skeleton_utils.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/transform.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/quaternion.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/math_constant.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/math_ex.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/vec_float.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/animation.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/animation_utils.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/animation_builder.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/export.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/memory/unique_ptr.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/memory/allocator.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/skeleton_builder.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/raw_skeleton.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/containers/string.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/containers/std_allocator.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/containers/vector.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/raw_animation.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/soa_transform.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/soa_float.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/simd_math.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/internal/simd_math_config.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
  /usr/include/c++/14.2.1/stdlib.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/internal/simd_math_sse-inl.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/maths/soa_quaternion.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/io/archive.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/endianness.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/base/io/stream.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include/ozz/animation/runtime/sampling_job.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/samples/framework/utils.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_LogicalDevice.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_RenderPass.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandBuffer.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandPool.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_GraphicsPipeline.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_SwapChain.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSetLayout.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSet.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UniformBuffer.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Camera.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_VkBuffer2.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/internal/simd_math_sse-inl.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/soa_quaternion.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/io/archive.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/endianness.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/io/stream.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/sampling_job.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/framework/utils.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_RenderPass.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandBuffer.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_SwapChain.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UniformBuffer.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Camera.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VkBuffer2.h \
  /usr/include/glm/glm.hpp /usr/include/c++/14.2.1/climits \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \

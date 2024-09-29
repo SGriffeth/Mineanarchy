@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_unique_ptr.dir/unique_ptr_tests.cc.o -o test_unique_ptr  ../../../src/base/libozz_base.a ../../gtest/libgtest.a

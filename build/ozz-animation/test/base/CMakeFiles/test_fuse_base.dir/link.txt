@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_fuse_base.dir/log_tests.cc.o CMakeFiles/test_fuse_base.dir/platform_tests.cc.o CMakeFiles/test_fuse_base.dir/__/__/src_fused/ozz_base.cc.o -o test_fuse_base  ../gtest/libgtest_d.a

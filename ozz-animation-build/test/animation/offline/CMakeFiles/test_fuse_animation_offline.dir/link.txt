@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_fuse_animation_offline.dir/animation_builder_tests.cc.o CMakeFiles/test_fuse_animation_offline.dir/__/__/__/src_fused/ozz_animation_offline.cc.o -o test_fuse_animation_offline  ../../../src/animation/runtime/libozz_animation.a ../../gtest/libgtest.a ../../../src/base/libozz_base.a

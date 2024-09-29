@@ -1,0 +1,13 @@
+# Target labels
+ ozz-animation
+# Source files and their labels
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation-complete.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-build.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-configure.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-download.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-install.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-mkdir.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-patch.rule
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-update.rule

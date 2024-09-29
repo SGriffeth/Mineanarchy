@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_log.dir/log_tests.cc.o -o test_log  ../../src/base/libozz_base_d.a ../gtest/libgtest_d.a

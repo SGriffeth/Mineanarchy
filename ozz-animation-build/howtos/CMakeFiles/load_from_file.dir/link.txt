@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/load_from_file.dir/load_from_file.cc.o -o load_from_file  ../src/animation/runtime/libozz_animation.a ../src/base/libozz_base.a

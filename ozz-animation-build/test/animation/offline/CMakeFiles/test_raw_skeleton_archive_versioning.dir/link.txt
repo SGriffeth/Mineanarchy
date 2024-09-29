@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_raw_skeleton_archive_versioning.dir/raw_skeleton_archive_versioning_tests.cc.o -o test_raw_skeleton_archive_versioning  ../../../src/animation/offline/libozz_animation_offline.a ../../../src/options/libozz_options.a ../../gtest/libgtest.a ../../../src/animation/runtime/libozz_animation.a ../../../src/base/libozz_base.a

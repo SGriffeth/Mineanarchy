@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_fuse_options.dir/options_registration_tests.cc.o CMakeFiles/test_fuse_options.dir/__/__/src_fused/ozz_options.cc.o -o test_fuse_options  ../../src/base/libozz_base.a ../gtest/libgtest.a

@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_endianness.dir/endianness_tests.cc.o -o test_endianness  ../../src/base/libozz_base_d.a ../gtest/libgtest_d.a

@@ -1,0 +1,18 @@
+# CMake generated Testfile for 
+# Source directory: /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive
+# Build directory: /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[sample_additive]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive/sample_additive" "--max_idle_loops=20" "--norender")
+set_tests_properties([=[sample_additive]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;52;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;0;")
+add_test([=[sample_additive_path]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive/sample_additive" "--skeleton=media/skeleton.ozz" "--animation=media/animation_base.ozz" "--splay_animation=media/animation_splay_additive.ozz" "--curl_animation=media/animation_curl_additive.ozz" "--max_idle_loops=20" "--norender")
+set_tests_properties([=[sample_additive_path]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;53;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;0;")
+add_test([=[sample_additive_invalid_skeleton_path]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive/sample_additive" "--skeleton=media/bad_skeleton.ozz" "--norender")
+set_tests_properties([=[sample_additive_invalid_skeleton_path]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;54;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;0;")
+add_test([=[sample_additive_invalid_animation_path1]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive/sample_additive" "--animation=media/bad_animation.ozz" "--norender")
+set_tests_properties([=[sample_additive_invalid_animation_path1]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;56;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;0;")
+add_test([=[sample_additive_invalid_animation_path2]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive/sample_additive" "--curl_animation=media/bad_animation.ozz" "--norender")
+set_tests_properties([=[sample_additive_invalid_animation_path2]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;58;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;0;")
+add_test([=[sample_additive_invalid_animation_path3]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/additive/sample_additive" "--splay_animation=media/bad_animation.ozz" "--norender")
+set_tests_properties([=[sample_additive_invalid_animation_path3]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;60;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/additive/CMakeLists.txt;0;")

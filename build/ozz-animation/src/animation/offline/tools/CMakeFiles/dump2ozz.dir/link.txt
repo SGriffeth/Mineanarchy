@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/dump2ozz.dir/dump2ozz.cc.o -o dump2ozz  libozz_animation_tools_d.a ../../../options/libozz_options_d.a ../libozz_animation_offline_d.a ../../runtime/libozz_animation_d.a ../../../base/libozz_base_d.a json/libjson_d.a

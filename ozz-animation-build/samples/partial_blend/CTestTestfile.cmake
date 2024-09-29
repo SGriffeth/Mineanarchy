@@ -1,0 +1,16 @@
+# CMake generated Testfile for 
+# Source directory: /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend
+# Build directory: /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/partial_blend
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[sample_partial_blend]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/partial_blend/sample_partial_blend" "--max_idle_loops=20" "--norender")
+set_tests_properties([=[sample_partial_blend]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;47;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;0;")
+add_test([=[sample_partial_blend_path]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/partial_blend/sample_partial_blend" "--skeleton=media/skeleton.ozz" "--lower_body_animation=media/animation_base.ozz" "--upper_body_animation=media/animation_partial.ozz" "--max_idle_loops=20" "--norender")
+set_tests_properties([=[sample_partial_blend_path]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;48;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;0;")
+add_test([=[sample_partial_blend_invalid_skeleton_path]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/partial_blend/sample_partial_blend" "--skeleton=media/bad_skeleton.ozz" "--norender")
+set_tests_properties([=[sample_partial_blend_invalid_skeleton_path]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;49;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;0;")
+add_test([=[sample_partial_blend_invalid_animation_path1]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/partial_blend/sample_partial_blend" "--lower_body_animation=media/bad_animation.ozz" "--norender")
+set_tests_properties([=[sample_partial_blend_invalid_animation_path1]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;51;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;0;")
+add_test([=[sample_partial_blend_invalid_animation_path2]=] "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation-build/samples/partial_blend/sample_partial_blend" "--upper_body_animation=media/bad_animation.ozz" "--norender")
+set_tests_properties([=[sample_partial_blend_invalid_animation_path2]=] PROPERTIES  WILL_FAIL "true" _BACKTRACE_TRIPLES "/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;53;add_test;/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/partial_blend/CMakeLists.txt;0;")

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/sebastiang/prototypevulkangame/vulkantutorial/SkeletalAnimation -I/home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/include -I/home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation -I/home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/samples -I/home/sebastiang/prototypevulkangame/vulkantutorial/ozz-animation/samples/framework -I/home/sebastiang/prototypevulkangame/vulkantutorial -I/home/sebastiang/prototypevulkangame/vulkantutorial/samples
+CXX_INCLUDES = -I/home/sebastiang/prototypevulkangame/Mineanarchy/SkeletalAnimation -I/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include -I/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation -I/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples -I/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/framework -I/home/sebastiang/prototypevulkangame/Mineanarchy
 
 CXX_FLAGS = -g -std=gnu++17
 

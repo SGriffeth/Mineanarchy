@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_archive.dir/archive_tests.cc.o CMakeFiles/test_archive.dir/archive_tests_objects.cc.o -o test_archive  ../../../src/base/libozz_base.a ../../gtest/libgtest.a

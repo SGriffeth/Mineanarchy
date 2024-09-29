@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_platform.dir/platform_tests.cc.o CMakeFiles/test_platform.dir/span_tests.cc.o -o test_platform  ../../src/base/libozz_base.a ../gtest/libgtest.a

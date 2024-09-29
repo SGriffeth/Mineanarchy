@@ -1,7 +1,7 @@
 CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o: \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.cpp \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.cpp \
  /usr/include/stdc-predef.h \
- /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.h \
  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \

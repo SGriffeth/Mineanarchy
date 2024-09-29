@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_std_containers.dir/std_containers_tests.cc.o -o test_std_containers  ../../../src/base/libozz_base.a ../../gtest/libgtest.a

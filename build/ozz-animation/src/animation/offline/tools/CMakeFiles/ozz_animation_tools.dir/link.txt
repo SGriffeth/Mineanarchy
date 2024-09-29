@@ -1,2 +1,0 @@
-/usr/bin/ar qc libozz_animation_tools_d.a CMakeFiles/ozz_animation_tools.dir/import2ozz.cc.o CMakeFiles/ozz_animation_tools.dir/import2ozz_anim.cc.o CMakeFiles/ozz_animation_tools.dir/import2ozz_config.cc.o CMakeFiles/ozz_animation_tools.dir/import2ozz_skel.cc.o CMakeFiles/ozz_animation_tools.dir/import2ozz_track.cc.o
-/usr/bin/ranlib libozz_animation_tools_d.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_skeleton_utils.dir/skeleton_utils_tests.cc.o -o test_skeleton_utils  ../../../src/animation/offline/libozz_animation_offline.a ../../gtest/libgtest.a ../../../src/animation/runtime/libozz_animation.a ../../../src/base/libozz_base.a

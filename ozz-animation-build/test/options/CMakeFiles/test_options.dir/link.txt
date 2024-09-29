@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_options.dir/options_tests.cc.o -o test_options  ../../src/options/libozz_options.a ../gtest/libgtest.a ../../src/base/libozz_base.a

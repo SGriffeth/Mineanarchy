@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_stream.dir/stream_tests.cc.o -o test_stream  ../../../src/base/libozz_base.a ../../gtest/libgtest.a

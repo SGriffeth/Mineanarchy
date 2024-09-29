@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_math.dir/math_ex_tests.cc.o CMakeFiles/test_math.dir/box_tests.cc.o CMakeFiles/test_math.dir/rect_tests.cc.o CMakeFiles/test_math.dir/vec_float_tests.cc.o CMakeFiles/test_math.dir/quaternion_tests.cc.o CMakeFiles/test_math.dir/transform_tests.cc.o -o test_math  ../../../src/base/libozz_base_d.a ../../gtest/libgtest_d.a

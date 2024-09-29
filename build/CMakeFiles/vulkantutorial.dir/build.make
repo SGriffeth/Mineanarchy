@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sebastiang/prototypevulkangame/vulkantutorial
+CMAKE_SOURCE_DIR = /home/sebastiang/prototypevulkangame/Mineanarchy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sebastiang/prototypevulkangame/vulkantutorial/build
+CMAKE_BINARY_DIR = /home/sebastiang/prototypevulkangame/Mineanarchy/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vulkantutorial.dir/depend.make
@@ -70,214 +70,214 @@ include CMakeFiles/vulkantutorial.dir/progress.make
 include CMakeFiles/vulkantutorial.dir/flags.make
 
 CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Instance.cpp
+CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.cpp
 CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Instance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Instance.cpp > CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.cpp > CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Instance.cpp -o CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.cpp -o CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.cpp
+CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.cpp
 CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.cpp > CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.cpp > CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UtilityFunctions.cpp -o CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.cpp -o CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_LogicalDevice.cpp
+CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp
 CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_LogicalDevice.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_LogicalDevice.cpp > CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp > CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_LogicalDevice.cpp -o CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp -o CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_SwapChain.cpp
+CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_SwapChain.cpp
 CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_SwapChain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_SwapChain.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_SwapChain.cpp > CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_SwapChain.cpp > CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_SwapChain.cpp -o CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_SwapChain.cpp -o CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_GraphicsPipeline.cpp
+CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp
 CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_GraphicsPipeline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_GraphicsPipeline.cpp > CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp > CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_GraphicsPipeline.cpp -o CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp -o CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_RenderPass.cpp
+CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_RenderPass.cpp
 CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_RenderPass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_RenderPass.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_RenderPass.cpp > CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_RenderPass.cpp > CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_RenderPass.cpp -o CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_RenderPass.cpp -o CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandBuffer.cpp
+CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandBuffer.cpp
 CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandBuffer.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandBuffer.cpp > CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandBuffer.cpp > CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandBuffer.cpp -o CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandBuffer.cpp -o CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandPool.cpp
+CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp
 CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandPool.cpp > CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp > CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_CommandPool.cpp -o CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp -o CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSet.cpp
+CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSet.cpp > CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp > CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSet.cpp -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSetLayout.cpp
+CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.cpp
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSetLayout.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSetLayout.cpp > CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.cpp > CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_DescriptorSetLayout.cpp -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.cpp -o CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UniformBuffer.cpp
+CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UniformBuffer.cpp
 CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UniformBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UniformBuffer.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UniformBuffer.cpp > CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UniformBuffer.cpp > CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_UniformBuffer.cpp -o CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UniformBuffer.cpp -o CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Camera.cpp
+CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Camera.cpp
 CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Camera.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Camera.cpp > CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Camera.cpp > CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Camera.cpp -o CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Camera.cpp -o CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Vertex.cpp
+CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Vertex.cpp
 CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Vertex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Vertex.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Vertex.cpp > CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Vertex.cpp > CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_Vertex.cpp -o CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Vertex.cpp -o CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_VkBuffer2.cpp
+CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VkBuffer2.cpp
 CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_VkBuffer2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VkBuffer2.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_VkBuffer2.cpp > CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VkBuffer2.cpp > CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_VkBuffer2.cpp -o CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VkBuffer2.cpp -o CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.s
 
 CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o: CMakeFiles/vulkantutorial.dir/flags.make
-CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o: /home/sebastiang/prototypevulkangame/vulkantutorial/ma_OzzModel.cpp
+CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.cpp
 CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o: CMakeFiles/vulkantutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o -c /home/sebastiang/prototypevulkangame/vulkantutorial/ma_OzzModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o -MF CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o.d -o CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o -c /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.cpp
 
 CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/vulkantutorial/ma_OzzModel.cpp > CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.cpp > CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.i
 
 CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/vulkantutorial/ma_OzzModel.cpp -o CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.cpp -o CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.s
 
 # Object files for target vulkantutorial
 vulkantutorial_OBJECTS = \
@@ -316,20 +316,12 @@ vulkantutorial: CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o
 vulkantutorial: CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o
 vulkantutorial: CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o
 vulkantutorial: CMakeFiles/vulkantutorial.dir/build.make
-vulkantutorial: SkeletalAnimation/libassimpskeletalanimation.a
 vulkantutorial: /usr/lib/libassimp.so.5.4.1
 vulkantutorial: /lib/libvulkan.so
-vulkantutorial: /usr/lib/libglfw.so.3.4
-vulkantutorial: ozz-animation/samples/framework/libsample_framework.a
-vulkantutorial: ozz-animation/src/animation/offline/libozz_animation_offline_d.a
-vulkantutorial: ozz-animation/src/animation/runtime/libozz_animation_d.a
-vulkantutorial: ozz-animation/src/base/libozz_base_d.a
-vulkantutorial: ozz-animation/src/geometry/runtime/libozz_geometry_d.a
-vulkantutorial: ozz-animation/src/options/libozz_options_d.a
 vulkantutorial: /usr/lib/libz.so
-vulkantutorial: ozz-animation/src/base/libozz_base_d.a
+vulkantutorial: /usr/lib/libglfw.so.3.4
 vulkantutorial: CMakeFiles/vulkantutorial.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable vulkantutorial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable vulkantutorial"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vulkantutorial.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -341,6 +333,6 @@ CMakeFiles/vulkantutorial.dir/clean:
 .PHONY : CMakeFiles/vulkantutorial.dir/clean
 
 CMakeFiles/vulkantutorial.dir/depend:
-	cd /home/sebastiang/prototypevulkangame/vulkantutorial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sebastiang/prototypevulkangame/vulkantutorial /home/sebastiang/prototypevulkangame/vulkantutorial /home/sebastiang/prototypevulkangame/vulkantutorial/build /home/sebastiang/prototypevulkangame/vulkantutorial/build /home/sebastiang/prototypevulkangame/vulkantutorial/build/CMakeFiles/vulkantutorial.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sebastiang/prototypevulkangame/Mineanarchy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sebastiang/prototypevulkangame/Mineanarchy /home/sebastiang/prototypevulkangame/Mineanarchy /home/sebastiang/prototypevulkangame/Mineanarchy/build /home/sebastiang/prototypevulkangame/Mineanarchy/build /home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/vulkantutorial.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/vulkantutorial.dir/depend
 

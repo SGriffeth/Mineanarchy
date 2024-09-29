@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation-complete.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-build.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-configure.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-download.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-install.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-mkdir.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-patch.rule"
+		},
+		{
+			"file" : "/home/sebastiang/prototypevulkangame/Mineanarchy/build/ozz-animation-prefix/src/ozz-animation-stamp/ozz-animation-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ozz-animation"
+		],
+		"name" : "ozz-animation"
+	}
+}

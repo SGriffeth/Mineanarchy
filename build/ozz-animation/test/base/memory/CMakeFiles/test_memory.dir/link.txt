@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_memory.dir/allocator_tests.cc.o -o test_memory  ../../../src/base/libozz_base_d.a ../../gtest/libgtest_d.a

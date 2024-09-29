@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_skinning_job.dir/skinning_job_tests.cc.o -o test_skinning_job  ../../../src/geometry/runtime/libozz_geometry.a ../../../src/base/libozz_base.a ../../gtest/libgtest.a

@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/gltf2ozz.dir/gltf2ozz.cc.o -o gltf2ozz  ../tools/libozz_animation_tools_d.a ../libozz_animation_offline_d.a ../../runtime/libozz_animation_d.a ../../../options/libozz_options_d.a ../../../base/libozz_base_d.a ../tools/json/libjson_d.a
