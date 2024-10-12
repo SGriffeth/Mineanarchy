@@ -2,6 +2,7 @@
 #include <ma_UtilityFunctions.h>
 #include <stdexcept>
 #include <ma_Vertex.h>
+#include <ma_VoxelVertex.h>
 
 Mineanarchy::GraphicsPipeline::GraphicsPipeline(VkDevice dev) : logDevice(dev) {}
 
@@ -32,8 +33,8 @@ void Mineanarchy::GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, 
 
     VkPipelineShaderStageCreateInfo shaderStages[] = {vertShaderStageInfo, fragShaderStageInfo};
 
-    auto bindingDescription = ma_Vertex::getBindingDescription();
-    auto attributeDescriptions = ma_Vertex::getAttributeDescriptions();
+    auto bindingDescription = VoxelVertex::getBindingDescription();
+    auto attributeDescriptions = VoxelVertex::getAttributeDescriptions();
 
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;    
@@ -56,7 +57,7 @@ void Mineanarchy::GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, 
     rasterizer.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
     rasterizer.depthClampEnable = VK_FALSE;
     rasterizer.rasterizerDiscardEnable = VK_FALSE;
-    rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
+    rasterizer.polygonMode = VK_POLYGON_MODE_LINE;
     rasterizer.lineWidth = 1.0f;
     rasterizer.cullMode = VK_CULL_MODE_NONE;
     rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
@@ -95,7 +96,14 @@ void Mineanarchy::GraphicsPipeline::createGraphicsPipeline(const char* vertSpv, 
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
     pipelineLayoutInfo.setLayoutCount = layouts.size();
     pipelineLayoutInfo.pSetLayouts = layouts.data();
-    pipelineLayoutInfo.pushConstantRangeCount = 0;
+
+    VkPushConstantRange pushConstantRange{};
+    pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT; // Specify the shader stage(s) that will use this
+    pushConstantRange.offset = 0; // Offset in bytes
+    pushConstantRange.size = sizeof(PushConstantData); // Size of the push constant data
+
+    pipelineLayoutInfo.pushConstantRangeCount = 1; // Number of push constant ranges
+    pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange; // Pointer to the push constant range
 
     if (vkCreatePipelineLayout(logDevice, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS) {
         throw std::runtime_error("failed to create pipeline layout!");

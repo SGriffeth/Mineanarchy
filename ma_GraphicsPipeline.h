@@ -12,6 +12,9 @@ namespace Mineanarchy {
         VkShaderModule createShaderModule(const std::vector<char>& code);
 
         friend void Instance::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
+        struct PushConstantData {
+            unsigned int useBoneTransformation; // Use an integer type to represent the boolean
+        };
         private:
         VkPipelineLayout pipelineLayout;
         VkPipeline graphicsPipeline;

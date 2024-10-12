@@ -14,7 +14,7 @@ int Mineanarchy::UtilityFunctions::queryConfigState() {
         return CONFIG_INEXISTENT;
     }
     try {
-        nlohmann::json parsedjs = nlohmann::json::parse(buffer.data());
+        nlohmann::json parsedjs = nlohmann::json::parse(buffer.data(), buffer.data() + buffer.size());
     } catch (const std::exception& ex) {
         std::cerr << "Error parsing JSON: " << ex.what() << std::endl;
         return CONFIG_INVALIDLY_FORMATTED;
@@ -41,7 +41,7 @@ void Mineanarchy::UtilityFunctions::getConfig() {
         (std::istreambuf_iterator<char>())
     );
     try {
-        config = nlohmann::json::parse(bytes.data());
+        config = nlohmann::json::parse(bytes.data(), bytes.data() + bytes.size());
     } catch (const std::exception& ex) {
         throw std::runtime_error("Error parsing JSON: " + std::string(ex.what()));
     }
@@ -64,6 +64,7 @@ void Mineanarchy::UtilityFunctions::createConfig() {
 
 void Mineanarchy::UtilityFunctions::setGameDirectory(const char* name) {
     std::filesystem::create_directories(name);
+    std::filesystem::create_directory(std::string(name) + "/chunks");
     std::filesystem::create_directory(std::string(name) + "/shaders");
     config["gameDir"] = name;
 }

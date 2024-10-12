@@ -27,7 +27,7 @@ std::vector<uint8_t> ma_OzzModel::LoadFile(const std::string& file_path) {
     file.read(reinterpret_cast<char*>(file_contents.data()), file_size);
     return file_contents;
 }*/
-void Mineanarchy::ma_OzzModel::LoadAnimation(const std::string& animation_file, const std::string& skeleton_file, const std::string& mesh_file, std::vector<ma_Vertex>& vertices, std::vector<uint16_t>& indices) {
+void Mineanarchy::ma_OzzModel::LoadAnimation(const std::string& animation_file, const std::string& skeleton_file, const std::string& mesh_file, std::vector<ma_Vertex>& vertices, std::vector<unsigned int>& indices) {
     Assimp::Importer importer;
     const aiScene* scene = importer.ReadFile(mesh_file.c_str(),
         aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_GenNormals);

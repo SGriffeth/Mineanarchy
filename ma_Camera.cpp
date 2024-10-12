@@ -4,10 +4,20 @@
 #include <cstring>
 #include <iostream>
 #include <cmath>
+#include <limits>
+#include <algorithm> // For std::clamp
 
 glm::vec3 Mineanarchy::Camera::cameraFront = glm::vec3(0, 0, 0);
 glm::vec3 Mineanarchy::Camera::cameraPosition = glm::vec3(0, 0, 1);
 glm::vec3 Mineanarchy::Camera::cameraUp = glm::vec3(0, -1, 0);
+
+Mineanarchy::Camera::Camera(unsigned x, unsigned int y, unsigned int z) {
+    cameraPosition = glm::vec3(x, y, z);
+}
+
+glm::vec3 Mineanarchy::Camera::getPosition() {
+    return cameraPosition;
+}
 
 void Mineanarchy::Camera::updateModelMat(glm::vec3 translation, glm::vec3 scale, glm::vec3 rotationAxis, float rotationAngle) {
     _mvpMat.model = glm::mat4(1.0f);
@@ -23,7 +33,7 @@ void Mineanarchy::Camera::updateViewMat(glm::vec3 up) {
 
 void Mineanarchy::Camera::updateProjectionMat(float fov, float aspectRatio, float nearPlane, float farPlane) {
     _mvpMat.proj = glm::perspective(glm::radians(fov), aspectRatio, nearPlane, farPlane);
-//    _mvpMat.proj[1][1] *= -1;
+    //_mvpMat.proj[1][1] *= -1;
     // Print the matrix
     
 }
@@ -136,4 +146,8 @@ void Mineanarchy::Camera::key_callback(GLFWwindow* window, int key, int scancode
         cameraPosition -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
     if (key == GLFW_KEY_D && action == GLFW_PRESS)
         cameraPosition += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+
+    cameraPosition.x = std::clamp(cameraPosition.x, .0f, (float)std::numeric_limits<unsigned int>::max());
+    cameraPosition.y = std::clamp(cameraPosition.y, .0f, (float)std::numeric_limits<unsigned int>::max());
+    cameraPosition.z = std::clamp(cameraPosition.z, .0f, (float)std::numeric_limits<unsigned int>::max());
 }

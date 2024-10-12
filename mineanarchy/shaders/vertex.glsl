@@ -6,6 +6,10 @@ layout(location = 2) in vec4 inBoneWeights;  // 4 floats
 
 layout(location = 0) out vec3 fragColor;
 
+layout(push_constant) uniform PushConstantData {
+    uint useBoneTransformations; // Use an unsigned integer for the boolean
+} pushConstants;
+
 layout(binding = 0) uniform UniformBufferObject {
     mat4 model;
     mat4 view;
@@ -49,7 +53,11 @@ void main() {
             boneTransform += bones.boneTransforms[boneID] * inBoneWeights[i];
         }
     }
-    gl_Position = ubo.proj * ubo.view * boneTransform * vec4(inPosition, 1.0);
+    if(pushConstants.useBoneTransformations == 0) {
+        gl_Position = ubo.proj * ubo.view * boneTransform * vec4(inPosition, 1.0);
+    } else {
+        gl_Position = ubo.proj * ubo.view * vec4(inPosition, 1.0);
+    }
     //gl_Position = ubo.proj * ubo.view * vec4(inPosition, 1.0);
     fragColor = colors[gl_VertexIndex % 3];
 }

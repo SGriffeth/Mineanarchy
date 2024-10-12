@@ -1,10 +1,13 @@
 #pragma once
 #include <vector>
 #include <ma_UtilityFunctions.h>
+#include <ma_VisibleChunkGrid.h>
+#include <ma_Mesher.h>
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 #include <glm/mat4x4.hpp>
 #include <ma_Vertex.h>
+#include <ma_VoxelVertex.h>
 #include <ma_OzzModel.h>
 
 namespace Mineanarchy {
@@ -51,6 +54,7 @@ namespace Mineanarchy {
         #endif
 
         void run();
+        void LoadModels(int condition);
         void initWindow();
         void initVulkan();
         void mainLoop();
@@ -92,6 +96,7 @@ namespace Mineanarchy {
         void createMvpUbo();
 
         private:
+        const unsigned int chunkSize = 16;
         const int MAX_FRAMES_IN_FLIGHT = 2;
         QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
         GLFWwindow* window;
@@ -105,6 +110,12 @@ namespace Mineanarchy {
 
         //VkQueue graphicsQueue;
         //VkQueue presentQueue;
+
+        int loadModels = 1;
+        unsigned int previousCameraX, previousCameraY, previousCameraZ;
+        TerrainGenerator* terrainGenerator;
+        VisibleChunkGrid* visibleChunkGrid;
+        Mesher* mesher;
 
         SwapChain* swapChain;
         LogicalDevice* logDevice;
@@ -121,8 +132,10 @@ namespace Mineanarchy {
         std::vector<DescriptorSetLayout*> descriptorSetLayouts;
         std::vector<DescriptorSet*> descriptorSets;
 
-        std::vector<ma_Vertex> vertices;
-        std::vector<uint16_t> indices;
+        std::vector<ma_Vertex> animVertices;
+        std::vector<unsigned int> animIndices;
+        VoxelVertex* vertices;
+        unsigned int* indices;
         VkDevice device;
         VkRenderPass vkRenderPass;
         VkCommandBuffer vkCommandBuffer;
@@ -155,6 +168,7 @@ namespace Mineanarchy {
         void createVertexBuffers();
         void createIndexBuffers();
         void createModels();
+        void createMesher();
 
         void updateUniformBuffers();
 

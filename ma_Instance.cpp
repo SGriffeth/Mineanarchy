@@ -83,27 +83,39 @@
         commandPool = new CommandPool(device);
         commandPool->createCommandPool(*this);
         vkCommandPool = commandPool->pool;
+        if(loadModels)
         createModels();
+    createDescriptorSets();
+    vkDescriptorSets.resize(descriptorSets.size());
+        for(uint i = 0; i < descriptorSets.size(); i++) {
+            vkDescriptorSets[i] = descriptorSets[i]->descriptorSet;
+        }
+        createUniformBuffers();
+        createCamera();
+        createMesher();
         createVertexBuffers();
         createIndexBuffers();
-        createDescriptorSets();
-        createUniformBuffers();
+        size_t voxelGridSideLength = visibleChunkGrid->getGridHalfSideLength()*2*visibleChunkGrid->getChunkSize();
+        mesher = new Mesher(vertices, indices, 1, *visibleChunkGrid);
+        mesher->Mesh();
         commandBuffer = new CommandBuffer(commandPool);
         commandBuffer->createCommandBuffer();
         vkCommandBuffer = commandBuffer->commandBuffer;
         createSyncObjects();
 
-        vkDescriptorSets.resize(descriptorSets.size());
-        for(uint i = 0; i < descriptorSets.size(); i++) {
-            vkDescriptorSets[i] = descriptorSets[i]->descriptorSet;
-        }
-        createCamera();
         /*UtilityFunctions::addDeletor([&]() {
             vkDestroyBuffer(device, vkVertexBuffer, nullptr);
             vkFreeMemory(device, vertexBuffer->bufferMemory, nullptr);
             vkDestroyBuffer(device, vkIndexBuffer, nullptr);
             vkFreeMemory(device, indexBuffer->bufferMemory, nullptr);
         });*/
+    }
+
+    void Mineanarchy::Instance::createMesher() {
+        terrainGenerator = new TerrainGenerator(80);
+        visibleChunkGrid = new VisibleChunkGrid(*terrainGenerator, chunkSize, 3);
+
+        visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/chunkSize, camera->getPosition().y/chunkSize, camera->getPosition().z/chunkSize);
     }
 
     void Mineanarchy::Instance::createModels() {
@@ -113,7 +125,7 @@
         });*/
         std::string gameDir;
         UtilityFunctions::getGameDirectory(gameDir);
-        model.LoadAnimation(gameDir + std::string("/") + UtilityFunctions::getConfigValue("animationFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("skeletonFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("meshFile"), vertices, indices);
+        model.LoadAnimation(gameDir + std::string("/") + UtilityFunctions::getConfigValue("animationFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("skeletonFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("meshFile"), animVertices, animIndices);
         model.UpdateBoneTransforms(boneTransforms, 0);
         if(boneTransforms.size() > 300) {
             std::stringstream ss;
@@ -122,7 +134,7 @@
             throw std::runtime_error(ss.str());
         }
         bool first0 = true;
-        for(uint i = 0; i < vertices.size(); i++) {
+        for(uint i = 0; i < animVertices.size(); i++) {
             if(vertices[i].pos[0] == 0 && vertices[i].pos[1] == 0 && vertices[i].pos[2] == 0 && !first0) {
                 continue;
             }
@@ -131,14 +143,16 @@
             std::cout << "vertices(" << i << ") = " << "(" << vertices[i].pos[0] << "," << vertices[i].pos[1] << "," << vertices[i].pos[2] << ")" << std::endl;
         }
 
-        for(uint i = 0; i < indices.size(); i++) {
+        for(uint i = 0; i < animIndices.size(); i++) {
             std::cout << "indices(" << i << ") = " << indices[i] << std::endl;
         }
     }
 
     void Mineanarchy::Instance::createVertexBuffers() {
-        vertexBuffer = new Buffer(device, sizeof(vertices[0]) * vertices.size());
-        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2;
+        vertices = new VoxelVertex[estimatedSize];
+        vertexBuffer = new Buffer(device, sizeof(vertices[0]) * estimatedSize);
+        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //vertexBuffer->updateBuffer(vertices);
         /*UtilityFunctions::addDeletor([this]() {
             vkDestroyBuffer(device, vkVertexBuffer, nullptr);
@@ -147,8 +161,11 @@
     }
 
     void Mineanarchy::Instance::createIndexBuffers() {
-        indexBuffer = new Buffer(device, sizeof(indices[0]) * indices.size());
-        indexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, indices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * 6*6;
+        estimatedSize /= 2; // tentatively say that we need half that
+        indices = new unsigned int[estimatedSize];
+        indexBuffer = new Buffer(device, sizeof(indices[0]) * estimatedSize);
+        indexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, indices, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //indexBuffer->updateBuffer(indices);
          /*UtilityFunctions::addDeletor([this]() {
             vkDestroyBuffer(device, indexBuffer, nullptr);
@@ -163,6 +180,16 @@
             //camera->printTransformations();
             mvpData = new char[sizeof(Camera::mvpMat)];
             camera->copyMvpTo(mvpData);
+            if(!((unsigned int)camera->getPosition().x/visibleChunkGrid->getChunkSize() == previousCameraX &&
+            (unsigned int)camera->getPosition().y/visibleChunkGrid->getChunkSize() == previousCameraY &&
+            (unsigned int)camera->getPosition().z/visibleChunkGrid->getChunkSize() == previousCameraZ)) {
+                std::cout << "loading again pos: (" << camera->getPosition().x << ", " << camera->getPosition().y << ", " << camera->getPosition().z << ")" << std::endl;
+                visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/visibleChunkGrid->getChunkSize(), camera->getPosition().y/visibleChunkGrid->getChunkSize(), camera->getPosition().z/visibleChunkGrid->getChunkSize());
+                mesher->Mesh();
+                previousCameraX = camera->getPosition().x/visibleChunkGrid->getChunkSize();
+                previousCameraY = camera->getPosition().y/visibleChunkGrid->getChunkSize();
+                previousCameraZ = camera->getPosition().z/visibleChunkGrid->getChunkSize();
+            }
             drawFrame();
         }
 
@@ -230,7 +257,7 @@
     }
 
     void Mineanarchy::Instance::createCamera() {
-        camera = new Camera();
+        camera = new Camera(chunkSize*100, 81, chunkSize*100); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
         camera->updateModelMat(glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), glm::vec3(0, 1, 0), 0);
         camera->updateViewMat(glm::vec3(0, -1, 0));
         camera->updateProjectionMat(45.0f, swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 100.0f);
@@ -494,9 +521,18 @@
             VkDeviceSize offsets[] = {0};
             vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
 
-            vkCmdBindIndexBuffer(commandBuffer, indexBuffer->buffer, 0, VK_INDEX_TYPE_UINT16);
+            vkCmdBindIndexBuffer(commandBuffer, indexBuffer->buffer, 0, VK_INDEX_TYPE_UINT32);
 
-            vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
+            GraphicsPipeline::PushConstantData pushConstantData;
+            pushConstantData.useBoneTransformation = loadModels; // Set to 1 or 0 based on your condition
+
+            vkCmdPushConstants(commandBuffer, graphicsPipeline->pipelineLayout, 
+                            VK_SHADER_STAGE_VERTEX_BIT, 
+                            0, // Offset (should match your push constant definition)
+                            sizeof(GraphicsPipeline::PushConstantData), 
+                            &pushConstantData);
+
+            vkCmdDrawIndexed(commandBuffer, mesher->getIndexCount(), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
 
@@ -520,8 +556,8 @@ void Mineanarchy::Instance::drawFrame() {
     // Calculate the elapsed time
     std::chrono::duration<float> elapsed = end - start;
     //std::cout << elapsed.count() << std::endl;
-    vertexBuffer->updateBuffer(vertices.data());
-    indexBuffer->updateBuffer(indices.data());
+    vertexBuffer->updateBuffer(vertices);
+    indexBuffer->updateBuffer(indices);
     recordCommandBuffer(vkCommandBuffer, imageIndex);
 
     VkSubmitInfo submitInfo{};
@@ -585,7 +621,13 @@ void Mineanarchy::Instance::createUniformBuffers() {
     uniformBuffers.push_back(new UniformBuffer(*descriptorSets[0], sizeof(mvpMat)));
     uniformBuffers[0]->createUniformBuffer(physicalDevice);
 
-    uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], boneTransforms.size()));
+    if(boneTransforms.size() == 0) {
+        uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], 1));
+    } else {
+        //uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], boneTransforms.size()));    
+        uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], sizeof(glm::mat4)*boneTransforms.size()));    
+    }
+    
     uniformBuffers[1]->createUniformBuffer(physicalDevice);
 }
 
@@ -600,15 +642,17 @@ void Mineanarchy::Instance::updateUniformBuffers() {
     descriptorWrite.pBufferInfo = nullptr; // Buffer information to update with
     uniformBuffers[0]->updateUniformBuffer(mvpData, descriptorWrite);
 
-    VkWriteDescriptorSet descriptorWrite2 = {};
-    descriptorWrite2.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-    descriptorWrite2.dstSet = vkDescriptorSets[1]; // Descriptor set to update
-    descriptorWrite2.dstBinding = 0; // Binding number in the descriptor set layout
-    descriptorWrite2.dstArrayElement = 0; // Starting element in the array (if an array)
-    descriptorWrite2.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
-    descriptorWrite2.descriptorCount = 1; // Number of descriptors to update
-    descriptorWrite2.pBufferInfo = nullptr; // Buffer information to update with
-    uniformBuffers[1]->updateUniformBuffer(boneTransforms.data(), descriptorWrite2);
+    if(loadModels) {
+        VkWriteDescriptorSet descriptorWrite2 = {};
+        descriptorWrite2.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        descriptorWrite2.dstSet = vkDescriptorSets[1]; // Descriptor set to update
+        descriptorWrite2.dstBinding = 0; // Binding number in the descriptor set layout
+        descriptorWrite2.dstArrayElement = 0; // Starting element in the array (if an array)
+        descriptorWrite2.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
+        descriptorWrite2.descriptorCount = 1; // Number of descriptors to update
+        descriptorWrite2.pBufferInfo = nullptr; // Buffer information to update with
+        uniformBuffers[1]->updateUniformBuffer(boneTransforms.data(), descriptorWrite2);
+    }
 }
 
 void Mineanarchy::Instance::createDescriptorSetLayouts() {
@@ -671,6 +715,10 @@ uint32_t Mineanarchy::Instance::findMemoryType(uint32_t typeFilter, VkMemoryProp
     throw std::runtime_error("failed to find suitable memory type!");
 }
 
+void Mineanarchy::Instance::LoadModels(int condition) {
+    loadModels = condition;
+}
+
 int main(int argc, char** argv) {
     int configState = Mineanarchy::UtilityFunctions::queryConfigState();
     if(configState == Mineanarchy::UtilityFunctions::CONFIG_INEXISTENT || configState == Mineanarchy::UtilityFunctions::CONFIG_INVALIDLY_FORMATTED) {
@@ -684,40 +732,44 @@ int main(int argc, char** argv) {
             Mineanarchy::UtilityFunctions::setAnimationFile(argv[4]);
             Mineanarchy::UtilityFunctions::writeToConfig();
         }
-    } else {
-        switch(argc) {
-            case 2:
-                Mineanarchy::UtilityFunctions::createConfig();
-                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
-                Mineanarchy::UtilityFunctions::writeToConfig();
-                break;
-            case 3:
-                Mineanarchy::UtilityFunctions::createConfig();
-                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
-                Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
-                Mineanarchy::UtilityFunctions::writeToConfig();
-                break;
-            case 4:
-                Mineanarchy::UtilityFunctions::createConfig();
-                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
-                Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
-                Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
-                Mineanarchy::UtilityFunctions::writeToConfig();
-                break;
-            case 5:
-                Mineanarchy::UtilityFunctions::createConfig();
-                Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
-                Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
-                Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
-                Mineanarchy::UtilityFunctions::setAnimationFile(argv[4]);
-                Mineanarchy::UtilityFunctions::writeToConfig();
-                break;
+    } else if(argc > 1) {
+        if(strcmp(argv[1], "modelsoff") != 0) {
+            switch(argc) {
+                case 2:
+                    Mineanarchy::UtilityFunctions::createConfig();
+                    Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                    Mineanarchy::UtilityFunctions::writeToConfig();
+                    break;
+                case 3:
+                    Mineanarchy::UtilityFunctions::createConfig();
+                    Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                    Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+                    Mineanarchy::UtilityFunctions::writeToConfig();
+                    break;
+                case 4:
+                    Mineanarchy::UtilityFunctions::createConfig();
+                    Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                    Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+                    Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
+                    Mineanarchy::UtilityFunctions::writeToConfig();
+                    break;
+                case 5:
+                    Mineanarchy::UtilityFunctions::createConfig();
+                    Mineanarchy::UtilityFunctions::setGameDirectory(argv[1]);
+                    Mineanarchy::UtilityFunctions::setMeshFile(argv[2]);
+                    Mineanarchy::UtilityFunctions::setSkeletonFile(argv[3]);
+                    Mineanarchy::UtilityFunctions::setAnimationFile(argv[4]);
+                    Mineanarchy::UtilityFunctions::writeToConfig();
+                    break;
+            }
         }
     }
     
     Mineanarchy::UtilityFunctions::getConfig();
-    
+
     Mineanarchy::Instance app;
+    if(argc > 1)
+    if(strcmp(argv[1], "modelsoff") == 0) app.LoadModels(0);
 
     try {
         app.run();

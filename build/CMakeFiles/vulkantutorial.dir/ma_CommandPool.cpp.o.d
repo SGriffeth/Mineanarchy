@@ -308,14 +308,32 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: \
  /usr/include/nlohmann/ordered_map.hpp /usr/include/c++/14.2.1/any \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VisibleChunkGrid.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_TerrainGenerator.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Mesher.h \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VoxelVertex.h \
+ /usr/include/glm/vec3.hpp /usr/include/glm/ext/vector_bool3.hpp \
+ /usr/include/glm/detail/type_vec3.hpp \
+ /usr/include/glm/detail/qualifier.hpp /usr/include/glm/detail/setup.hpp \
+ /usr/include/glm/simd/platform.h /usr/include/glm/detail/type_vec3.inl \
+ /usr/include/glm/detail/compute_vector_relational.hpp \
+ /usr/include/glm/ext/vector_bool3_precision.hpp \
+ /usr/include/glm/ext/vector_float3.hpp \
+ /usr/include/glm/ext/vector_float3_precision.hpp \
+ /usr/include/glm/ext/vector_double3.hpp \
+ /usr/include/glm/ext/vector_double3_precision.hpp \
+ /usr/include/glm/ext/vector_int3.hpp \
+ /usr/include/glm/ext/vector_int3_sized.hpp \
+ /usr/include/glm/ext/scalar_int_sized.hpp \
+ /usr/include/glm/detail/setup.hpp /usr/include/glm/ext/vector_uint3.hpp \
+ /usr/include/glm/ext/vector_uint3_sized.hpp \
+ /usr/include/glm/ext/scalar_uint_sized.hpp /usr/include/GLFW/glfw3.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h /usr/include/glm/mat4x4.hpp \
  /usr/include/glm/ext/matrix_double4x4.hpp \
  /usr/include/glm/detail/type_mat4x4.hpp \
  /usr/include/glm/detail/type_vec4.hpp \
- /usr/include/glm/detail/qualifier.hpp /usr/include/glm/detail/setup.hpp \
- /usr/include/glm/simd/platform.h /usr/include/glm/detail/type_vec4.inl \
- /usr/include/glm/detail/compute_vector_relational.hpp \
+ /usr/include/glm/detail/type_vec4.inl \
  /usr/include/glm/detail/type_mat4x4.inl /usr/include/glm/matrix.hpp \
  /usr/include/glm/detail/setup.hpp /usr/include/glm/vec2.hpp \
  /usr/include/glm/ext/vector_bool2.hpp \
@@ -328,22 +346,8 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: \
  /usr/include/glm/ext/vector_double2_precision.hpp \
  /usr/include/glm/ext/vector_int2.hpp \
  /usr/include/glm/ext/vector_int2_sized.hpp \
- /usr/include/glm/ext/scalar_int_sized.hpp \
- /usr/include/glm/detail/setup.hpp /usr/include/glm/ext/vector_uint2.hpp \
- /usr/include/glm/ext/vector_uint2_sized.hpp \
- /usr/include/glm/ext/scalar_uint_sized.hpp /usr/include/glm/vec3.hpp \
- /usr/include/glm/ext/vector_bool3.hpp \
- /usr/include/glm/detail/type_vec3.hpp \
- /usr/include/glm/detail/type_vec3.inl \
- /usr/include/glm/ext/vector_bool3_precision.hpp \
- /usr/include/glm/ext/vector_float3.hpp \
- /usr/include/glm/ext/vector_float3_precision.hpp \
- /usr/include/glm/ext/vector_double3.hpp \
- /usr/include/glm/ext/vector_double3_precision.hpp \
- /usr/include/glm/ext/vector_int3.hpp \
- /usr/include/glm/ext/vector_int3_sized.hpp \
- /usr/include/glm/ext/vector_uint3.hpp \
- /usr/include/glm/ext/vector_uint3_sized.hpp /usr/include/glm/vec4.hpp \
+ /usr/include/glm/ext/vector_uint2.hpp \
+ /usr/include/glm/ext/vector_uint2_sized.hpp /usr/include/glm/vec4.hpp \
  /usr/include/glm/ext/vector_bool4.hpp \
  /usr/include/glm/ext/vector_bool4_precision.hpp \
  /usr/include/glm/ext/vector_float4.hpp \

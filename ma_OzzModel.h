@@ -27,7 +27,7 @@ namespace Mineanarchy {
     class ma_OzzModel {
         public:
         void UpdateBoneTransforms(std::vector<glm::mat4>& matrices, float time);
-        void LoadAnimation(const std::string& animation_file, const std::string& skeleton_file, const std::string& mesh_file, std::vector<ma_Vertex>& vertices, std::vector<uint16_t>& indices);
+        void LoadAnimation(const std::string& animation_file, const std::string& skeleton_file, const std::string& mesh_file, std::vector<ma_Vertex>& vertices, std::vector<unsigned int>& indices);
         private:
         ozz::animation::Animation animation;
         ozz::animation::Skeleton skeleton;

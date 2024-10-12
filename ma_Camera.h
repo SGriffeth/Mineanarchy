@@ -15,8 +15,10 @@ namespace Mineanarchy {
         void updateViewMat(glm::vec3 cameraUp);
         void updateProjectionMat(float fov, float aspectRatio, float nearPlane, float farPlane);
         void printTransformations();
+        glm::vec3 getPosition();
         static void mouse_callback(GLFWwindow* window, double xpos, double ypos);
         static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+        Camera(unsigned int x, unsigned int y, unsigned int z);
         
         private:
         struct mvpMat _mvpMat;

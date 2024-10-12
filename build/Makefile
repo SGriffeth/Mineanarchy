@@ -334,6 +334,30 @@ ma_LogicalDevice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.s
 .PHONY : ma_LogicalDevice.cpp.s
 
+ma_Mesher.o: ma_Mesher.cpp.o
+.PHONY : ma_Mesher.o
+
+# target to build an object file
+ma_Mesher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o
+.PHONY : ma_Mesher.cpp.o
+
+ma_Mesher.i: ma_Mesher.cpp.i
+.PHONY : ma_Mesher.i
+
+# target to preprocess a source file
+ma_Mesher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.i
+.PHONY : ma_Mesher.cpp.i
+
+ma_Mesher.s: ma_Mesher.cpp.s
+.PHONY : ma_Mesher.s
+
+# target to generate assembly for a file
+ma_Mesher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.s
+.PHONY : ma_Mesher.cpp.s
+
 ma_OzzModel.o: ma_OzzModel.cpp.o
 .PHONY : ma_OzzModel.o
 
@@ -405,6 +429,30 @@ ma_SwapChain.s: ma_SwapChain.cpp.s
 ma_SwapChain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.s
 .PHONY : ma_SwapChain.cpp.s
+
+ma_TerrainGenerator.o: ma_TerrainGenerator.cpp.o
+.PHONY : ma_TerrainGenerator.o
+
+# target to build an object file
+ma_TerrainGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.o
+.PHONY : ma_TerrainGenerator.cpp.o
+
+ma_TerrainGenerator.i: ma_TerrainGenerator.cpp.i
+.PHONY : ma_TerrainGenerator.i
+
+# target to preprocess a source file
+ma_TerrainGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.i
+.PHONY : ma_TerrainGenerator.cpp.i
+
+ma_TerrainGenerator.s: ma_TerrainGenerator.cpp.s
+.PHONY : ma_TerrainGenerator.s
+
+# target to generate assembly for a file
+ma_TerrainGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.s
+.PHONY : ma_TerrainGenerator.cpp.s
 
 ma_UniformBuffer.o: ma_UniformBuffer.cpp.o
 .PHONY : ma_UniformBuffer.o
@@ -478,6 +526,30 @@ ma_Vertex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.s
 .PHONY : ma_Vertex.cpp.s
 
+ma_VisibleChunkGrid.o: ma_VisibleChunkGrid.cpp.o
+.PHONY : ma_VisibleChunkGrid.o
+
+# target to build an object file
+ma_VisibleChunkGrid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VisibleChunkGrid.cpp.o
+.PHONY : ma_VisibleChunkGrid.cpp.o
+
+ma_VisibleChunkGrid.i: ma_VisibleChunkGrid.cpp.i
+.PHONY : ma_VisibleChunkGrid.i
+
+# target to preprocess a source file
+ma_VisibleChunkGrid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VisibleChunkGrid.cpp.i
+.PHONY : ma_VisibleChunkGrid.cpp.i
+
+ma_VisibleChunkGrid.s: ma_VisibleChunkGrid.cpp.s
+.PHONY : ma_VisibleChunkGrid.s
+
+# target to generate assembly for a file
+ma_VisibleChunkGrid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VisibleChunkGrid.cpp.s
+.PHONY : ma_VisibleChunkGrid.cpp.s
+
 ma_VkBuffer2.o: ma_VkBuffer2.cpp.o
 .PHONY : ma_VkBuffer2.o
 
@@ -501,6 +573,30 @@ ma_VkBuffer2.s: ma_VkBuffer2.cpp.s
 ma_VkBuffer2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.s
 .PHONY : ma_VkBuffer2.cpp.s
+
+ma_VoxelVertex.o: ma_VoxelVertex.cpp.o
+.PHONY : ma_VoxelVertex.o
+
+# target to build an object file
+ma_VoxelVertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o
+.PHONY : ma_VoxelVertex.cpp.o
+
+ma_VoxelVertex.i: ma_VoxelVertex.cpp.i
+.PHONY : ma_VoxelVertex.i
+
+# target to preprocess a source file
+ma_VoxelVertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.i
+.PHONY : ma_VoxelVertex.cpp.i
+
+ma_VoxelVertex.s: ma_VoxelVertex.cpp.s
+.PHONY : ma_VoxelVertex.s
+
+# target to generate assembly for a file
+ma_VoxelVertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.s
+.PHONY : ma_VoxelVertex.cpp.s
 
 # Help Target
 help:
@@ -536,6 +632,9 @@ help:
 	@echo "... ma_LogicalDevice.o"
 	@echo "... ma_LogicalDevice.i"
 	@echo "... ma_LogicalDevice.s"
+	@echo "... ma_Mesher.o"
+	@echo "... ma_Mesher.i"
+	@echo "... ma_Mesher.s"
 	@echo "... ma_OzzModel.o"
 	@echo "... ma_OzzModel.i"
 	@echo "... ma_OzzModel.s"
@@ -545,6 +644,9 @@ help:
 	@echo "... ma_SwapChain.o"
 	@echo "... ma_SwapChain.i"
 	@echo "... ma_SwapChain.s"
+	@echo "... ma_TerrainGenerator.o"
+	@echo "... ma_TerrainGenerator.i"
+	@echo "... ma_TerrainGenerator.s"
 	@echo "... ma_UniformBuffer.o"
 	@echo "... ma_UniformBuffer.i"
 	@echo "... ma_UniformBuffer.s"
@@ -554,9 +656,15 @@ help:
 	@echo "... ma_Vertex.o"
 	@echo "... ma_Vertex.i"
 	@echo "... ma_Vertex.s"
+	@echo "... ma_VisibleChunkGrid.o"
+	@echo "... ma_VisibleChunkGrid.i"
+	@echo "... ma_VisibleChunkGrid.s"
 	@echo "... ma_VkBuffer2.o"
 	@echo "... ma_VkBuffer2.i"
 	@echo "... ma_VkBuffer2.s"
+	@echo "... ma_VoxelVertex.o"
+	@echo "... ma_VoxelVertex.i"
+	@echo "... ma_VoxelVertex.s"
 .PHONY : help
 
 
