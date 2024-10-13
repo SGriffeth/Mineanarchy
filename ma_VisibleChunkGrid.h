@@ -46,7 +46,7 @@ namespace Mineanarchy {
         void UpdateGridSideLength(unsigned int newHalfSideLength);
 
         void GetGridPosition(unsigned int& x, unsigned int& y, unsigned int& z) const;
-        size_t GetVoxelMapIndex(unsigned int x, unsigned int y, unsigned int z) const;
+        unsigned int GetVoxelMapIndex(unsigned int x, unsigned int y, unsigned int z) const;
         const unsigned char* getVoxelData() const;
         unsigned int getGridHalfSideLength() const;
         unsigned int getChunkSize() const;

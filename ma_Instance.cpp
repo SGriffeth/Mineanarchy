@@ -114,6 +114,7 @@
     void Mineanarchy::Instance::createMesher() {
         terrainGenerator = new TerrainGenerator(80);
         visibleChunkGrid = new VisibleChunkGrid(*terrainGenerator, chunkSize, 3);
+        terrainGenerator->SetChunkGrid(visibleChunkGrid);
 
         visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/chunkSize, camera->getPosition().y/chunkSize, camera->getPosition().z/chunkSize);
     }
@@ -180,17 +181,20 @@
             //camera->printTransformations();
             mvpData = new char[sizeof(Camera::mvpMat)];
             camera->copyMvpTo(mvpData);
+            
+            drawFrame();
             if(!((unsigned int)camera->getPosition().x/visibleChunkGrid->getChunkSize() == previousCameraX &&
             (unsigned int)camera->getPosition().y/visibleChunkGrid->getChunkSize() == previousCameraY &&
             (unsigned int)camera->getPosition().z/visibleChunkGrid->getChunkSize() == previousCameraZ)) {
                 std::cout << "loading again pos: (" << camera->getPosition().x << ", " << camera->getPosition().y << ", " << camera->getPosition().z << ")" << std::endl;
                 visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/visibleChunkGrid->getChunkSize(), camera->getPosition().y/visibleChunkGrid->getChunkSize(), camera->getPosition().z/visibleChunkGrid->getChunkSize());
                 mesher->Mesh();
+                vertexBuffer->updateBuffer(vertices);
+                indexBuffer->updateBuffer(indices);
                 previousCameraX = camera->getPosition().x/visibleChunkGrid->getChunkSize();
                 previousCameraY = camera->getPosition().y/visibleChunkGrid->getChunkSize();
                 previousCameraZ = camera->getPosition().z/visibleChunkGrid->getChunkSize();
             }
-            drawFrame();
         }
 
         vkDeviceWaitIdle(device);
@@ -257,7 +261,8 @@
     }
 
     void Mineanarchy::Instance::createCamera() {
-        camera = new Camera(chunkSize*100, 81, chunkSize*100); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
+        //camera = new Camera(chunkSize*100, 81, chunkSize*100); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
+        camera = new Camera(10, 81, 10); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
         camera->updateModelMat(glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), glm::vec3(0, 1, 0), 0);
         camera->updateViewMat(glm::vec3(0, -1, 0));
         camera->updateProjectionMat(45.0f, swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 100.0f);
@@ -556,8 +561,12 @@ void Mineanarchy::Instance::drawFrame() {
     // Calculate the elapsed time
     std::chrono::duration<float> elapsed = end - start;
     //std::cout << elapsed.count() << std::endl;
-    vertexBuffer->updateBuffer(vertices);
-    indexBuffer->updateBuffer(indices);
+    /*if(!((unsigned int)camera->getPosition().x/visibleChunkGrid->getChunkSize() == previousCameraX &&
+            (unsigned int)camera->getPosition().y/visibleChunkGrid->getChunkSize() == previousCameraY &&
+            (unsigned int)camera->getPosition().z/visibleChunkGrid->getChunkSize() == previousCameraZ)) {
+        vertexBuffer->updateBuffer(vertices);
+        indexBuffer->updateBuffer(indices);
+    }*/
     recordCommandBuffer(vkCommandBuffer, imageIndex);
 
     VkSubmitInfo submitInfo{};

@@ -48,12 +48,15 @@ void Mineanarchy::VisibleChunkGrid::UpdateGridPosition(unsigned int x, unsigned 
                     if(currentChunkY < previousy + gridHalfSideLength && currentChunkY > previousy - gridHalfSideLength) {
                         if(currentChunkZ < previousz + gridHalfSideLength && currentChunkZ > previousz - gridHalfSideLength) {
                             // This chunk was previously loaded (conditions never met for some reason)
-                            unsigned int previousChunkX = xi + (this->x - previousx);
-                            unsigned int previousChunkY = yi + (this->y - previousy);
-                            unsigned int previousChunkZ = zi + (this->z - previousz);
+                            int previousChunkX = static_cast<std::int32_t>(xi) + static_cast<std::int32_t>(this->x) - static_cast<std::int32_t>(previousx);
+                            int previousChunkY = static_cast<std::int32_t>(yi) + static_cast<std::int32_t>(this->y) - static_cast<std::int32_t>(previousy);
+                            int previousChunkZ = static_cast<std::int32_t>(zi) + static_cast<std::int32_t>(this->z) - static_cast<std::int32_t>(previousz);
+                            if(previousChunkX < 0 || previousChunkY < 0 || previousChunkZ < 0) {
+                                throw std::runtime_error("negative previous chunk exception");
+                            }
                             memcpy(voxelMap+GetVoxelMapIndex(xi, yi, zi), previousVoxelMap+GetVoxelMapIndex(previousChunkX, previousChunkY, previousChunkZ), chunkSize*chunkSize*chunkSize);
                             memcpy(previousVoxelMap+GetVoxelMapIndex(xi, yi, zi), voxelMap+GetVoxelMapIndex(xi, yi, zi), chunkSize*chunkSize*chunkSize);
-                           // std::cout << "previously loaded chunk: " << xi << ", " << yi << ", " << zi << std::endl;
+                            std::cout << "currently loaded chunk: (" << xi << ", " << yi << ", " << zi << ") previously loaded chunk: (" << previousChunkX << ", " << previousChunkY << ", " << previousChunkZ  << ") diff: (" << static_cast<std::int32_t>(this->x) - static_cast<std::int32_t>(previousx) << ", " << static_cast<std::int32_t>(this->y) - static_cast<std::int32_t>(previousy) << ". " << static_cast<std::int32_t>(this->z) - static_cast<std::int32_t>(previousz) << ")" << std::endl;
                             continue;
                         }
                     }
@@ -73,8 +76,8 @@ void Mineanarchy::VisibleChunkGrid::GetGridPosition(unsigned int& x, unsigned in
 }
 
 // x, y, and z are relative chunk coordinates that is relative to the visible chunk grid
-size_t Mineanarchy::VisibleChunkGrid::GetVoxelMapIndex(unsigned int x, unsigned int y, unsigned int z) const {
-    size_t index;
+unsigned int Mineanarchy::VisibleChunkGrid::GetVoxelMapIndex(unsigned int x, unsigned int y, unsigned int z) const {
+    unsigned int index;
     index = (x)*chunkSize*chunkSize*chunkSize + chunkSize*chunkSize*chunkSize*gridHalfSideLength*2*(z) + chunkSize*chunkSize*chunkSize*gridHalfSideLength*2*gridHalfSideLength*2*(y); // problem's here
     return index;
 }
@@ -85,21 +88,28 @@ void Mineanarchy::VisibleChunkGrid::UpdateVisibleChunk(unsigned int x, unsigned 
     unsigned int currentChunkY = this->y - gridHalfSideLength + y;
     unsigned int currentChunkZ = this->z - gridHalfSideLength + z;
 
+    const unsigned int* heightMap = generator.getHeightMap();
+
     for(unsigned int yi = 0; yi < chunkSize; yi++) {
         for(unsigned int zi = 0; zi < chunkSize; zi++) {
             for(unsigned int xi = 0; xi < chunkSize; xi++) {
                 if(cachedChunkChanges[xi + yi*chunkSize*chunkSize + zi*chunkSize].hasBeenChanged) {
                     std::cout << "loading cached chunk change" << std::endl;
                 }
-                //voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] = cachedChunkChanges[xi + yi*chunkSize*chunkSize + zi*chunkSize].hasBeenChanged ? cachedChunkChanges[xi + yi*chunkSize*chunkSize + zi*chunkSize].blockId : generator.sampleVoxel(currentChunkX*chunkSize + xi, currentChunkY*chunkSize + yi, currentChunkZ*chunkSize + zi);
-                voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] = generator.sampleVoxel(currentChunkX*chunkSize + xi, currentChunkY*chunkSize + yi, currentChunkZ*chunkSize + zi);
+                if(yi == 0) generator.sampleVoxel(currentChunkX*chunkSize + xi, 0, currentChunkZ*chunkSize + zi);
+                /*voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] =
+                cachedChunkChanges[xi + yi*chunkSize*chunkSize + zi*chunkSize].hasBeenChanged ? cachedChunkChanges[xi + yi*chunkSize*chunkSize + zi*chunkSize].blockId : (currentChunkY*chunkSize + yi < generator.getHeightMap(currentChunkX*chunkSize, currentChunkZ*chunkSize) ? 1 : 0);*/
+
+                voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] = (currentChunkY*chunkSize + yi < generator.getHeightMap(currentChunkX*chunkSize, currentChunkZ*chunkSize) ? 1 : 0);
+
+                //voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] = generator.sampleVoxel(currentChunkX*chunkSize + xi, currentChunkY*chunkSize + yi, currentChunkZ*chunkSize + zi);
                 /*if(voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] == 0) { // Condition never met 
                     std::cout << (currentChunkY*chunkSize + yi) << " ";
                     //std::cout << "(" << xi << ", " << yi << ", " << zi << ") ";
                 } else if((currentChunkY*chunkSize + yi) > 80) {
                     std::cout << "strange: " << currentChunkY*chunkSize + yi << std::endl;
                 }*/
-                previousVoxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] = voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize];
+                //previousVoxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize] = voxelMap[chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize];
                 //std::cout << "index: " << chunkVoxelIndex + xi + yi*chunkSize*chunkSize + zi*chunkSize << std::endl;
             }
         }

@@ -11,8 +11,8 @@ namespace Mineanarchy {
         unsigned int numberOfVertices = 0;
         unsigned int cubeSideLength;
         unsigned int gridHalfSideLength;
-        unsigned int chunkSize;
         const VisibleChunkGrid& visibleChunkGrid;
+        unsigned int ConvertToVoxelMapRelativeIndex(unsigned int xi, unsigned int yi, unsigned int zi);
         public:
         Mesher(VoxelVertex* vertices, unsigned int* indices, unsigned int cubeSideLength, const VisibleChunkGrid& visibleChunkGrid);
         void Mesh();
