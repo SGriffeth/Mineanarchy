@@ -14,7 +14,7 @@ namespace Mineanarchy {
         LogicalDevice& operator=(const LogicalDevice&) = delete;
         public:
         LogicalDevice(Instance* instance);
-        void createLogicalDevice(VkQueue* pQueue, VkQueue* gQueue);
+        void createLogicalDevice(VkPhysicalDevice physicalDevice, VkQueue* pQueue, VkQueue* gQueue);
         void destroy();
 
         friend void Instance::initVulkan();

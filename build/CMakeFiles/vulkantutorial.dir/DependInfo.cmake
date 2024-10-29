@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp" "CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o.d"
   "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.cpp" "CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o.d"
   "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp" "CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o.d"
+  "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_IndexBufferManager.cpp" "CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o.d"
   "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_Instance.cpp" "CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o.d"
   "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp" "CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o.d"
   "/home/sebastiang/prototypevulkangame/Mineanarchy/ma_Mesher.cpp" "CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o" "gcc" "CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o.d"

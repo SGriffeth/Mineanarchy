@@ -13,7 +13,8 @@ namespace Mineanarchy {
         unsigned int* heightMap;
         const VisibleChunkGrid* visibleChunkGrid;
         public:
-        unsigned char sampleVoxel(unsigned int x, unsigned int y, unsigned int z) const;
+        void sampleVoxel(unsigned int x, unsigned int y, unsigned int z) const;
+        unsigned char GetBlockType(unsigned int x, unsigned int y, unsigned int z) const;
         TerrainGenerator(unsigned int SEA_LEVEL);
         void SetChunkGrid(const VisibleChunkGrid* visibleChunkGrid);
         const unsigned int* getHeightMap() const;

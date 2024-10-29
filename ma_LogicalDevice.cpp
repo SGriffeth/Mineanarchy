@@ -1,13 +1,14 @@
 #include <ma_LogicalDevice.h>
 #include <ma_UtilityFunctions.h>
 #include <ma_Instance.h>
+#include <stdexcept>
 #include <set>
 
 Mineanarchy::LogicalDevice::LogicalDevice(Instance* inst) : instance(inst) {
 
 }
 
-void Mineanarchy::LogicalDevice::createLogicalDevice(VkQueue* pQueue, VkQueue* gQueue) {
+void Mineanarchy::LogicalDevice::createLogicalDevice(VkPhysicalDevice physicalDevice, VkQueue* pQueue, VkQueue* gQueue) {
     Instance::QueueFamilyIndices indices = instance->findQueueFamilies();
 
     std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
@@ -23,7 +24,16 @@ void Mineanarchy::LogicalDevice::createLogicalDevice(VkQueue* pQueue, VkQueue* g
         queueCreateInfos.push_back(queueCreateInfo);
     }
 
-    VkPhysicalDeviceFeatures deviceFeatures{};
+    VkPhysicalDeviceFeatures supportedFeatures{};
+    vkGetPhysicalDeviceFeatures(physicalDevice, &supportedFeatures);
+
+    if (!supportedFeatures.fillModeNonSolid) {
+        // Handle the case where the feature is not supported
+        throw std::runtime_error("feature fillModeNonSolid is not supported");
+    }
+
+    VkPhysicalDeviceFeatures desiredFeatures = {};
+    desiredFeatures.fillModeNonSolid = VK_TRUE;
 
     VkDeviceCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
@@ -31,7 +41,7 @@ void Mineanarchy::LogicalDevice::createLogicalDevice(VkQueue* pQueue, VkQueue* g
     createInfo.queueCreateInfoCount = static_cast<uint32_t>(queueCreateInfos.size());
     createInfo.pQueueCreateInfos = queueCreateInfos.data();
 
-    createInfo.pEnabledFeatures = &deviceFeatures;
+    createInfo.pEnabledFeatures = &desiredFeatures;
 
     createInfo.enabledExtensionCount = static_cast<uint32_t>(instance->deviceExtensions.size());
     createInfo.ppEnabledExtensionNames = instance->deviceExtensions.data();

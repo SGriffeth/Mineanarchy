@@ -53,16 +53,28 @@
     }
 
     void Mineanarchy::Instance::initVulkan() {
+        createCamera();
+        createMesher();
+        mesher = new Mesher(vertices, indices, 1, *visibleChunkGrid, *terrainGenerator, *vboManager, *iboManager);
+        auto meshStart = std::chrono::high_resolution_clock::now();
+        mesher->Mesh();
+        auto meshEnd = std::chrono::high_resolution_clock::now();
+        auto totalDuration = std::chrono::duration_cast<std::chrono::microseconds>(meshEnd - meshStart).count();
+        std::cout << "Done w first meshing, took: " << totalDuration << std::endl;
+
         createInstance();
         setupDebugMessenger();
         createSurface();
         Instance::pickPhysicalDevice();
         logDevice = new LogicalDevice(this);
-        logDevice->createLogicalDevice(&presentQueue, &graphicsQueue);
+        logDevice->createLogicalDevice(physicalDevice, &presentQueue, &graphicsQueue);
         device = logDevice->device;
         swapChain = new SwapChain(logDevice->device);
         swapChain->createSwapChain(*this);
+        
+
         swapChain->createImageViews();
+
         renderPass = new RenderPass();
         renderPass->createRenderPass(logDevice->device, swapChain->getImageFormat());
         std::string gameD;
@@ -91,16 +103,26 @@
             vkDescriptorSets[i] = descriptorSets[i]->descriptorSet;
         }
         createUniformBuffers();
-        createCamera();
-        createMesher();
+        camera->updateProjectionMat(45.0f, swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 450.0f);
+        camera->updateModelMat(glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), glm::vec3(0, 1, 0), 0);
+        camera->updateViewMat(glm::vec3(0, -1, 0));
+        camera->printTransformations();
+        mvpData = new char[sizeof(Camera::mvpMat)];
+        camera->copyMvpTo(mvpData);
+        updateUniformBuffers();
         createVertexBuffers();
         createIndexBuffers();
         size_t voxelGridSideLength = visibleChunkGrid->getGridHalfSideLength()*2*visibleChunkGrid->getChunkSize();
-        mesher = new Mesher(vertices, indices, 1, *visibleChunkGrid);
-        mesher->Mesh();
-        commandBuffer = new CommandBuffer(commandPool);
-        commandBuffer->createCommandBuffer();
-        vkCommandBuffer = commandBuffer->commandBuffer;
+        commandBuffers = new CommandBuffer[MAX_FRAMES_IN_FLIGHT];
+        for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; ++i) {
+            commandBuffers[i] = CommandBuffer(commandPool);
+            commandBuffers[i].createCommandBuffer();
+        }
+
+        vkCommandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
+        for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+            vkCommandBuffers[i] = commandBuffers[i].commandBuffer;
+        }
         createSyncObjects();
 
         /*UtilityFunctions::addDeletor([&]() {
@@ -112,8 +134,10 @@
     }
 
     void Mineanarchy::Instance::createMesher() {
-        terrainGenerator = new TerrainGenerator(80);
-        visibleChunkGrid = new VisibleChunkGrid(*terrainGenerator, chunkSize, 3);
+        iboManager = new IndexBufferManager(350*sizeof(unsigned int));
+        vboManager = new IndexBufferManager(350*sizeof(vertices[0]));
+        terrainGenerator = new TerrainGenerator(SEA_LEVEL);
+        visibleChunkGrid = new VisibleChunkGrid(*terrainGenerator, chunkSize, gridHalfSideLength);
         terrainGenerator->SetChunkGrid(visibleChunkGrid);
 
         visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/chunkSize, camera->getPosition().y/chunkSize, camera->getPosition().z/chunkSize);
@@ -150,10 +174,10 @@
     }
 
     void Mineanarchy::Instance::createVertexBuffers() {
-        size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2;
-        vertices = new VoxelVertex[estimatedSize];
-        vertexBuffer = new Buffer(device, sizeof(vertices[0]) * estimatedSize);
-        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        //size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2;
+        vertices.reserve(vboManager->GetRecBufferCapacity());
+        vertexBuffer = new Buffer(device, sizeof(vertices[0]) * vboManager->GetRecBufferCapacity());
+        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //vertexBuffer->updateBuffer(vertices);
         /*UtilityFunctions::addDeletor([this]() {
             vkDestroyBuffer(device, vkVertexBuffer, nullptr);
@@ -162,11 +186,14 @@
     }
 
     void Mineanarchy::Instance::createIndexBuffers() {
-        size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * 6*6;
-        estimatedSize /= 2; // tentatively say that we need half that
-        indices = new unsigned int[estimatedSize];
-        indexBuffer = new Buffer(device, sizeof(indices[0]) * estimatedSize);
-        indexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, indices, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        //size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * 6*6;
+        //estimatedSize /= 2; // tentatively say that we need half that
+        //indices = new unsigned int[estimatedSize];
+        //unsigned int* testBuffer = new unsigned int[estimatedSize];
+        //indices.reserve(estimatedSize);
+        indices.reserve(iboManager->GetRecBufferCapacity());
+        indexBuffer = new Buffer(device, sizeof(unsigned int) * iboManager->GetRecBufferCapacity());
+        indexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, indices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //indexBuffer->updateBuffer(indices);
          /*UtilityFunctions::addDeletor([this]() {
             vkDestroyBuffer(device, indexBuffer, nullptr);
@@ -176,24 +203,52 @@
 
     void Mineanarchy::Instance::mainLoop() {
         while (!glfwWindowShouldClose(window)) {
+            auto start = std::chrono::high_resolution_clock::now();
             glfwPollEvents();
             camera->updateViewMat(glm::vec3(0, -1, 0));
             //camera->printTransformations();
             mvpData = new char[sizeof(Camera::mvpMat)];
             camera->copyMvpTo(mvpData);
             
+            auto frameDrawStart = std::chrono::high_resolution_clock::now();
             drawFrame();
+            auto frameDrawEnd = std::chrono::high_resolution_clock::now();
             if(!((unsigned int)camera->getPosition().x/visibleChunkGrid->getChunkSize() == previousCameraX &&
             (unsigned int)camera->getPosition().y/visibleChunkGrid->getChunkSize() == previousCameraY &&
             (unsigned int)camera->getPosition().z/visibleChunkGrid->getChunkSize() == previousCameraZ)) {
                 std::cout << "loading again pos: (" << camera->getPosition().x << ", " << camera->getPosition().y << ", " << camera->getPosition().z << ")" << std::endl;
+                auto gridUpdateStart = std::chrono::high_resolution_clock::now();
                 visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/visibleChunkGrid->getChunkSize(), camera->getPosition().y/visibleChunkGrid->getChunkSize(), camera->getPosition().z/visibleChunkGrid->getChunkSize());
+                auto gridUpdateEnd = std::chrono::high_resolution_clock::now();
+
+                unsigned int previousSize = iboManager->GetRecBufferCapacity();
+                unsigned int vboPreviousSize = vboManager->GetRecBufferCapacity();
+                auto meshStart = std::chrono::high_resolution_clock::now();
                 mesher->Mesh();
-                vertexBuffer->updateBuffer(vertices);
-                indexBuffer->updateBuffer(indices);
+                auto meshEnd = std::chrono::high_resolution_clock::now();
+                auto bufferResizeStart = std::chrono::high_resolution_clock::now();
+                if(previousSize != iboManager->GetRecBufferCapacity())
+                indexBuffer->resizeBuffer(VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, iboManager->GetRecBufferCapacity()*sizeof(unsigned int));
+            
+                if(vboPreviousSize != vboManager->GetRecBufferCapacity())
+                vertexBuffer->resizeBuffer(VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, vboManager->GetRecBufferCapacity()*sizeof(vertices[0]));
+                auto bufferResizeEnd = std::chrono::high_resolution_clock::now();
+                
+                vertexBuffer->updateBuffer(vertices.data());
+                indexBuffer->updateBuffer(indices.data());
                 previousCameraX = camera->getPosition().x/visibleChunkGrid->getChunkSize();
                 previousCameraY = camera->getPosition().y/visibleChunkGrid->getChunkSize();
                 previousCameraZ = camera->getPosition().z/visibleChunkGrid->getChunkSize();
+                auto end = std::chrono::high_resolution_clock::now();
+
+                // Calculate durations
+                auto bufferResizeDuration = std::chrono::duration_cast<std::chrono::microseconds>(bufferResizeEnd - bufferResizeStart).count();
+                auto frameDrawDuration = std::chrono::duration_cast<std::chrono::microseconds>(frameDrawEnd - frameDrawStart).count();
+                auto gridUpdateDuration = std::chrono::duration_cast<std::chrono::microseconds>(gridUpdateEnd - gridUpdateStart).count();
+                auto meshDuration = std::chrono::duration_cast<std::chrono::microseconds>(meshEnd - meshStart).count();
+                auto totalDuration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+
+                std::cout << "Buffer resize time: " << bufferResizeDuration << "µs, Frame draw time: " <<  frameDrawDuration << "µs, Grid update time: " << gridUpdateDuration << "µs, Meshing time: " << meshDuration << "µs, Total time: " << totalDuration << "µs" << std::endl;
             }
         }
 
@@ -204,6 +259,9 @@
         //vkDestroySwapchainKHR(device, swapChain, nullptr);
         //Deletion queue
         UtilityFunctions::runDeletors();
+
+        //indexBuffer->destroy();
+        //vertexBuffer->destroy();
 
         logDevice->destroy();
 
@@ -262,14 +320,9 @@
 
     void Mineanarchy::Instance::createCamera() {
         //camera = new Camera(chunkSize*100, 81, chunkSize*100); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
-        camera = new Camera(10, 81, 10); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
-        camera->updateModelMat(glm::vec3(0, 0, 0), glm::vec3(1, 1, 1), glm::vec3(0, 1, 0), 0);
-        camera->updateViewMat(glm::vec3(0, -1, 0));
-        camera->updateProjectionMat(45.0f, swapChainExtent.width / (float) swapChainExtent.height, 0.1f, 100.0f);
-        camera->printTransformations();
-        mvpData = new char[sizeof(Camera::mvpMat)];
-        camera->copyMvpTo(mvpData);
-        updateUniformBuffers();
+        camera = new Camera(10, SEA_LEVEL, 10); // If the camera is too high up no vertices will be generated and hence an empty vertices vector will cause a segfault
+        
+        //updateUniformBuffers();
     }
 
     Mineanarchy::Instance::SwapChainSupportDetails Mineanarchy::Instance::querySwapChainSupport(VkPhysicalDevice device) {
@@ -518,15 +571,15 @@
             graphicsPipeline->pipelineLayout,
             0,
             1,
-            &vkDescriptorSets[0],
+            &vkDescriptorSets[currentFrame],
             0,
             nullptr);
 
-            VkBuffer vertexBuffers[] = {vertexBuffer->buffer};
+            VkBuffer vertexBuffers[] = {vertexBuffer->newBuffer};
             VkDeviceSize offsets[] = {0};
             vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
 
-            vkCmdBindIndexBuffer(commandBuffer, indexBuffer->buffer, 0, VK_INDEX_TYPE_UINT32);
+            vkCmdBindIndexBuffer(commandBuffer, indexBuffer->newBuffer, 0, VK_INDEX_TYPE_UINT32);
 
             GraphicsPipeline::PushConstantData pushConstantData;
             pushConstantData.useBoneTransformation = loadModels; // Set to 1 or 0 based on your condition
@@ -536,8 +589,11 @@
                             0, // Offset (should match your push constant definition)
                             sizeof(GraphicsPipeline::PushConstantData), 
                             &pushConstantData);
-
-            vkCmdDrawIndexed(commandBuffer, mesher->getIndexCount(), 1, 0, 0, 0);
+            const std::vector<Mesher::ChunkInfo>& chunksToRender = mesher->GetChunksToRender();
+            for(size_t i = 0; i < chunksToRender.size(); i++) {
+                vkCmdDrawIndexed(commandBuffer, chunksToRender[i].iboEndIndex - chunksToRender[i].iboStartIndex, 1, chunksToRender[i].iboStartIndex, 0, 0);
+            }
+            //vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
 
@@ -548,13 +604,13 @@
 
 void Mineanarchy::Instance::drawFrame() {
     static auto start = std::chrono::steady_clock::now();
-    vkWaitForFences(device, 1, &inFlightFence, VK_TRUE, UINT64_MAX);
-    vkResetFences(device, 1, &inFlightFence);
+    vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
+    vkResetFences(device, 1, &inFlightFences[currentFrame]);
 
     uint32_t imageIndex;
-    vkAcquireNextImageKHR(device, vkSwapChain, UINT64_MAX, imageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex);
+    vkAcquireNextImageKHR(device, vkSwapChain, UINT64_MAX, imageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &imageIndex);
 
-    vkResetCommandBuffer(vkCommandBuffer, /*VkCommandBufferResetFlagBits*/ 0);
+    vkResetCommandBuffer(vkCommandBuffers[currentFrame], /*VkCommandBufferResetFlagBits*/ 0);
     // Record the end time
     auto end = std::chrono::steady_clock::now();
     
@@ -567,25 +623,25 @@ void Mineanarchy::Instance::drawFrame() {
         vertexBuffer->updateBuffer(vertices);
         indexBuffer->updateBuffer(indices);
     }*/
-    recordCommandBuffer(vkCommandBuffer, imageIndex);
+    recordCommandBuffer(vkCommandBuffers[currentFrame], imageIndex);
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-    VkSemaphore waitSemaphores[] = {imageAvailableSemaphore};
+    VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
     VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
     submitInfo.waitSemaphoreCount = 1;
     submitInfo.pWaitSemaphores = waitSemaphores;
     submitInfo.pWaitDstStageMask = waitStages;
 
     submitInfo.commandBufferCount = 1;
-    submitInfo.pCommandBuffers = &vkCommandBuffer;
+    submitInfo.pCommandBuffers = &vkCommandBuffers[currentFrame];
 
-    VkSemaphore signalSemaphores[] = {renderFinishedSemaphore};
+    VkSemaphore signalSemaphores[] = {renderFinishedSemaphores[currentFrame]};
     submitInfo.signalSemaphoreCount = 1;
     submitInfo.pSignalSemaphores = signalSemaphores;
 
-    if (vkQueueSubmit(graphicsQueue, 1, &submitInfo, inFlightFence) != VK_SUCCESS) {
+    if (vkQueueSubmit(graphicsQueue, 1, &submitInfo, inFlightFences[currentFrame]) != VK_SUCCESS) {
         throw std::runtime_error("failed to submit draw command buffer!");
     }
 
@@ -602,11 +658,36 @@ void Mineanarchy::Instance::drawFrame() {
     presentInfo.pImageIndices = &imageIndex;
 
     vkQueuePresentKHR(presentQueue, &presentInfo);
+    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
     start = std::chrono::steady_clock::now();
 }
 
 void Mineanarchy::Instance::createSyncObjects() {
+    imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    inFlightFences.resize(MAX_FRAMES_IN_FLIGHT);
+
     VkSemaphoreCreateInfo semaphoreInfo{};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+
+    VkFenceCreateInfo fenceInfo{};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+    fenceInfo.flags = VK_FENCE_CREATE_SIGNALED_BIT;
+
+    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        if (vkCreateSemaphore(device, &semaphoreInfo, nullptr, &imageAvailableSemaphores[i]) != VK_SUCCESS ||
+            vkCreateSemaphore(device, &semaphoreInfo, nullptr, &renderFinishedSemaphores[i]) != VK_SUCCESS ||
+            vkCreateFence(device, &fenceInfo, nullptr, &inFlightFences[i]) != VK_SUCCESS) {
+            throw std::runtime_error("failed to create synchronization objects for a frame!");
+        }
+        UtilityFunctions::addDeletor([=]() {
+            vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+            vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr); // problem here
+            vkDestroyFence(device, inFlightFences[i], nullptr);
+        });
+    }
+    
+    /*VkSemaphoreCreateInfo semaphoreInfo{};
     semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
 
     VkFenceCreateInfo fenceInfo{};
@@ -623,45 +704,53 @@ void Mineanarchy::Instance::createSyncObjects() {
         vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
         vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);
         vkDestroyFence(device, inFlightFence, nullptr);
-    });
+    });*/
 }
 
 void Mineanarchy::Instance::createUniformBuffers() {
-    uniformBuffers.push_back(new UniformBuffer(*descriptorSets[0], sizeof(mvpMat)));
-    uniformBuffers[0]->createUniformBuffer(physicalDevice);
+    uniformBuffers.reserve(MAX_FRAMES_IN_FLIGHT);
 
-    if(boneTransforms.size() == 0) {
-        uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], 1));
-    } else {
-        //uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], boneTransforms.size()));    
-        uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], sizeof(glm::mat4)*boneTransforms.size()));    
+    for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        uniformBuffers.push_back(new UniformBuffer(*descriptorSets[i+0], sizeof(mvpMat)));
+        uniformBuffers[i]->createUniformBuffer(physicalDevice);        
     }
-    
-    uniformBuffers[1]->createUniformBuffer(physicalDevice);
+
+    /*for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        if(boneTransforms.size() == 0) {
+            uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], 1));
+        } else {
+            //uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], boneTransforms.size()));    
+            uniformBuffers.push_back(new UniformBuffer(*descriptorSets[1], sizeof(glm::mat4)*boneTransforms.size()));    
+        }
+        
+        uniformBuffers[i+MAX_FRAMES_IN_FLIGHT]->createUniformBuffer(physicalDevice);
+    }*/
 }
 
 void Mineanarchy::Instance::updateUniformBuffers() {
-    VkWriteDescriptorSet descriptorWrite = {};
-    descriptorWrite.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-    descriptorWrite.dstSet = vkDescriptorSets[0]; // Descriptor set to update
-    descriptorWrite.dstBinding = 0; // Binding number in the descriptor set layout
-    descriptorWrite.dstArrayElement = 0; // Starting element in the array (if an array)
-    descriptorWrite.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
-    descriptorWrite.descriptorCount = 1; // Number of descriptors to update
-    descriptorWrite.pBufferInfo = nullptr; // Buffer information to update with
-    uniformBuffers[0]->updateUniformBuffer(mvpData, descriptorWrite);
-
-    if(loadModels) {
+    //for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        VkWriteDescriptorSet descriptorWrite = {};
+        descriptorWrite.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        descriptorWrite.dstSet = vkDescriptorSets[currentFrame]; // Descriptor set to update
+        descriptorWrite.dstBinding = 0; // Binding number in the descriptor set layout
+        descriptorWrite.dstArrayElement = 0; // Starting element in the array (if an array)
+        descriptorWrite.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
+        descriptorWrite.descriptorCount = 1; // Number of descriptors to update
+        descriptorWrite.pBufferInfo = nullptr; // Buffer information to update with
+        uniformBuffers[currentFrame]->updateUniformBuffer(mvpData, descriptorWrite);
+    //}
+    /*if(loadModels)
+    for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         VkWriteDescriptorSet descriptorWrite2 = {};
         descriptorWrite2.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-        descriptorWrite2.dstSet = vkDescriptorSets[1]; // Descriptor set to update
+        descriptorWrite2.dstSet = vkDescriptorSets[i+MAX_FRAMES_IN_FLIGHT]; // Descriptor set to update
         descriptorWrite2.dstBinding = 0; // Binding number in the descriptor set layout
         descriptorWrite2.dstArrayElement = 0; // Starting element in the array (if an array)
         descriptorWrite2.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER; // Type of descriptor
         descriptorWrite2.descriptorCount = 1; // Number of descriptors to update
         descriptorWrite2.pBufferInfo = nullptr; // Buffer information to update with
-        uniformBuffers[1]->updateUniformBuffer(boneTransforms.data(), descriptorWrite2);
-    }
+        uniformBuffers[i+MAX_FRAMES_IN_FLIGHT]->updateUniformBuffer(boneTransforms.data(), descriptorWrite2);
+    }*/
 }
 
 void Mineanarchy::Instance::createDescriptorSetLayouts() {
@@ -679,36 +768,25 @@ void Mineanarchy::Instance::createDescriptorSetLayouts() {
     layoutInfo.bindingCount = 1;
     layoutInfo.pBindings = &binding;
 
-    VkDescriptorSetLayoutBinding binding2 = {};
-    binding2.binding = 0;
-    binding2.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    binding2.descriptorCount = 1;
-    binding2.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
-    binding2.pImmutableSamplers = nullptr;
-    
-    // Create descriptor set layout
-    VkDescriptorSetLayoutCreateInfo layoutInfo2 = {};
-    layoutInfo2.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
-    layoutInfo2.bindingCount = 1;
-    layoutInfo2.pBindings = &binding2;
+    descriptorSetLayouts.reserve(1);
 
-    descriptorSetLayouts.resize(2);
-
-    descriptorSetLayouts[0] = new DescriptorSetLayout(device, binding, layoutInfo);
+    descriptorSetLayouts.push_back(new DescriptorSetLayout(device, binding, layoutInfo));
     descriptorSetLayouts[0]->createDescriptorSetLayout();
-
-    descriptorSetLayouts[1] = new DescriptorSetLayout(device, binding2, layoutInfo2);
-    descriptorSetLayouts[1]->createDescriptorSetLayout();
 }
 
 void Mineanarchy::Instance::createDescriptorSets() {
-    descriptorSets.resize(2);
+    descriptorSets.reserve(MAX_FRAMES_IN_FLIGHT);
 
-    descriptorSets[0] = new DescriptorSet(descriptorSetLayouts[0]);
-    descriptorSets[0]->createDescriptorSet();
-
-    descriptorSets[1] = new DescriptorSet(descriptorSetLayouts[1]);
-    descriptorSets[1]->createDescriptorSet();
+    for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        descriptorSets.push_back(new DescriptorSet(descriptorSetLayouts[0]));
+        descriptorSets[i+0]->createDescriptorSet();
+    }
+    
+    /*if(loadModels)
+    for(unsigned int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        descriptorSets.push_back(new DescriptorSet(descriptorSetLayouts[1]));
+        descriptorSets[i+MAX_FRAMES_IN_FLIGHT]->createDescriptorSet();
+    }*/
 }
 
 uint32_t Mineanarchy::Instance::findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties) {

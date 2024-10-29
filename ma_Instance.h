@@ -9,6 +9,7 @@
 #include <ma_Vertex.h>
 #include <ma_VoxelVertex.h>
 #include <ma_OzzModel.h>
+#include <ma_IndexBufferManager.h>
 
 namespace Mineanarchy {
     class SwapChain;
@@ -97,6 +98,9 @@ namespace Mineanarchy {
 
         private:
         const unsigned int chunkSize = 16;
+        const unsigned int SEA_LEVEL = 30;
+        const unsigned int gridHalfSideLength = 3;
+        unsigned int currentFrame = 0;
         const int MAX_FRAMES_IN_FLIGHT = 2;
         QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
         GLFWwindow* window;
@@ -121,7 +125,7 @@ namespace Mineanarchy {
         LogicalDevice* logDevice;
         GraphicsPipeline* graphicsPipeline;
         RenderPass* renderPass;
-        CommandBuffer* commandBuffer;
+        CommandBuffer* commandBuffers;
         CommandPool* commandPool;
         std::vector<UniformBuffer*> uniformBuffers;
         ma_OzzModel model;
@@ -134,11 +138,13 @@ namespace Mineanarchy {
 
         std::vector<ma_Vertex> animVertices;
         std::vector<unsigned int> animIndices;
-        VoxelVertex* vertices;
-        unsigned int* indices;
+        std::vector<VoxelVertex> vertices;
+        std::vector<unsigned int> indices;
+        IndexBufferManager* iboManager;
+        IndexBufferManager* vboManager;
         VkDevice device;
         VkRenderPass vkRenderPass;
-        VkCommandBuffer vkCommandBuffer;
+        std::vector<VkCommandBuffer> vkCommandBuffers;
         VkCommandPool vkCommandPool;
         VkSwapchainKHR vkSwapChain;
         Buffer* vertexBuffer;
@@ -152,9 +158,9 @@ namespace Mineanarchy {
         VkQueue presentQueue;
         VkQueue graphicsQueue;
 
-        VkSemaphore imageAvailableSemaphore;
-        VkSemaphore renderFinishedSemaphore;
-        VkFence inFlightFence;
+        std::vector<VkSemaphore> imageAvailableSemaphores;
+        std::vector<VkSemaphore> renderFinishedSemaphores;
+        std::vector<VkFence> inFlightFences;
 
         Instance& operator=(const Instance&) = delete;
         Instance(const Instance&) = delete;

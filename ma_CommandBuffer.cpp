@@ -5,6 +5,10 @@ Mineanarchy::CommandBuffer::CommandBuffer(CommandPool* pool) : commandPool(pool)
 
 }
 
+Mineanarchy::CommandBuffer::CommandBuffer() {
+    
+}
+
 void Mineanarchy::CommandBuffer::createCommandBuffer() {
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;

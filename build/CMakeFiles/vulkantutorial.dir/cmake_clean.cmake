@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o.d"
   "CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o"
   "CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o.d"
+  "CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o"
+  "CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o.d"
   "CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o"
   "CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o.d"
   "CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o"

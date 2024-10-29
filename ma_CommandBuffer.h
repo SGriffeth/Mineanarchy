@@ -12,6 +12,7 @@ namespace Mineanarchy {
         VkCommandBuffer commandBuffer;
         CommandPool* commandPool;
         public:
+        CommandBuffer();
         CommandBuffer(CommandPool* pool);
         void createCommandBuffer();
 

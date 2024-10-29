@@ -15,18 +15,22 @@ void Mineanarchy::Buffer::createBuffer(VkQueue graphicsQueue, VkCommandPool vkCo
 
     void* data;
     vkMapMemory(device, stagingBufferMemory, 0, bufferSize, 0, &data);
-        memcpy(data, vertices, (size_t) bufferSize);
+        memcpy(data, vertices, (size_t) bufferSize); // bufferSize is greater than vertices size causing segfault
     vkUnmapMemory(device, stagingBufferMemory);
 
-    createBuffer(physicalDevice, bufferSize, usage, properties, buffer, bufferMemory);
+    createBuffer(physicalDevice, bufferSize, usage, properties, newBuffer, newBufferMemory);
 
-    copyBuffer(graphicsQueue, vkCommandPool, stagingBuffer, buffer, bufferSize);
+    copyBuffer(stagingBuffer, newBuffer, bufferSize);
     vkDestroyBuffer(device, stagingBuffer, nullptr);
     vkFreeMemory(device, stagingBufferMemory, nullptr);
-     UtilityFunctions::addDeletor([this]() {
-            vkDestroyBuffer(device, buffer, nullptr);
-            vkFreeMemory(device, bufferMemory, nullptr);
-        });
+     UtilityFunctions::addDeletor([&]() { // newBuffer eventually destroyed by resizeBuffer so this causes segfault after termination
+        if(!firstResize) {
+            vkFreeMemory(device, oldBufferMemory, nullptr);
+            vkDestroyBuffer(device, oldBuffer, nullptr);
+        }
+        vkFreeMemory(device, newBufferMemory, nullptr);
+        vkDestroyBuffer(device, newBuffer, nullptr);
+    });
 }
 
 void Mineanarchy::Buffer::createBuffer(VkPhysicalDevice physicalDevice, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory) {
@@ -55,11 +59,17 @@ void Mineanarchy::Buffer::createBuffer(VkPhysicalDevice physicalDevice, VkDevice
     vkBindBufferMemory(device, buffer, bufferMemory, 0);
 }
 
-void Mineanarchy::Buffer::copyBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkBuffer& srcBuffer, VkBuffer& dstBuffer, VkDeviceSize size) {
+void Mineanarchy::Buffer::copyBuffer(VkBuffer& srcBuffer, VkBuffer& dstBuffer, VkDeviceSize size) {
+    VkFence fence;
+    VkFenceCreateInfo fenceInfo = {};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+    fenceInfo.flags = 0;
+    vkCreateFence(device, &fenceInfo, nullptr, &fence);
+
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
-    allocInfo.commandPool = vkCommandPool;
+    allocInfo.commandPool = commandPool;
     allocInfo.commandBufferCount = 1;
 
     VkCommandBuffer command;
@@ -82,10 +92,14 @@ void Mineanarchy::Buffer::copyBuffer(VkQueue graphicsQueue, VkCommandPool vkComm
     submitInfo.commandBufferCount = 1;
     submitInfo.pCommandBuffers = &command;
 
-    vkQueueSubmit(graphicsQueue, 1, &submitInfo, VK_NULL_HANDLE);
-    vkQueueWaitIdle(graphicsQueue);
+    vkQueueSubmit(graphicsQueue, 1, &submitInfo, fence);
+    // Wait for the specific command buffer to finish executing
+    vkWaitForFences(device, 1, &fence, VK_TRUE, UINT64_MAX);
 
-    vkFreeCommandBuffers(device, vkCommandPool, 1, &command);
+    vkFreeCommandBuffers(device, commandPool, 1, &command);
+    
+    // Clean up the fence
+    vkDestroyFence(device, fence, nullptr);
 }
 
 uint32_t Mineanarchy::Buffer::findMemoryType(VkPhysicalDevice physicalDevice, uint32_t typeFilter, VkMemoryPropertyFlags properties) {
@@ -111,7 +125,41 @@ void Mineanarchy::Buffer::updateBuffer(void* data2) {
         memcpy(data, data2, (size_t) bufferSize);
     vkUnmapMemory(device, stagingBufferMemory);
 
-    copyBuffer(graphicsQueue, commandPool, stagingBuffer, buffer, bufferSize);
+    copyBuffer(stagingBuffer, newBuffer, bufferSize);
     vkDestroyBuffer(device, stagingBuffer, nullptr);
     vkFreeMemory(device, stagingBufferMemory, nullptr);
 }
+
+// createBuffer(VkPhysicalDevice physicalDevice, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory)
+// Resizing index buffer
+void Mineanarchy::Buffer::resizeBuffer(VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkDeviceSize newSize) {
+    // 4. Cleanup the old buffer
+    if(!firstResize) {
+        vkDestroyBuffer(device, oldBuffer, nullptr);
+        vkFreeMemory(device, oldBufferMemory, nullptr);
+    }
+
+    oldBuffer = newBuffer;
+    oldBufferMemory = newBufferMemory;
+    
+    // 1. Create new buffer
+    createBuffer(physicalDevice, newSize, usage, properties, newBuffer, newBufferMemory); // newBuffer is used in rendering always
+
+    // 2. Copy old buffer data to new buffer
+    //VkDeviceSize oldSize = bufferSize/* size of the old buffer */;
+
+    // 3. Update your reference to the new buffer
+    // (Handle this in your application logic)
+    bufferSize = newSize;
+    firstResize = 0;
+}
+
+
+/*void Mineanarchy::Buffer::destroy() {
+    if(!firstResize) {
+        vkFreeMemory(device, oldBufferMemory, nullptr);
+        vkDestroyBuffer(device, oldBuffer, nullptr);
+    }
+    vkFreeMemory(device, newBufferMemory, nullptr);
+    vkDestroyBuffer(device, newBuffer, nullptr);
+}*/

@@ -1,8 +1,8 @@
 #version 450
 
 layout(location = 0) in vec3 inPosition;
-layout(location = 1) in uvec4 inBoneIndices; // 4 unsigned integers
-layout(location = 2) in vec4 inBoneWeights;  // 4 floats
+/*layout(location = 1) in uvec4 inBoneIndices; // 4 unsigned integers
+layout(location = 2) in vec4 inBoneWeights;  // 4 floats*/
 
 layout(location = 0) out vec3 fragColor;
 
@@ -16,9 +16,9 @@ layout(binding = 0) uniform UniformBufferObject {
     mat4 proj;
 } ubo;
 
-layout(binding = 0) uniform BoneTransforms {
+/*layout(binding = 0) uniform BoneTransforms {
     mat4 boneTransforms[300];
-} bones;
+} bones;*/
 
 /*vec2 positions[3] = vec2[](
     vec2(0.0, -0.5),
@@ -44,7 +44,7 @@ void main() {
     //gl_Position = ubo.proj * ubo.view * vec4(inPosition, 1);
     //gl_Position = ubo.proj * ubo.view * vec4(positions[gl_VertexIndex], 1.0);
     // Calculate the final position of the vertex
-    mat4 boneTransform = mat4(0.0);
+    /*mat4 boneTransform = mat4(0.0);
     
     // Apply transformations from up to 4 bones (adjust the number as needed)
     for (int i = 0; i < 4; ++i) {
@@ -52,9 +52,14 @@ void main() {
         if (boneID >= 0 && boneID < 300) {
             boneTransform += bones.boneTransforms[boneID] * inBoneWeights[i];
         }
-    }
-    if(pushConstants.useBoneTransformations == 0) {
+    }*/
+    /*if(pushConstants.useBoneTransformations == 0) {
         gl_Position = ubo.proj * ubo.view * boneTransform * vec4(inPosition, 1.0);
+    } else {
+        gl_Position = ubo.proj * ubo.view * vec4(inPosition, 1.0);
+    }*/
+    if(pushConstants.useBoneTransformations == 0) {
+        gl_Position = ubo.proj * ubo.view * vec4(inPosition, 1.0);
     } else {
         gl_Position = ubo.proj * ubo.view * vec4(inPosition, 1.0);
     }

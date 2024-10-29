@@ -328,8 +328,9 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: \
  /usr/include/glm/ext/scalar_int_sized.hpp \
  /usr/include/glm/detail/setup.hpp /usr/include/glm/ext/vector_uint3.hpp \
  /usr/include/glm/ext/vector_uint3_sized.hpp \
- /usr/include/glm/ext/scalar_uint_sized.hpp /usr/include/GLFW/glfw3.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/glm/ext/scalar_uint_sized.hpp \
+ /home/sebastiang/prototypevulkangame/Mineanarchy/ma_IndexBufferManager.h \
+ /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h /usr/include/glm/mat4x4.hpp \
  /usr/include/glm/ext/matrix_double4x4.hpp \
  /usr/include/glm/detail/type_mat4x4.hpp \

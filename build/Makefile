@@ -286,6 +286,30 @@ ma_GraphicsPipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.s
 .PHONY : ma_GraphicsPipeline.cpp.s
 
+ma_IndexBufferManager.o: ma_IndexBufferManager.cpp.o
+.PHONY : ma_IndexBufferManager.o
+
+# target to build an object file
+ma_IndexBufferManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o
+.PHONY : ma_IndexBufferManager.cpp.o
+
+ma_IndexBufferManager.i: ma_IndexBufferManager.cpp.i
+.PHONY : ma_IndexBufferManager.i
+
+# target to preprocess a source file
+ma_IndexBufferManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.i
+.PHONY : ma_IndexBufferManager.cpp.i
+
+ma_IndexBufferManager.s: ma_IndexBufferManager.cpp.s
+.PHONY : ma_IndexBufferManager.s
+
+# target to generate assembly for a file
+ma_IndexBufferManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.s
+.PHONY : ma_IndexBufferManager.cpp.s
+
 ma_Instance.o: ma_Instance.cpp.o
 .PHONY : ma_Instance.o
 
@@ -626,6 +650,9 @@ help:
 	@echo "... ma_GraphicsPipeline.o"
 	@echo "... ma_GraphicsPipeline.i"
 	@echo "... ma_GraphicsPipeline.s"
+	@echo "... ma_IndexBufferManager.o"
+	@echo "... ma_IndexBufferManager.i"
+	@echo "... ma_IndexBufferManager.s"
 	@echo "... ma_Instance.o"
 	@echo "... ma_Instance.i"
 	@echo "... ma_Instance.s"
