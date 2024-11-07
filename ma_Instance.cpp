@@ -58,6 +58,7 @@
         mesher = new Mesher(vertices, indices, 1, *visibleChunkGrid, *terrainGenerator, *vboManager, *iboManager);
         auto meshStart = std::chrono::high_resolution_clock::now();
         mesher->Mesh();
+        //mesher->AwaitChunkMeshing();
         auto meshEnd = std::chrono::high_resolution_clock::now();
         auto totalDuration = std::chrono::duration_cast<std::chrono::microseconds>(meshEnd - meshStart).count();
         std::cout << "Done w first meshing, took: " << totalDuration << std::endl;
@@ -225,6 +226,7 @@
                 unsigned int vboPreviousSize = vboManager->GetRecBufferCapacity();
                 auto meshStart = std::chrono::high_resolution_clock::now();
                 mesher->Mesh();
+                //mesher->AwaitChunkMeshing();
                 auto meshEnd = std::chrono::high_resolution_clock::now();
                 auto bufferResizeStart = std::chrono::high_resolution_clock::now();
                 if(previousSize != iboManager->GetRecBufferCapacity())
@@ -591,6 +593,7 @@
                             &pushConstantData);
             const std::vector<Mesher::ChunkInfo>& chunksToRender = mesher->GetChunksToRender();
             for(size_t i = 0; i < chunksToRender.size(); i++) {
+                if(chunksToRender[i].iboEndIndex < chunksToRender[i].iboStartIndex) throw std::runtime_error("end index is less than start index");
                 vkCmdDrawIndexed(commandBuffer, chunksToRender[i].iboEndIndex - chunksToRender[i].iboStartIndex, 1, chunksToRender[i].iboStartIndex, 0, 0);
             }
             //vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);

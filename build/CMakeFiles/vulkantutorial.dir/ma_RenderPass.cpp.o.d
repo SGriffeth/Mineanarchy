@@ -331,7 +331,149 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: \
  /usr/include/glm/ext/vector_uint3_sized.hpp \
  /usr/include/glm/ext/scalar_uint_sized.hpp \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ma_IndexBufferManager.h \
- /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/c++/14.2.1/thread /usr/include/c++/14.2.1/bits/std_thread.h \
+ /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
+ /usr/include/c++/14.2.1/mutex /usr/include/c++/14.2.1/bits/std_mutex.h \
+ /usr/include/c++/14.2.1/bits/unique_lock.h \
+ /usr/include/tbb/concurrent_hash_map.h \
+ /usr/include/oneapi/tbb/concurrent_hash_map.h \
+ /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+ /usr/include/oneapi/tbb/detail/_utils.h /usr/include/c++/14.2.1/atomic \
+ /usr/include/oneapi/tbb/detail/_config.h \
+ /usr/include/oneapi/tbb/detail/_export.h \
+ /usr/include/oneapi/tbb/detail/_assert.h \
+ /usr/include/oneapi/tbb/detail/_machine.h \
+ /usr/include/c++/14.2.1/climits \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/uio_lim.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
+ /usr/include/c++/14.2.1/stdlib.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+ /usr/include/oneapi/tbb/detail/_assert.h \
+ /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+ /usr/include/oneapi/tbb/detail/_template_helpers.h \
+ /usr/include/oneapi/tbb/detail/_utils.h \
+ /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+ /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+ /usr/include/oneapi/tbb/detail/_template_helpers.h \
+ /usr/include/oneapi/tbb/detail/_hash_compare.h \
+ /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+ /usr/include/oneapi/tbb/detail/_range_common.h \
+ /usr/include/oneapi/tbb/tbb_allocator.h \
+ /usr/include/oneapi/tbb/detail/_utils.h \
+ /usr/include/c++/14.2.1/memory_resource \
+ /usr/include/c++/14.2.1/shared_mutex \
+ /usr/include/oneapi/tbb/spin_rw_mutex.h \
+ /usr/include/oneapi/tbb/detail/_mutex_common.h \
+ /usr/include/oneapi/tbb/profiling.h \
+ /usr/include/oneapi/tbb/detail/_config.h \
+ /usr/include/oneapi/tbb/detail/_string_resource.h \
+ /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+ /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+ /usr/include/oneapi/tbb/spin_rw_mutex.h /usr/include/GLFW/glfw3.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h /usr/include/glm/mat4x4.hpp \
  /usr/include/glm/ext/matrix_double4x4.hpp \
  /usr/include/glm/detail/type_mat4x4.hpp \
@@ -453,11 +595,6 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/soa_float.h \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/simd_math.h \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/internal/simd_math_config.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
- /usr/include/c++/14.2.1/stdlib.h \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/internal/simd_math_sse-inl.h \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/soa_quaternion.h \
  /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/io/archive.h \

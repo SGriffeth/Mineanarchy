@@ -398,6 +398,7 @@ vulkantutorial: CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o
 vulkantutorial: CMakeFiles/vulkantutorial.dir/build.make
 vulkantutorial: /usr/lib/libassimp.so.5.4.1
 vulkantutorial: /lib/libvulkan.so
+vulkantutorial: /usr/lib/libtbb.so.12.13
 vulkantutorial: /usr/lib/libz.so
 vulkantutorial: /usr/lib/libglfw.so.3.4
 vulkantutorial: CMakeFiles/vulkantutorial.dir/link.txt

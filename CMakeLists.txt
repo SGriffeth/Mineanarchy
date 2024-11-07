@@ -25,6 +25,8 @@ find_package(glfw3 REQUIRED)
 find_package(nlohmann_json REQUIRED)
 find_package(glm REQUIRED)
 find_package(assimp REQUIRED)
+# Find TBB package
+find_package(TBB REQUIRED)
 
 option(ozz_build_samples "Build the samples" OFF)
 
@@ -49,6 +51,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${ASSIMP_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} PRIVATE ${Vulkan_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} PRIVATE ${GLM_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw)
+# Link TBB libraries to your executable
+target_link_libraries(${PROJECT_NAME} PRIVATE TBB::tbb)
 
 # Link OZZ-Animation libraries to your executable
 target_link_libraries(${PROJECT_NAME} PRIVATE sample_framework)

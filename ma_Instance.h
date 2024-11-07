@@ -99,7 +99,7 @@ namespace Mineanarchy {
         private:
         const unsigned int chunkSize = 16;
         const unsigned int SEA_LEVEL = 30;
-        const unsigned int gridHalfSideLength = 3;
+        const unsigned int gridHalfSideLength = 2;
         unsigned int currentFrame = 0;
         const int MAX_FRAMES_IN_FLIGHT = 2;
         QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);

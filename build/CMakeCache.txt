@@ -233,6 +233,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
+//The directory containing a CMake configuration file for TBB.
+TBB_DIR:PATH=/usr/lib/cmake/TBB
+
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=/bin/glslangValidator
 

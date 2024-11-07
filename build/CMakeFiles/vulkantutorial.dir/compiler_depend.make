@@ -466,12 +466,15 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -517,14 +520,17 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -604,6 +610,8 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -630,7 +638,9 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -645,6 +655,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -683,6 +694,8 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -693,6 +706,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -701,6 +715,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -867,7 +882,9 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -915,6 +932,25 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -927,6 +963,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -942,13 +979,111 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -1021,12 +1156,15 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -1072,14 +1210,17 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -1159,6 +1300,8 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -1185,7 +1328,9 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -1200,6 +1345,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -1238,6 +1384,8 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -1248,6 +1396,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -1256,6 +1405,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -1422,7 +1572,9 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -1470,6 +1622,25 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -1482,6 +1653,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -1497,13 +1669,111 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -1577,12 +1847,15 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -1628,14 +1901,17 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -1715,6 +1991,8 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -1741,7 +2019,9 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -1756,6 +2036,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -1794,6 +2075,8 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -1804,6 +2087,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -1812,6 +2096,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -1978,7 +2263,9 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -2026,6 +2313,25 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -2038,6 +2344,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -2053,13 +2360,111 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSetLayout.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -2133,12 +2538,15 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -2184,14 +2592,17 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -2271,6 +2682,8 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -2297,7 +2710,9 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -2312,6 +2727,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -2350,6 +2766,8 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -2360,6 +2778,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -2368,6 +2787,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -2534,7 +2954,9 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -2582,6 +3004,25 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -2594,6 +3035,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -2609,13 +3051,111 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -2687,12 +3227,15 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -2738,14 +3281,17 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -2825,6 +3371,8 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -2851,7 +3399,9 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -2866,6 +3416,7 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -2904,6 +3455,8 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -2914,6 +3467,7 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -2922,6 +3476,7 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -3088,7 +3643,9 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -3136,6 +3693,25 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -3148,6 +3724,7 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -3163,13 +3740,111 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_IndexBufferManager.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/ma_IndexBufferManager.h \
@@ -3403,6 +4078,7 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -3482,6 +4158,8 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -3510,7 +4188,9 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -3567,6 +4247,8 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -3578,6 +4260,7 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
   /usr/include/c++/14.2.1/set \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -3586,6 +4269,7 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -3824,6 +4508,25 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -3836,6 +4539,7 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -3851,16 +4555,112 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -3932,12 +4732,15 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -3983,14 +4786,17 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -4070,6 +4876,8 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -4098,7 +4906,9 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -4113,6 +4923,7 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -4151,6 +4962,8 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -4162,6 +4975,7 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
   /usr/include/c++/14.2.1/set \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -4170,6 +4984,7 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -4336,7 +5151,9 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -4384,6 +5201,25 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -4396,6 +5232,7 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -4411,13 +5248,111 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Mesher.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -4445,12 +5380,15 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -4496,16 +5434,26 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
+  /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
+  /usr/include/c++/14.2.1/bits/algorithmfwd.h \
+  /usr/include/c++/14.2.1/bits/align.h \
   /usr/include/c++/14.2.1/bits/alloc_traits.h \
+  /usr/include/c++/14.2.1/bits/allocated_ptr.h \
   /usr/include/c++/14.2.1/bits/allocator.h \
+  /usr/include/c++/14.2.1/bits/atomic_base.h \
+  /usr/include/c++/14.2.1/bits/atomic_lockfree_defines.h \
   /usr/include/c++/14.2.1/bits/basic_ios.h \
   /usr/include/c++/14.2.1/bits/basic_ios.tcc \
   /usr/include/c++/14.2.1/bits/basic_string.h \
@@ -4517,6 +5465,7 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/14.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/14.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14.2.1/bits/deque.tcc \
   /usr/include/c++/14.2.1/bits/enable_special_members.h \
   /usr/include/c++/14.2.1/bits/erase_if.h \
   /usr/include/c++/14.2.1/bits/exception.h \
@@ -4530,6 +5479,7 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/bits/invoke.h \
   /usr/include/c++/14.2.1/bits/ios_base.h \
   /usr/include/c++/14.2.1/bits/istream.tcc \
+  /usr/include/c++/14.2.1/bits/list.tcc \
   /usr/include/c++/14.2.1/bits/locale_classes.h \
   /usr/include/c++/14.2.1/bits/locale_classes.tcc \
   /usr/include/c++/14.2.1/bits/locale_facets.h \
@@ -4547,25 +5497,47 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/bits/postypes.h \
   /usr/include/c++/14.2.1/bits/predefined_ops.h \
   /usr/include/c++/14.2.1/bits/ptr_traits.h \
+  /usr/include/c++/14.2.1/bits/random.h \
+  /usr/include/c++/14.2.1/bits/random.tcc \
   /usr/include/c++/14.2.1/bits/range_access.h \
   /usr/include/c++/14.2.1/bits/refwrap.h \
   /usr/include/c++/14.2.1/bits/requires_hosted.h \
+  /usr/include/c++/14.2.1/bits/shared_ptr.h \
+  /usr/include/c++/14.2.1/bits/shared_ptr_atomic.h \
+  /usr/include/c++/14.2.1/bits/shared_ptr_base.h \
   /usr/include/c++/14.2.1/bits/specfun.h \
   /usr/include/c++/14.2.1/bits/std_abs.h \
+  /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
+  /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
   /usr/include/c++/14.2.1/bits/stl_construct.h \
+  /usr/include/c++/14.2.1/bits/stl_deque.h \
   /usr/include/c++/14.2.1/bits/stl_function.h \
+  /usr/include/c++/14.2.1/bits/stl_heap.h \
   /usr/include/c++/14.2.1/bits/stl_iterator.h \
   /usr/include/c++/14.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14.2.1/bits/stl_list.h \
+  /usr/include/c++/14.2.1/bits/stl_numeric.h \
   /usr/include/c++/14.2.1/bits/stl_pair.h \
+  /usr/include/c++/14.2.1/bits/stl_queue.h \
+  /usr/include/c++/14.2.1/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14.2.1/bits/stl_relops.h \
+  /usr/include/c++/14.2.1/bits/stl_tempbuf.h \
   /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/14.2.1/bits/stl_vector.h \
+  /usr/include/c++/14.2.1/bits/stream_iterator.h \
   /usr/include/c++/14.2.1/bits/streambuf.tcc \
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
+  /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
+  /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
   /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
@@ -4576,6 +5548,7 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
   /usr/include/c++/14.2.1/chrono \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/compare \
@@ -4590,28 +5563,46 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/cwctype \
   /usr/include/c++/14.2.1/debug/assertions.h \
   /usr/include/c++/14.2.1/debug/debug.h \
+  /usr/include/c++/14.2.1/deque \
   /usr/include/c++/14.2.1/exception \
   /usr/include/c++/14.2.1/ext/aligned_buffer.h \
   /usr/include/c++/14.2.1/ext/alloc_traits.h \
   /usr/include/c++/14.2.1/ext/atomicity.h \
+  /usr/include/c++/14.2.1/ext/concurrence.h \
   /usr/include/c++/14.2.1/ext/numeric_traits.h \
   /usr/include/c++/14.2.1/ext/string_conversions.h \
   /usr/include/c++/14.2.1/ext/type_traits.h \
+  /usr/include/c++/14.2.1/functional \
   /usr/include/c++/14.2.1/initializer_list \
   /usr/include/c++/14.2.1/ios \
   /usr/include/c++/14.2.1/iosfwd \
   /usr/include/c++/14.2.1/iostream \
   /usr/include/c++/14.2.1/istream \
+  /usr/include/c++/14.2.1/iterator \
   /usr/include/c++/14.2.1/limits \
+  /usr/include/c++/14.2.1/list \
+  /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
+  /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/ostream \
+  /usr/include/c++/14.2.1/pstl/execution_defs.h \
+  /usr/include/c++/14.2.1/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/14.2.1/pstl/glue_memory_defs.h \
+  /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
+  /usr/include/c++/14.2.1/queue \
+  /usr/include/c++/14.2.1/random \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/stdexcept \
+  /usr/include/c++/14.2.1/stdlib.h \
   /usr/include/c++/14.2.1/streambuf \
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -4628,7 +5619,9 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/type_traits \
   /usr/include/c++/14.2.1/typeinfo \
   /usr/include/c++/14.2.1/unordered_map \
+  /usr/include/c++/14.2.1/utility \
   /usr/include/c++/14.2.1/vector \
+  /usr/include/c++/14.2.1/version \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -4639,6 +5632,7 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -4666,9 +5660,99 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/glm/vec3.hpp \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/oneapi/tbb.h \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/blocked_range2d.h \
+  /usr/include/oneapi/tbb/blocked_range3d.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
+  /usr/include/oneapi/tbb/collaborative_call_once.h \
+  /usr/include/oneapi/tbb/combinable.h \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_map.h \
+  /usr/include/oneapi/tbb/concurrent_priority_queue.h \
+  /usr/include/oneapi/tbb/concurrent_queue.h \
+  /usr/include/oneapi/tbb/concurrent_set.h \
+  /usr/include/oneapi/tbb/concurrent_unordered_map.h \
+  /usr/include/oneapi/tbb/concurrent_unordered_set.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
+  /usr/include/oneapi/tbb/detail/_aggregator.h \
+  /usr/include/oneapi/tbb/detail/_aligned_space.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_attach.h \
+  /usr/include/oneapi/tbb/detail/_concurrent_queue_base.h \
+  /usr/include/oneapi/tbb/detail/_concurrent_skip_list.h \
+  /usr/include/oneapi/tbb/detail/_concurrent_unordered_base.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_body_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_cache_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_indexer_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_item_buffer_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_join_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_node_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_node_set_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_nodes_deduction.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_tagged_buffer_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_trace_impl.h \
+  /usr/include/oneapi/tbb/detail/_flow_graph_types_impl.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_intrusive_list_node.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_node_handle.h \
+  /usr/include/oneapi/tbb/detail/_pipeline_filters.h \
+  /usr/include/oneapi/tbb/detail/_pipeline_filters_deduction.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_mutex.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
+  /usr/include/oneapi/tbb/detail/_small_object_pool.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_task.h \
+  /usr/include/oneapi/tbb/detail/_task_handle.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/detail/_waitable_atomic.h \
+  /usr/include/oneapi/tbb/enumerable_thread_specific.h \
+  /usr/include/oneapi/tbb/flow_graph.h \
+  /usr/include/oneapi/tbb/flow_graph_abstractions.h \
+  /usr/include/oneapi/tbb/global_control.h \
+  /usr/include/oneapi/tbb/info.h \
+  /usr/include/oneapi/tbb/mutex.h \
+  /usr/include/oneapi/tbb/null_mutex.h \
+  /usr/include/oneapi/tbb/null_rw_mutex.h \
+  /usr/include/oneapi/tbb/parallel_for.h \
+  /usr/include/oneapi/tbb/parallel_for_each.h \
+  /usr/include/oneapi/tbb/parallel_invoke.h \
+  /usr/include/oneapi/tbb/parallel_pipeline.h \
+  /usr/include/oneapi/tbb/parallel_reduce.h \
+  /usr/include/oneapi/tbb/parallel_scan.h \
+  /usr/include/oneapi/tbb/parallel_sort.h \
+  /usr/include/oneapi/tbb/partitioner.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/queuing_mutex.h \
+  /usr/include/oneapi/tbb/queuing_rw_mutex.h \
+  /usr/include/oneapi/tbb/rw_mutex.h \
+  /usr/include/oneapi/tbb/spin_mutex.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/task.h \
+  /usr/include/oneapi/tbb/task_arena.h \
+  /usr/include/oneapi/tbb/task_group.h \
+  /usr/include/oneapi/tbb/task_scheduler_observer.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/tick_count.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -4681,6 +5765,9 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/parallel_for.h \
+  /usr/include/tbb/tbb.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -4696,9 +5783,111 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.h \
@@ -5402,12 +6591,15 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -5453,14 +6645,17 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -5540,6 +6735,8 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -5566,7 +6763,9 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -5581,6 +6780,7 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -5619,6 +6819,8 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -5629,6 +6831,7 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -5637,6 +6840,7 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -5803,7 +7007,9 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -5851,6 +7057,25 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -5863,6 +7088,7 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -5878,13 +7104,111 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_SwapChain.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -5956,12 +7280,15 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -6007,14 +7334,17 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -6094,6 +7424,8 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -6120,7 +7452,9 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -6135,6 +7469,7 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -6173,6 +7508,8 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -6183,6 +7520,7 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -6191,6 +7529,7 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -6357,7 +7696,9 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -6405,6 +7746,25 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -6417,6 +7777,7 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -6432,13 +7793,111 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_TerrainGenerator.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/FastNoiseLite.h \
@@ -6736,12 +8195,15 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -6787,14 +8249,17 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -6874,6 +8339,8 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -6900,7 +8367,9 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -6915,6 +8384,7 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -6953,6 +8423,8 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -6963,6 +8435,7 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -6971,6 +8444,7 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -7137,7 +8611,9 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -7185,6 +8661,25 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -7197,6 +8692,7 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -7212,13 +8708,111 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.h \
@@ -8175,12 +9769,15 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -8226,14 +9823,17 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/any \
   /usr/include/c++/14.2.1/array \
+  /usr/include/c++/14.2.1/atomic \
   /usr/include/c++/14.2.1/backward/auto_ptr.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
@@ -8313,6 +9913,8 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/bits/sstream.tcc \
   /usr/include/c++/14.2.1/bits/std_abs.h \
   /usr/include/c++/14.2.1/bits/std_function.h \
+  /usr/include/c++/14.2.1/bits/std_mutex.h \
+  /usr/include/c++/14.2.1/bits/std_thread.h \
   /usr/include/c++/14.2.1/bits/stl_algo.h \
   /usr/include/c++/14.2.1/bits/stl_algobase.h \
   /usr/include/c++/14.2.1/bits/stl_bvector.h \
@@ -8339,7 +9941,9 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/14.2.1/bits/string_view.tcc \
   /usr/include/c++/14.2.1/bits/stringfwd.h \
+  /usr/include/c++/14.2.1/bits/this_thread_sleep.h \
   /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
+  /usr/include/c++/14.2.1/bits/unique_lock.h \
   /usr/include/c++/14.2.1/bits/unique_ptr.h \
   /usr/include/c++/14.2.1/bits/unordered_map.h \
   /usr/include/c++/14.2.1/bits/uses_allocator.h \
@@ -8354,6 +9958,7 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/cctype \
   /usr/include/c++/14.2.1/cerrno \
+  /usr/include/c++/14.2.1/climits \
   /usr/include/c++/14.2.1/clocale \
   /usr/include/c++/14.2.1/cmath \
   /usr/include/c++/14.2.1/codecvt \
@@ -8392,6 +9997,8 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/locale \
   /usr/include/c++/14.2.1/map \
   /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/memory_resource \
+  /usr/include/c++/14.2.1/mutex \
   /usr/include/c++/14.2.1/new \
   /usr/include/c++/14.2.1/numeric \
   /usr/include/c++/14.2.1/optional \
@@ -8402,6 +10009,7 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/14.2.1/pstl/pstl_config.h \
   /usr/include/c++/14.2.1/ratio \
+  /usr/include/c++/14.2.1/shared_mutex \
   /usr/include/c++/14.2.1/sstream \
   /usr/include/c++/14.2.1/stack \
   /usr/include/c++/14.2.1/stdexcept \
@@ -8410,6 +10018,7 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/c++/14.2.1/string \
   /usr/include/c++/14.2.1/string_view \
   /usr/include/c++/14.2.1/system_error \
+  /usr/include/c++/14.2.1/thread \
   /usr/include/c++/14.2.1/tr1/bessel_function.tcc \
   /usr/include/c++/14.2.1/tr1/beta_function.tcc \
   /usr/include/c++/14.2.1/tr1/ell_integral.tcc \
@@ -8576,7 +10185,9 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/nlohmann/adl_serializer.hpp \
@@ -8624,6 +10235,25 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/detail/_allocator_traits.h \
+  /usr/include/oneapi/tbb/detail/_assert.h \
+  /usr/include/oneapi/tbb/detail/_config.h \
+  /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_export.h \
+  /usr/include/oneapi/tbb/detail/_hash_compare.h \
+  /usr/include/oneapi/tbb/detail/_machine.h \
+  /usr/include/oneapi/tbb/detail/_mutex_common.h \
+  /usr/include/oneapi/tbb/detail/_namespace_injection.h \
+  /usr/include/oneapi/tbb/detail/_range_common.h \
+  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
+  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_string_resource.h \
+  /usr/include/oneapi/tbb/detail/_template_helpers.h \
+  /usr/include/oneapi/tbb/detail/_utils.h \
+  /usr/include/oneapi/tbb/profiling.h \
+  /usr/include/oneapi/tbb/spin_rw_mutex.h \
+  /usr/include/oneapi/tbb/tbb_allocator.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -8636,6 +10266,7 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
+  /usr/include/tbb/concurrent_hash_map.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -8651,13 +10282,111 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/vulkan/vulkan_core.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
 
 CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VoxelVertex.cpp \
   /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VoxelVertex.h \
@@ -8760,8 +10489,6 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/quaternion_relational.inl:
 
-/usr/include/glm/ext/quaternion_relational.hpp:
-
 /usr/include/glm/ext/quaternion_geometric.inl:
 
 /usr/include/glm/ext/quaternion_float.hpp:
@@ -8778,13 +10505,9 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/assimp/vector3.inl:
 
-/usr/include/assimp/vector3.h:
-
 /usr/include/assimp/vector2.inl:
 
 /usr/include/assimp/vector2.h:
-
-/usr/include/assimp/texture.h:
 
 /usr/include/assimp/scene.h:
 
@@ -8792,15 +10515,9 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/assimp/metadata.h:
 
-/usr/include/assimp/mesh.h:
-
 /usr/include/assimp/matrix4x4.inl:
 
 /usr/include/assimp/matrix4x4.h:
-
-/usr/include/assimp/defs.h:
-
-/usr/include/assimp/config.h:
 
 /usr/include/assimp/color4.inl:
 
@@ -8815,6 +10532,96 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/assimp/Compiler/poppack1.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_OzzModel.cpp:
+
+/usr/include/tbb/tbb.h:
+
+/usr/include/oneapi/tbb/tick_count.h:
+
+/usr/include/oneapi/tbb/task_group.h:
+
+/usr/include/oneapi/tbb/task_arena.h:
+
+/usr/include/oneapi/tbb/rw_mutex.h:
+
+/usr/include/oneapi/tbb/queuing_rw_mutex.h:
+
+/usr/include/oneapi/tbb/queuing_mutex.h:
+
+/usr/include/oneapi/tbb/parallel_sort.h:
+
+/usr/include/oneapi/tbb/parallel_pipeline.h:
+
+/usr/include/oneapi/tbb/parallel_invoke.h:
+
+/usr/include/oneapi/tbb/parallel_for_each.h:
+
+/usr/include/oneapi/tbb/null_mutex.h:
+
+/usr/include/oneapi/tbb/global_control.h:
+
+/usr/include/oneapi/tbb/detail/_waitable_atomic.h:
+
+/usr/include/oneapi/tbb/detail/_task.h:
+
+/usr/include/oneapi/tbb/detail/_small_object_pool.h:
+
+/usr/include/oneapi/tbb/detail/_node_handle.h:
+
+/usr/include/oneapi/tbb/detail/_intrusive_list_node.h:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_node_impl.h:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_join_impl.h:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_indexer_impl.h:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_impl.h:
+
+/usr/include/oneapi/tbb/detail/_exception.h:
+
+/usr/include/assimp/vector3.h:
+
+/usr/include/oneapi/tbb/detail/_attach.h:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_cache_impl.h:
+
+/usr/include/oneapi/tbb/concurrent_unordered_set.h:
+
+/usr/include/oneapi/tbb/concurrent_unordered_map.h:
+
+/usr/include/oneapi/tbb/concurrent_set.h:
+
+/usr/include/oneapi/tbb/concurrent_priority_queue.h:
+
+/usr/include/oneapi/tbb/concurrent_map.h:
+
+/usr/include/oneapi/tbb/flow_graph_abstractions.h:
+
+/usr/include/oneapi/tbb/combinable.h:
+
+/usr/include/oneapi/tbb/collaborative_call_once.h:
+
+/usr/include/oneapi/tbb/cache_aligned_allocator.h:
+
+/usr/include/assimp/texture.h:
+
+/usr/include/oneapi/tbb/blocked_range3d.h:
+
+/usr/include/oneapi/tbb/blocked_range.h:
+
+/usr/include/oneapi/tbb.h:
+
+/usr/include/c++/14.2.1/list:
+
+/usr/include/glm/ext/quaternion_relational.hpp:
+
+/usr/include/c++/14.2.1/bits/stl_queue.h:
+
+/usr/include/c++/14.2.1/bits/stl_list.h:
+
+/usr/include/c++/14.2.1/bits/random.h:
+
+/usr/include/c++/14.2.1/bits/list.tcc:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_LogicalDevice.cpp:
 
@@ -8842,15 +10649,131 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.cpp:
 
-/home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h:
+
+/usr/include/oneapi/tbb/detail/_task_handle.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h:
+
+/usr/include/oneapi/tbb/partitioner.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_DescriptorSet.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h:
+
+/usr/include/oneapi/tbb/info.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h:
+
+/usr/include/oneapi/tbb/detail/_aligned_space.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h:
+
+/usr/include/assimp/mesh.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h:
 
 /usr/include/vulkan/vulkan_core.h:
 
@@ -8870,9 +10793,51 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/vk_video/vulkan_video_codec_av1std.h:
 
+/usr/include/oneapi/tbb/tbb_allocator.h:
+
+/usr/include/oneapi/tbb/spin_rw_mutex.h:
+
+/usr/include/oneapi/tbb/profiling.h:
+
+/usr/include/oneapi/tbb/detail/_utils.h:
+
+/usr/include/oneapi/tbb/detail/_template_helpers.h:
+
+/usr/include/oneapi/tbb/detail/_string_resource.h:
+
+/usr/include/oneapi/tbb/detail/_scoped_lock.h:
+
+/usr/include/assimp/config.h:
+
+/usr/include/oneapi/tbb/detail/_namespace_injection.h:
+
+/usr/include/oneapi/tbb/detail/_mutex_common.h:
+
+/usr/include/assimp/defs.h:
+
+/usr/include/oneapi/tbb/detail/_machine.h:
+
+/home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.cpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h:
+
+/usr/include/oneapi/tbb/detail/_hash_compare.h:
+
+/usr/include/oneapi/tbb/detail/_containers_helpers.h:
+
+/usr/include/oneapi/tbb/detail/_assert.h:
+
+/usr/include/oneapi/tbb/detail/_allocator_traits.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h:
+
+/usr/include/oneapi/tbb/concurrent_hash_map.h:
+
 /usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
 
 /usr/include/nlohmann/json_fwd.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h:
 
 /usr/include/nlohmann/detail/value_t.hpp:
 
@@ -8912,13 +10877,35 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/nlohmann/detail/iterators/iter_impl.hpp:
 
+/usr/include/oneapi/tbb/null_rw_mutex.h:
+
 /usr/include/nlohmann/detail/iterators/internal_iterator.hpp:
 
 /usr/include/nlohmann/detail/input/position_t.hpp:
 
+/home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp:
+
+/usr/include/nlohmann/detail/input/json_sax.hpp:
+
+/usr/include/nlohmann/detail/input/input_adapters.hpp:
+
+/usr/include/nlohmann/detail/hash.hpp:
+
+/usr/include/c++/14.2.1/queue:
+
+/usr/include/nlohmann/detail/conversions/to_chars.hpp:
+
+/usr/include/nlohmann/detail/conversions/from_json.hpp:
+
+/usr/include/nlohmann/detail/abi_macros.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h:
+
 /usr/include/glm/detail/type_mat4x4.inl:
 
 /usr/include/glm/detail/type_mat4x3.inl:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h:
 
 /usr/include/glm/detail/type_mat4x2.inl:
 
@@ -8929,6 +10916,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/glm/detail/type_mat2x4.hpp:
 
 /usr/include/glm/detail/type_mat2x3.hpp:
+
+/usr/include/nlohmann/detail/input/binary_reader.hpp:
+
+/usr/include/glm/detail/qualifier.hpp:
 
 /usr/include/glm/gtc/matrix_transform.inl:
 
@@ -8964,11 +10955,19 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/strings.h:
 
+/usr/include/oneapi/tbb/detail/_flow_graph_types_impl.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h:
+
 /usr/include/glm/detail/_vectorize.hpp:
 
 /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
 
 /usr/include/errno.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h:
 
 /usr/include/nlohmann/ordered_map.hpp:
 
@@ -8979,6 +10978,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
 /usr/include/c++/14.2.1/bits/std_abs.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h:
 
 /usr/include/glm/ext/matrix_transform.hpp:
 
@@ -9000,7 +11001,13 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/tr1/ell_integral.tcc:
 
+/usr/include/tbb/concurrent_hash_map.h:
+
 /usr/include/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/oneapi/tbb/parallel_reduce.h:
+
+/usr/include/oneapi/tbb/mutex.h:
 
 /usr/include/c++/14.2.1/tr1/beta_function.tcc:
 
@@ -9009,6 +11016,12 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/glm/detail/_fixes.hpp:
 
 /usr/include/c++/14.2.1/pstl/execution_defs.h:
+
+/usr/include/nlohmann/detail/conversions/to_json.hpp:
+
+/usr/include/glm/detail/compute_common.hpp:
+
+/usr/include/c++/14.2.1/bits/locale_facets.h:
 
 /usr/include/c++/14.2.1/ostream:
 
@@ -9020,6 +11033,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/common.hpp:
 
+/usr/include/oneapi/tbb/concurrent_queue.h:
+
 /usr/include/c++/14.2.1/ext/type_traits.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/io/stream.h:
@@ -9030,7 +11045,13 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/matrix_float4x3_precision.hpp:
 
+/usr/include/oneapi/tbb/spin_mutex.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h:
+
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandPool.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h:
 
 /usr/include/c++/14.2.1/typeinfo:
 
@@ -9041,6 +11062,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/tr1/bessel_function.tcc:
 
 /usr/include/c++/14.2.1/bits/shared_ptr.h:
+
+/usr/include/oneapi/tbb/detail/_concurrent_skip_list.h:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -9070,15 +11093,27 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/cstdio:
 
+/usr/include/oneapi/tbb/concurrent_vector.h:
+
 /usr/include/glm/detail/type_vec1.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h:
 
 /usr/include/bits/types/struct_tm.h:
 
-/usr/include/nlohmann/detail/conversions/to_chars.hpp:
+/usr/include/oneapi/tbb/flow_graph.h:
 
 /usr/include/c++/14.2.1/clocale:
 
 /usr/include/bits/posix1_lim.h:
+
+/usr/include/oneapi/tbb/detail/_concurrent_queue_base.h:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h:
 
 /usr/include/c++/14.2.1/ext/alloc_traits.h:
 
@@ -9100,13 +11135,13 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/detail/type_half.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h:
+
 /usr/include/c++/14.2.1/bits/utility.h:
 
 /usr/include/c++/14.2.1/ext/atomicity.h:
 
 /usr/include/c++/14.2.1/stdlib.h:
-
-/usr/include/c++/14.2.1/bits/uses_allocator.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
@@ -9138,13 +11173,19 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/detail/type_vec2.hpp:
 
+/usr/include/c++/14.2.1/bits/unique_lock.h:
+
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/internal/simd_math_sse-inl.h:
 
 /usr/include/c++/14.2.1/cstdlib:
 
 /usr/include/c++/14.2.1/bits/stl_algobase.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h:
+
 /usr/include/GLFW/glfw3.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h:
 
 /usr/include/glm/ext/vector_float4_precision.hpp:
 
@@ -9160,15 +11201,21 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/bits/setjmp.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h:
+
 /usr/include/c++/14.2.1/stack:
 
 /usr/include/nlohmann/detail/input/lexer.hpp:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
 
+/usr/include/oneapi/tbb/detail/_rtm_mutex.h:
+
 /usr/include/c++/14.2.1/bits/stl_iterator_base_types.h:
 
 /usr/include/bits/stdint-least.h:
+
+/usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h:
 
 /usr/include/c++/14.2.1/concepts:
 
@@ -9212,6 +11259,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/bits/types/struct_timeval.h:
 
+/usr/include/c++/14.2.1/thread:
+
 /usr/include/c++/14.2.1/exception:
 
 /usr/include/bits/types/clockid_t.h:
@@ -9219,6 +11268,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/new:
 
 /usr/include/glm/gtc/epsilon.inl:
+
+/usr/include/oneapi/tbb/parallel_scan.h:
 
 /usr/include/bits/types/error_t.h:
 
@@ -9229,6 +11280,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/bits/algorithmfwd.h:
 
 /usr/include/locale.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h:
 
 /usr/include/c++/14.2.1/bits/alloc_traits.h:
 
@@ -9245,6 +11298,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/bits/ios_base.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/oneapi/tbb/detail/_segment_table.h:
 
 /usr/include/glm/detail/type_vec1.inl:
 
@@ -9264,6 +11319,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/detail/func_common.inl:
 
+/usr/include/tbb/parallel_for.h:
+
 /usr/include/c++/14.2.1/bits/stl_tempbuf.h:
 
 /usr/include/bits/stdlib-float.h:
@@ -9282,11 +11339,19 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/matrix_double3x2_precision.hpp:
 
+/usr/include/oneapi/tbb/detail/_flow_graph_node_set_impl.h:
+
 /usr/include/c++/14.2.1/tr1/exp_integral.tcc:
 
 /usr/include/bits/types/timer_t.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h:
+
 /usr/include/c++/14.2.1/bits/localefwd.h:
+
+/usr/include/oneapi/tbb/task.h:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_body_impl.h:
 
 /usr/include/gnu/stubs.h:
 
@@ -9304,11 +11369,15 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/limits:
 
+/usr/include/oneapi/tbb/detail/_config.h:
+
 /usr/include/c++/14.2.1/bits/stl_iterator.h:
 
 /usr/include/glm/mat3x2.hpp:
 
 /usr/include/bits/iscanonical.h:
+
+/usr/include/c++/14.2.1/bits/random.tcc:
 
 /usr/include/bits/libc-header-start.h:
 
@@ -9324,6 +11393,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/quaternion_transform.inl:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h:
+
 /usr/include/bits/typesizes.h:
 
 /usr/include/c++/14.2.1/bits/functexcept.h:
@@ -9331,6 +11404,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/glm/detail/type_mat3x2.hpp:
 
 /usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/14.2.1/random:
 
 /usr/include/c++/14.2.1/bits/mask_array.h:
 
@@ -9358,6 +11433,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/bits/fp-logb.h:
 
+/usr/include/oneapi/tbb/detail/_concurrent_unordered_base.h:
+
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/animation_builder.h:
 
 /usr/include/bits/locale.h:
@@ -9379,6 +11456,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/bits/types/__fpos_t.h:
 
 /usr/include/c++/14.2.1/bits/indirect_array.h:
+
+/usr/include/c++/14.2.1/bits/uses_allocator.h:
+
+/usr/include/c++/14.2.1/mutex:
 
 /usr/include/nlohmann/adl_serializer.hpp:
 
@@ -9432,11 +11513,15 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/quaternion_trigonometric.hpp:
 
+/usr/include/oneapi/tbb/detail/_export.h:
+
 /usr/include/bits/types/struct_timespec.h:
 
 /usr/include/bits/types/wint_t.h:
 
 /usr/include/glm/ext/scalar_int_sized.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h:
 
 /usr/include/bits/timesize.h:
 
@@ -9484,6 +11569,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/bits/cxxabi_init_exception.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h:
+
 /usr/include/glm/mat4x4.hpp:
 
 /usr/include/bits/types/__mbstate_t.h:
@@ -9496,6 +11585,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/matrix_double2x2_precision.hpp:
 
+/usr/include/oneapi/tbb/parallel_for.h:
+
+/usr/include/oneapi/tbb/blocked_range2d.h:
+
 /usr/include/math.h:
 
 /usr/include/glm/ext/matrix_float4x4_precision.hpp:
@@ -9507,6 +11600,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/glm/detail/type_mat3x3.inl:
 
 /usr/include/glm/ext/vector_uint4_sized.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
@@ -9528,6 +11623,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/bits/istream.tcc:
 
+/usr/include/oneapi/tbb/enumerable_thread_specific.h:
+
+/usr/include/oneapi/tbb/detail/_range_common.h:
+
 /usr/include/glm/gtc/constants.hpp:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_CommandBuffer.cpp:
@@ -9538,9 +11637,11 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/bits/vector.tcc:
 
+/usr/include/oneapi/tbb/detail/_flow_graph_trace_impl.h:
+
 /usr/include/c++/14.2.1/bits/memoryfwd.h:
 
-/usr/include/c++/14.2.1/bits/move.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
@@ -9551,6 +11652,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/glm/detail/func_exponential.inl:
 
 /usr/include/c++/14.2.1/bits/new_allocator.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h:
 
 /usr/include/c++/14.2.1/bits/stl_numeric.h:
 
@@ -9586,8 +11689,6 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/matrix_double2x4.hpp:
 
-/usr/include/nlohmann/detail/abi_macros.hpp:
-
 /usr/include/features-time64.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/export.h:
@@ -9596,11 +11697,11 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/matrix_double2x4_precision.hpp:
 
-/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/simd_math.h:
-
 /usr/include/glm/ext/matrix_double3x2.hpp:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VisibleChunkGrid.cpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h:
 
 /usr/include/vk_video/vulkan_video_codec_h265std_encode.h:
 
@@ -9616,11 +11717,15 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/locale:
 
+/usr/include/oneapi/tbb/detail/_pipeline_filters_deduction.h:
+
 /usr/include/glm/ext/matrix_double4x2.hpp:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Vertex.cpp:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/containers/std_allocator.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h:
 
 /usr/include/c++/14.2.1/bits/exception_ptr.h:
 
@@ -9640,6 +11745,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/stdc-predef.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h:
+
 /usr/include/glm/ext/matrix_float2x3.hpp:
 
 /usr/include/c++/14.2.1/bits/uniform_int_dist.h:
@@ -9650,11 +11757,11 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/sstream:
 
+/usr/include/oneapi/tbb/detail/_aggregator.h:
+
 /usr/include/c++/14.2.1/pstl/pstl_config.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/messages_members.h:
-
-/usr/include/nlohmann/detail/conversions/from_json.hpp:
 
 /usr/include/glm/ext/quaternion_transform.hpp:
 
@@ -9720,6 +11827,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/vector_bool4.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h:
+
 /usr/include/c++/14.2.1/bits/chrono.h:
 
 /usr/include/glm/ext/vector_double2.hpp:
@@ -9752,6 +11861,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/bits/shared_ptr_base.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h:
+
 /usr/include/glm/ext/vector_int2.hpp:
 
 /usr/include/glm/ext/vector_int2_sized.hpp:
@@ -9776,6 +11887,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/ext/vector_int4_sized.hpp:
 
+/usr/include/oneapi/tbb/detail/_flow_graph_item_buffer_impl.h:
+
 /usr/include/vk_video/vulkan_video_codec_h264std_decode.h:
 
 /usr/include/glm/ext/vector_uint2.hpp:
@@ -9784,11 +11897,13 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/fwd.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h:
+
 /usr/include/glm/geometric.hpp:
 
-/home/sebastiang/prototypevulkangame/Mineanarchy/ma_GraphicsPipeline.cpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h:
 
-/usr/include/nlohmann/detail/input/json_sax.hpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h:
 
 /usr/include/glm/gtc/constants.inl:
 
@@ -9820,6 +11935,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/glm/mat3x4.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h:
+
 /usr/include/glm/mat4x2.hpp:
 
 /usr/include/glm/mat4x3.hpp:
@@ -9835,6 +11952,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/glm/trigonometric.hpp:
 
 /usr/include/glm/vec2.hpp:
+
+/usr/include/oneapi/tbb/detail/_flow_graph_tagged_buffer_impl.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h:
 
 /usr/include/glm/vec3.hpp:
 
@@ -9852,6 +11973,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/linux/limits.h:
 
+/usr/include/oneapi/tbb/detail/_flow_graph_nodes_deduction.h:
+
 /usr/include/string.h:
 
 /usr/include/sys/select.h:
@@ -9863,6 +11986,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/time.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h:
+
+/usr/include/c++/14.2.1/atomic:
 
 /usr/include/glm/ext/vector_float3_precision.hpp:
 
@@ -9877,6 +12002,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/bits/uio_lim.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_UtilityFunctions.h:
+
+/usr/include/c++/14.2.1/shared_mutex:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/skeleton_utils.h:
 
@@ -9920,6 +12047,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_VoxelVertex.h:
 
+/usr/include/oneapi/tbb/task_scheduler_observer.h:
+
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/offline/skeleton_builder.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/animation_utils.h:
@@ -9942,11 +12071,15 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/export.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h:
+
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/animation/runtime/animation.h:
 
 /usr/include/glm/ext/vector_double2_precision.hpp:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/math_constant.h:
+
+/usr/include/oneapi/tbb/detail/_pipeline_filters.h:
 
 /usr/include/c++/14.2.1/bits/locale_facets.tcc:
 
@@ -9972,6 +12105,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/samples/framework/utils.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h:
+
 /usr/include/c++/14.2.1/bits/align.h:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/vec_float.h:
@@ -9983,10 +12118,6 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/bits/exception_defines.h:
 
 /usr/include/c++/14.2.1/bits/stl_tree.h:
-
-/usr/include/wchar.h:
-
-/usr/include/nlohmann/detail/exceptions.hpp:
 
 /home/sebastiang/prototypevulkangame/Mineanarchy/ma_Mesher.cpp:
 
@@ -10010,6 +12141,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/bits/gslice.h:
 
+/home/sebastiang/prototypevulkangame/Mineanarchy/ozz-animation/include/ozz/base/maths/simd_math.h:
+
+/usr/include/c++/14.2.1/bits/std_thread.h:
+
 /usr/include/glm/ext/matrix_projection.inl:
 
 /usr/include/c++/14.2.1/bits/hashtable.h:
@@ -10030,21 +12165,29 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/bits/std_function.h:
 
+/usr/include/c++/14.2.1/bits/std_mutex.h:
+
 /usr/include/c++/14.2.1/bits/stl_stack.h:
+
+/usr/include/oneapi/tbb/version.h:
 
 /usr/include/bits/timex.h:
 
 /usr/include/c++/14.2.1/bits/stl_vector.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h:
+
+/usr/include/c++/14.2.1/bits/move.h:
+
+/usr/include/c++/14.2.1/bits/this_thread_sleep.h:
+
 /usr/include/c++/14.2.1/bits/unique_ptr.h:
 
 /usr/include/c++/14.2.1/bits/valarray_array.tcc:
 
-/usr/include/glm/detail/qualifier.hpp:
-
-/usr/include/nlohmann/detail/input/binary_reader.hpp:
-
 /usr/include/c++/14.2.1/bits/valarray_before.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h:
 
 /usr/include/c++/14.2.1/ctime:
 
@@ -10068,17 +12211,23 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/c++/14.2.1/iterator:
 
-/usr/include/c++/14.2.1/optional:
+/usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/opt_random.h:
 
-/usr/include/c++/14.2.1/pstl/glue_memory_defs.h:
+/usr/include/c++/14.2.1/memory_resource:
 
 /usr/include/c++/14.2.1/bits/forward_list.tcc:
 
 /usr/include/c++/14.2.1/ratio:
 
+/usr/include/c++/14.2.1/optional:
+
+/usr/include/c++/14.2.1/pstl/glue_memory_defs.h:
+
 /usr/include/c++/14.2.1/unordered_map:
 
 /usr/include/c++/14.2.1/valarray:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h:
 
 /usr/include/bits/floatn-common.h:
 
@@ -10089,13 +12238,3 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/include/c++/14.2.1/bits/uses_allocator_args.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h:
-
-/usr/include/nlohmann/detail/input/input_adapters.hpp:
-
-/usr/include/glm/detail/compute_common.hpp:
-
-/usr/include/c++/14.2.1/bits/locale_facets.h:
-
-/usr/include/nlohmann/detail/conversions/to_json.hpp:
-
-/usr/include/nlohmann/detail/hash.hpp:
