@@ -115,17 +115,17 @@ uint32_t Mineanarchy::Buffer::findMemoryType(VkPhysicalDevice physicalDevice, ui
     throw std::runtime_error("failed to find suitable memory type!");
 }
 
-void Mineanarchy::Buffer::updateBuffer(void* data2) {
+void Mineanarchy::Buffer::updateBuffer(void* data2, size_t dataSize) {
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
-    createBuffer(physicalDevice, bufferSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
+    createBuffer(physicalDevice, dataSize, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
 
     void* data;
-    vkMapMemory(device, stagingBufferMemory, 0, bufferSize, 0, &data);
-        memcpy(data, data2, (size_t) bufferSize);
+    vkMapMemory(device, stagingBufferMemory, 0, dataSize, 0, &data);
+        memcpy(data, data2, (size_t) dataSize);
     vkUnmapMemory(device, stagingBufferMemory);
 
-    copyBuffer(stagingBuffer, newBuffer, bufferSize);
+    copyBuffer(stagingBuffer, newBuffer, dataSize);
     vkDestroyBuffer(device, stagingBuffer, nullptr);
     vkFreeMemory(device, stagingBufferMemory, nullptr);
 }

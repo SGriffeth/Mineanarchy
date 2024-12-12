@@ -57,7 +57,7 @@
         createMesher();
         mesher = new Mesher(vertices, indices, 1, *visibleChunkGrid, *terrainGenerator, *vboManager, *iboManager);
         auto meshStart = std::chrono::high_resolution_clock::now();
-        mesher->Mesh();
+        mesher->ScheduleMeshTask();
         //mesher->AwaitChunkMeshing();
         auto meshEnd = std::chrono::high_resolution_clock::now();
         auto totalDuration = std::chrono::duration_cast<std::chrono::microseconds>(meshEnd - meshStart).count();
@@ -96,8 +96,8 @@
         commandPool = new CommandPool(device);
         commandPool->createCommandPool(*this);
         vkCommandPool = commandPool->pool;
-        if(loadModels)
-        createModels();
+        /*if(loadModels)
+        createModels();*/
     createDescriptorSets();
     vkDescriptorSets.resize(descriptorSets.size());
         for(uint i = 0; i < descriptorSets.size(); i++) {
@@ -144,11 +144,11 @@
         visibleChunkGrid->UpdateGridPosition(camera->getPosition().x/chunkSize, camera->getPosition().y/chunkSize, camera->getPosition().z/chunkSize);
     }
 
-    void Mineanarchy::Instance::createModels() {
+    /*void Mineanarchy::Instance::createModels() {
         //model = ma_OzzModel();
-        /*UtilityFunctions::addDeletor([this]{
+        UtilityFunctions::addDeletor([this]{
             delete this->model;
-        });*/
+        });
         std::string gameDir;
         UtilityFunctions::getGameDirectory(gameDir);
         model.LoadAnimation(gameDir + std::string("/") + UtilityFunctions::getConfigValue("animationFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("skeletonFile"), gameDir + std::string("/") + UtilityFunctions::getConfigValue("meshFile"), animVertices, animIndices);
@@ -172,13 +172,14 @@
         for(uint i = 0; i < animIndices.size(); i++) {
             std::cout << "indices(" << i << ") = " << indices[i] << std::endl;
         }
-    }
+    }*/
 
     void Mineanarchy::Instance::createVertexBuffers() {
         //size_t estimatedSize = chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2 * chunkSize*visibleChunkGrid->getGridHalfSideLength()*2;
         vertices.reserve(vboManager->GetRecBufferCapacity());
         vertexBuffer = new Buffer(device, sizeof(vertices[0]) * vboManager->GetRecBufferCapacity());
-        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, vertices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+        std::vector<Mineanarchy::VoxelVertex> tempVertices(vertices.begin(), vertices.end());
+        vertexBuffer->createBuffer(graphicsQueue, vkCommandPool, physicalDevice, tempVertices.data(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
         //vertexBuffer->updateBuffer(vertices);
         /*UtilityFunctions::addDeletor([this]() {
             vkDestroyBuffer(device, vkVertexBuffer, nullptr);
@@ -225,7 +226,7 @@
                 unsigned int previousSize = iboManager->GetRecBufferCapacity();
                 unsigned int vboPreviousSize = vboManager->GetRecBufferCapacity();
                 auto meshStart = std::chrono::high_resolution_clock::now();
-                mesher->Mesh();
+                mesher->ScheduleMeshTask();
                 //mesher->AwaitChunkMeshing();
                 auto meshEnd = std::chrono::high_resolution_clock::now();
                 auto bufferResizeStart = std::chrono::high_resolution_clock::now();
@@ -236,8 +237,9 @@
                 vertexBuffer->resizeBuffer(VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, vboManager->GetRecBufferCapacity()*sizeof(vertices[0]));
                 auto bufferResizeEnd = std::chrono::high_resolution_clock::now();
                 
-                vertexBuffer->updateBuffer(vertices.data());
-                indexBuffer->updateBuffer(indices.data());
+                std::vector<Mineanarchy::VoxelVertex> tempVertices(vertices.begin(), vertices.end());
+                vertexBuffer->updateBuffer(tempVertices.data(), tempVertices.size()*sizeof(tempVertices[0]));
+                indexBuffer->updateBuffer(indices.data(), indices.size()*sizeof(indices[0]));
                 previousCameraX = camera->getPosition().x/visibleChunkGrid->getChunkSize();
                 previousCameraY = camera->getPosition().y/visibleChunkGrid->getChunkSize();
                 previousCameraZ = camera->getPosition().z/visibleChunkGrid->getChunkSize();
@@ -591,6 +593,7 @@
                             0, // Offset (should match your push constant definition)
                             sizeof(GraphicsPipeline::PushConstantData), 
                             &pushConstantData);
+            //vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0);
             const std::vector<Mesher::ChunkInfo>& chunksToRender = mesher->GetChunksToRender();
             for(size_t i = 0; i < chunksToRender.size(); i++) {
                 if(chunksToRender[i].iboEndIndex < chunksToRender[i].iboStartIndex) throw std::runtime_error("end index is less than start index");

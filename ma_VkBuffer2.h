@@ -6,7 +6,7 @@ namespace Mineanarchy {
         public:
         Buffer(VkDevice dev, size_t bufferSize);
         void createBuffer(VkQueue graphicsQueue, VkCommandPool vkCommandPool, VkPhysicalDevice physicalDevice, void* vertices, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties);
-        void updateBuffer(void* data);
+        void updateBuffer(void* data, size_t bufferSize);
         void resizeBuffer(VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkDeviceSize newSize);
         //void destroy();
 
