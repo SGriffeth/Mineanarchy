@@ -1,4 +1,4 @@
 /home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/ozz-animation.dir
-/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/vulkantutorial.dir
+/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/Mineanarchy.dir
 /home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/edit_cache.dir
 /home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles/rebuild_cache.dir

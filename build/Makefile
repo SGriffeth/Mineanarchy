@@ -130,24 +130,24 @@ ozz-animation/fast:
 .PHONY : ozz-animation/fast
 
 #=============================================================================
-# Target rules for targets named vulkantutorial
+# Target rules for targets named Mineanarchy
 
 # Build rule for target.
-vulkantutorial: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vulkantutorial
-.PHONY : vulkantutorial
+Mineanarchy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Mineanarchy
+.PHONY : Mineanarchy
 
 # fast build rule for target.
-vulkantutorial/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/build
-.PHONY : vulkantutorial/fast
+Mineanarchy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/build
+.PHONY : Mineanarchy/fast
 
 ma_Camera.o: ma_Camera.cpp.o
 .PHONY : ma_Camera.o
 
 # target to build an object file
 ma_Camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Camera.cpp.o
 .PHONY : ma_Camera.cpp.o
 
 ma_Camera.i: ma_Camera.cpp.i
@@ -155,7 +155,7 @@ ma_Camera.i: ma_Camera.cpp.i
 
 # target to preprocess a source file
 ma_Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Camera.cpp.i
 .PHONY : ma_Camera.cpp.i
 
 ma_Camera.s: ma_Camera.cpp.s
@@ -163,7 +163,7 @@ ma_Camera.s: ma_Camera.cpp.s
 
 # target to generate assembly for a file
 ma_Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Camera.cpp.s
 .PHONY : ma_Camera.cpp.s
 
 ma_CommandBuffer.o: ma_CommandBuffer.cpp.o
@@ -171,7 +171,7 @@ ma_CommandBuffer.o: ma_CommandBuffer.cpp.o
 
 # target to build an object file
 ma_CommandBuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_CommandBuffer.cpp.o
 .PHONY : ma_CommandBuffer.cpp.o
 
 ma_CommandBuffer.i: ma_CommandBuffer.cpp.i
@@ -179,7 +179,7 @@ ma_CommandBuffer.i: ma_CommandBuffer.cpp.i
 
 # target to preprocess a source file
 ma_CommandBuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_CommandBuffer.cpp.i
 .PHONY : ma_CommandBuffer.cpp.i
 
 ma_CommandBuffer.s: ma_CommandBuffer.cpp.s
@@ -187,7 +187,7 @@ ma_CommandBuffer.s: ma_CommandBuffer.cpp.s
 
 # target to generate assembly for a file
 ma_CommandBuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_CommandBuffer.cpp.s
 .PHONY : ma_CommandBuffer.cpp.s
 
 ma_CommandPool.o: ma_CommandPool.cpp.o
@@ -195,7 +195,7 @@ ma_CommandPool.o: ma_CommandPool.cpp.o
 
 # target to build an object file
 ma_CommandPool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_CommandPool.cpp.o
 .PHONY : ma_CommandPool.cpp.o
 
 ma_CommandPool.i: ma_CommandPool.cpp.i
@@ -203,7 +203,7 @@ ma_CommandPool.i: ma_CommandPool.cpp.i
 
 # target to preprocess a source file
 ma_CommandPool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_CommandPool.cpp.i
 .PHONY : ma_CommandPool.cpp.i
 
 ma_CommandPool.s: ma_CommandPool.cpp.s
@@ -211,7 +211,7 @@ ma_CommandPool.s: ma_CommandPool.cpp.s
 
 # target to generate assembly for a file
 ma_CommandPool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_CommandPool.cpp.s
 .PHONY : ma_CommandPool.cpp.s
 
 ma_DescriptorSet.o: ma_DescriptorSet.cpp.o
@@ -219,7 +219,7 @@ ma_DescriptorSet.o: ma_DescriptorSet.cpp.o
 
 # target to build an object file
 ma_DescriptorSet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_DescriptorSet.cpp.o
 .PHONY : ma_DescriptorSet.cpp.o
 
 ma_DescriptorSet.i: ma_DescriptorSet.cpp.i
@@ -227,7 +227,7 @@ ma_DescriptorSet.i: ma_DescriptorSet.cpp.i
 
 # target to preprocess a source file
 ma_DescriptorSet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_DescriptorSet.cpp.i
 .PHONY : ma_DescriptorSet.cpp.i
 
 ma_DescriptorSet.s: ma_DescriptorSet.cpp.s
@@ -235,7 +235,7 @@ ma_DescriptorSet.s: ma_DescriptorSet.cpp.s
 
 # target to generate assembly for a file
 ma_DescriptorSet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_DescriptorSet.cpp.s
 .PHONY : ma_DescriptorSet.cpp.s
 
 ma_DescriptorSetLayout.o: ma_DescriptorSetLayout.cpp.o
@@ -243,7 +243,7 @@ ma_DescriptorSetLayout.o: ma_DescriptorSetLayout.cpp.o
 
 # target to build an object file
 ma_DescriptorSetLayout.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_DescriptorSetLayout.cpp.o
 .PHONY : ma_DescriptorSetLayout.cpp.o
 
 ma_DescriptorSetLayout.i: ma_DescriptorSetLayout.cpp.i
@@ -251,7 +251,7 @@ ma_DescriptorSetLayout.i: ma_DescriptorSetLayout.cpp.i
 
 # target to preprocess a source file
 ma_DescriptorSetLayout.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_DescriptorSetLayout.cpp.i
 .PHONY : ma_DescriptorSetLayout.cpp.i
 
 ma_DescriptorSetLayout.s: ma_DescriptorSetLayout.cpp.s
@@ -259,7 +259,7 @@ ma_DescriptorSetLayout.s: ma_DescriptorSetLayout.cpp.s
 
 # target to generate assembly for a file
 ma_DescriptorSetLayout.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_DescriptorSetLayout.cpp.s
 .PHONY : ma_DescriptorSetLayout.cpp.s
 
 ma_GraphicsPipeline.o: ma_GraphicsPipeline.cpp.o
@@ -267,7 +267,7 @@ ma_GraphicsPipeline.o: ma_GraphicsPipeline.cpp.o
 
 # target to build an object file
 ma_GraphicsPipeline.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_GraphicsPipeline.cpp.o
 .PHONY : ma_GraphicsPipeline.cpp.o
 
 ma_GraphicsPipeline.i: ma_GraphicsPipeline.cpp.i
@@ -275,7 +275,7 @@ ma_GraphicsPipeline.i: ma_GraphicsPipeline.cpp.i
 
 # target to preprocess a source file
 ma_GraphicsPipeline.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_GraphicsPipeline.cpp.i
 .PHONY : ma_GraphicsPipeline.cpp.i
 
 ma_GraphicsPipeline.s: ma_GraphicsPipeline.cpp.s
@@ -283,7 +283,7 @@ ma_GraphicsPipeline.s: ma_GraphicsPipeline.cpp.s
 
 # target to generate assembly for a file
 ma_GraphicsPipeline.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_GraphicsPipeline.cpp.s
 .PHONY : ma_GraphicsPipeline.cpp.s
 
 ma_IndexBufferManager.o: ma_IndexBufferManager.cpp.o
@@ -291,7 +291,7 @@ ma_IndexBufferManager.o: ma_IndexBufferManager.cpp.o
 
 # target to build an object file
 ma_IndexBufferManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_IndexBufferManager.cpp.o
 .PHONY : ma_IndexBufferManager.cpp.o
 
 ma_IndexBufferManager.i: ma_IndexBufferManager.cpp.i
@@ -299,7 +299,7 @@ ma_IndexBufferManager.i: ma_IndexBufferManager.cpp.i
 
 # target to preprocess a source file
 ma_IndexBufferManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_IndexBufferManager.cpp.i
 .PHONY : ma_IndexBufferManager.cpp.i
 
 ma_IndexBufferManager.s: ma_IndexBufferManager.cpp.s
@@ -307,7 +307,7 @@ ma_IndexBufferManager.s: ma_IndexBufferManager.cpp.s
 
 # target to generate assembly for a file
 ma_IndexBufferManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_IndexBufferManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_IndexBufferManager.cpp.s
 .PHONY : ma_IndexBufferManager.cpp.s
 
 ma_Instance.o: ma_Instance.cpp.o
@@ -315,7 +315,7 @@ ma_Instance.o: ma_Instance.cpp.o
 
 # target to build an object file
 ma_Instance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Instance.cpp.o
 .PHONY : ma_Instance.cpp.o
 
 ma_Instance.i: ma_Instance.cpp.i
@@ -323,7 +323,7 @@ ma_Instance.i: ma_Instance.cpp.i
 
 # target to preprocess a source file
 ma_Instance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Instance.cpp.i
 .PHONY : ma_Instance.cpp.i
 
 ma_Instance.s: ma_Instance.cpp.s
@@ -331,7 +331,7 @@ ma_Instance.s: ma_Instance.cpp.s
 
 # target to generate assembly for a file
 ma_Instance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Instance.cpp.s
 .PHONY : ma_Instance.cpp.s
 
 ma_LogicalDevice.o: ma_LogicalDevice.cpp.o
@@ -339,7 +339,7 @@ ma_LogicalDevice.o: ma_LogicalDevice.cpp.o
 
 # target to build an object file
 ma_LogicalDevice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_LogicalDevice.cpp.o
 .PHONY : ma_LogicalDevice.cpp.o
 
 ma_LogicalDevice.i: ma_LogicalDevice.cpp.i
@@ -347,7 +347,7 @@ ma_LogicalDevice.i: ma_LogicalDevice.cpp.i
 
 # target to preprocess a source file
 ma_LogicalDevice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_LogicalDevice.cpp.i
 .PHONY : ma_LogicalDevice.cpp.i
 
 ma_LogicalDevice.s: ma_LogicalDevice.cpp.s
@@ -355,7 +355,7 @@ ma_LogicalDevice.s: ma_LogicalDevice.cpp.s
 
 # target to generate assembly for a file
 ma_LogicalDevice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_LogicalDevice.cpp.s
 .PHONY : ma_LogicalDevice.cpp.s
 
 ma_Mesher.o: ma_Mesher.cpp.o
@@ -363,7 +363,7 @@ ma_Mesher.o: ma_Mesher.cpp.o
 
 # target to build an object file
 ma_Mesher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Mesher.cpp.o
 .PHONY : ma_Mesher.cpp.o
 
 ma_Mesher.i: ma_Mesher.cpp.i
@@ -371,7 +371,7 @@ ma_Mesher.i: ma_Mesher.cpp.i
 
 # target to preprocess a source file
 ma_Mesher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Mesher.cpp.i
 .PHONY : ma_Mesher.cpp.i
 
 ma_Mesher.s: ma_Mesher.cpp.s
@@ -379,7 +379,7 @@ ma_Mesher.s: ma_Mesher.cpp.s
 
 # target to generate assembly for a file
 ma_Mesher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Mesher.cpp.s
 .PHONY : ma_Mesher.cpp.s
 
 ma_OzzModel.o: ma_OzzModel.cpp.o
@@ -387,7 +387,7 @@ ma_OzzModel.o: ma_OzzModel.cpp.o
 
 # target to build an object file
 ma_OzzModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_OzzModel.cpp.o
 .PHONY : ma_OzzModel.cpp.o
 
 ma_OzzModel.i: ma_OzzModel.cpp.i
@@ -395,7 +395,7 @@ ma_OzzModel.i: ma_OzzModel.cpp.i
 
 # target to preprocess a source file
 ma_OzzModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_OzzModel.cpp.i
 .PHONY : ma_OzzModel.cpp.i
 
 ma_OzzModel.s: ma_OzzModel.cpp.s
@@ -403,7 +403,7 @@ ma_OzzModel.s: ma_OzzModel.cpp.s
 
 # target to generate assembly for a file
 ma_OzzModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_OzzModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_OzzModel.cpp.s
 .PHONY : ma_OzzModel.cpp.s
 
 ma_RenderPass.o: ma_RenderPass.cpp.o
@@ -411,7 +411,7 @@ ma_RenderPass.o: ma_RenderPass.cpp.o
 
 # target to build an object file
 ma_RenderPass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_RenderPass.cpp.o
 .PHONY : ma_RenderPass.cpp.o
 
 ma_RenderPass.i: ma_RenderPass.cpp.i
@@ -419,7 +419,7 @@ ma_RenderPass.i: ma_RenderPass.cpp.i
 
 # target to preprocess a source file
 ma_RenderPass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_RenderPass.cpp.i
 .PHONY : ma_RenderPass.cpp.i
 
 ma_RenderPass.s: ma_RenderPass.cpp.s
@@ -427,7 +427,7 @@ ma_RenderPass.s: ma_RenderPass.cpp.s
 
 # target to generate assembly for a file
 ma_RenderPass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_RenderPass.cpp.s
 .PHONY : ma_RenderPass.cpp.s
 
 ma_SwapChain.o: ma_SwapChain.cpp.o
@@ -435,7 +435,7 @@ ma_SwapChain.o: ma_SwapChain.cpp.o
 
 # target to build an object file
 ma_SwapChain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_SwapChain.cpp.o
 .PHONY : ma_SwapChain.cpp.o
 
 ma_SwapChain.i: ma_SwapChain.cpp.i
@@ -443,7 +443,7 @@ ma_SwapChain.i: ma_SwapChain.cpp.i
 
 # target to preprocess a source file
 ma_SwapChain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_SwapChain.cpp.i
 .PHONY : ma_SwapChain.cpp.i
 
 ma_SwapChain.s: ma_SwapChain.cpp.s
@@ -451,7 +451,7 @@ ma_SwapChain.s: ma_SwapChain.cpp.s
 
 # target to generate assembly for a file
 ma_SwapChain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_SwapChain.cpp.s
 .PHONY : ma_SwapChain.cpp.s
 
 ma_TerrainGenerator.o: ma_TerrainGenerator.cpp.o
@@ -459,7 +459,7 @@ ma_TerrainGenerator.o: ma_TerrainGenerator.cpp.o
 
 # target to build an object file
 ma_TerrainGenerator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_TerrainGenerator.cpp.o
 .PHONY : ma_TerrainGenerator.cpp.o
 
 ma_TerrainGenerator.i: ma_TerrainGenerator.cpp.i
@@ -467,7 +467,7 @@ ma_TerrainGenerator.i: ma_TerrainGenerator.cpp.i
 
 # target to preprocess a source file
 ma_TerrainGenerator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_TerrainGenerator.cpp.i
 .PHONY : ma_TerrainGenerator.cpp.i
 
 ma_TerrainGenerator.s: ma_TerrainGenerator.cpp.s
@@ -475,7 +475,7 @@ ma_TerrainGenerator.s: ma_TerrainGenerator.cpp.s
 
 # target to generate assembly for a file
 ma_TerrainGenerator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_TerrainGenerator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_TerrainGenerator.cpp.s
 .PHONY : ma_TerrainGenerator.cpp.s
 
 ma_UniformBuffer.o: ma_UniformBuffer.cpp.o
@@ -483,7 +483,7 @@ ma_UniformBuffer.o: ma_UniformBuffer.cpp.o
 
 # target to build an object file
 ma_UniformBuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_UniformBuffer.cpp.o
 .PHONY : ma_UniformBuffer.cpp.o
 
 ma_UniformBuffer.i: ma_UniformBuffer.cpp.i
@@ -491,7 +491,7 @@ ma_UniformBuffer.i: ma_UniformBuffer.cpp.i
 
 # target to preprocess a source file
 ma_UniformBuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_UniformBuffer.cpp.i
 .PHONY : ma_UniformBuffer.cpp.i
 
 ma_UniformBuffer.s: ma_UniformBuffer.cpp.s
@@ -499,7 +499,7 @@ ma_UniformBuffer.s: ma_UniformBuffer.cpp.s
 
 # target to generate assembly for a file
 ma_UniformBuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_UniformBuffer.cpp.s
 .PHONY : ma_UniformBuffer.cpp.s
 
 ma_UtilityFunctions.o: ma_UtilityFunctions.cpp.o
@@ -507,7 +507,7 @@ ma_UtilityFunctions.o: ma_UtilityFunctions.cpp.o
 
 # target to build an object file
 ma_UtilityFunctions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_UtilityFunctions.cpp.o
 .PHONY : ma_UtilityFunctions.cpp.o
 
 ma_UtilityFunctions.i: ma_UtilityFunctions.cpp.i
@@ -515,7 +515,7 @@ ma_UtilityFunctions.i: ma_UtilityFunctions.cpp.i
 
 # target to preprocess a source file
 ma_UtilityFunctions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_UtilityFunctions.cpp.i
 .PHONY : ma_UtilityFunctions.cpp.i
 
 ma_UtilityFunctions.s: ma_UtilityFunctions.cpp.s
@@ -523,7 +523,7 @@ ma_UtilityFunctions.s: ma_UtilityFunctions.cpp.s
 
 # target to generate assembly for a file
 ma_UtilityFunctions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_UtilityFunctions.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_UtilityFunctions.cpp.s
 .PHONY : ma_UtilityFunctions.cpp.s
 
 ma_Vertex.o: ma_Vertex.cpp.o
@@ -531,7 +531,7 @@ ma_Vertex.o: ma_Vertex.cpp.o
 
 # target to build an object file
 ma_Vertex.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Vertex.cpp.o
 .PHONY : ma_Vertex.cpp.o
 
 ma_Vertex.i: ma_Vertex.cpp.i
@@ -539,7 +539,7 @@ ma_Vertex.i: ma_Vertex.cpp.i
 
 # target to preprocess a source file
 ma_Vertex.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Vertex.cpp.i
 .PHONY : ma_Vertex.cpp.i
 
 ma_Vertex.s: ma_Vertex.cpp.s
@@ -547,7 +547,7 @@ ma_Vertex.s: ma_Vertex.cpp.s
 
 # target to generate assembly for a file
 ma_Vertex.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_Vertex.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_Vertex.cpp.s
 .PHONY : ma_Vertex.cpp.s
 
 ma_VisibleChunkGrid.o: ma_VisibleChunkGrid.cpp.o
@@ -555,7 +555,7 @@ ma_VisibleChunkGrid.o: ma_VisibleChunkGrid.cpp.o
 
 # target to build an object file
 ma_VisibleChunkGrid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VisibleChunkGrid.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VisibleChunkGrid.cpp.o
 .PHONY : ma_VisibleChunkGrid.cpp.o
 
 ma_VisibleChunkGrid.i: ma_VisibleChunkGrid.cpp.i
@@ -563,7 +563,7 @@ ma_VisibleChunkGrid.i: ma_VisibleChunkGrid.cpp.i
 
 # target to preprocess a source file
 ma_VisibleChunkGrid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VisibleChunkGrid.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VisibleChunkGrid.cpp.i
 .PHONY : ma_VisibleChunkGrid.cpp.i
 
 ma_VisibleChunkGrid.s: ma_VisibleChunkGrid.cpp.s
@@ -571,7 +571,7 @@ ma_VisibleChunkGrid.s: ma_VisibleChunkGrid.cpp.s
 
 # target to generate assembly for a file
 ma_VisibleChunkGrid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VisibleChunkGrid.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VisibleChunkGrid.cpp.s
 .PHONY : ma_VisibleChunkGrid.cpp.s
 
 ma_VkBuffer2.o: ma_VkBuffer2.cpp.o
@@ -579,7 +579,7 @@ ma_VkBuffer2.o: ma_VkBuffer2.cpp.o
 
 # target to build an object file
 ma_VkBuffer2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VkBuffer2.cpp.o
 .PHONY : ma_VkBuffer2.cpp.o
 
 ma_VkBuffer2.i: ma_VkBuffer2.cpp.i
@@ -587,7 +587,7 @@ ma_VkBuffer2.i: ma_VkBuffer2.cpp.i
 
 # target to preprocess a source file
 ma_VkBuffer2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VkBuffer2.cpp.i
 .PHONY : ma_VkBuffer2.cpp.i
 
 ma_VkBuffer2.s: ma_VkBuffer2.cpp.s
@@ -595,7 +595,7 @@ ma_VkBuffer2.s: ma_VkBuffer2.cpp.s
 
 # target to generate assembly for a file
 ma_VkBuffer2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VkBuffer2.cpp.s
 .PHONY : ma_VkBuffer2.cpp.s
 
 ma_VoxelVertex.o: ma_VoxelVertex.cpp.o
@@ -603,7 +603,7 @@ ma_VoxelVertex.o: ma_VoxelVertex.cpp.o
 
 # target to build an object file
 ma_VoxelVertex.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VoxelVertex.cpp.o
 .PHONY : ma_VoxelVertex.cpp.o
 
 ma_VoxelVertex.i: ma_VoxelVertex.cpp.i
@@ -611,7 +611,7 @@ ma_VoxelVertex.i: ma_VoxelVertex.cpp.i
 
 # target to preprocess a source file
 ma_VoxelVertex.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VoxelVertex.cpp.i
 .PHONY : ma_VoxelVertex.cpp.i
 
 ma_VoxelVertex.s: ma_VoxelVertex.cpp.s
@@ -619,7 +619,7 @@ ma_VoxelVertex.s: ma_VoxelVertex.cpp.s
 
 # target to generate assembly for a file
 ma_VoxelVertex.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/ma_VoxelVertex.cpp.s
 .PHONY : ma_VoxelVertex.cpp.s
 
 # Help Target
@@ -631,7 +631,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ozz-animation"
-	@echo "... vulkantutorial"
+	@echo "... Mineanarchy"
 	@echo "... ma_Camera.o"
 	@echo "... ma_Camera.i"
 	@echo "... ma_Camera.s"

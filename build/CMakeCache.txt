@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=vulkantutorial
+CMAKE_PROJECT_NAME:STATIC=Mineanarchy
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0
@@ -232,6 +232,15 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
+//Value Computed by CMake
+Mineanarchy_BINARY_DIR:STATIC=/home/sebastiang/prototypevulkangame/Mineanarchy/build
+
+//Value Computed by CMake
+Mineanarchy_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Mineanarchy_SOURCE_DIR:STATIC=/home/sebastiang/prototypevulkangame/Mineanarchy
 
 //The directory containing a CMake configuration file for TBB.
 TBB_DIR:PATH=/usr/lib/cmake/TBB

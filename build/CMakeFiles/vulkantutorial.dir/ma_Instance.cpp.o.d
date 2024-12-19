@@ -474,8 +474,15 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: \
  /usr/include/oneapi/tbb/detail/_string_resource.h \
  /usr/include/oneapi/tbb/detail/_scoped_lock.h \
  /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
- /usr/include/oneapi/tbb/spin_rw_mutex.h /usr/include/GLFW/glfw3.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/oneapi/tbb/spin_rw_mutex.h \
+ /usr/include/tbb/concurrent_vector.h \
+ /usr/include/oneapi/tbb/concurrent_vector.h \
+ /usr/include/oneapi/tbb/detail/_segment_table.h \
+ /usr/include/oneapi/tbb/detail/_exception.h \
+ /usr/include/oneapi/tbb/blocked_range.h \
+ /usr/include/oneapi/tbb/version.h \
+ /usr/include/oneapi/tbb/cache_aligned_allocator.h \
+ /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h /usr/include/glm/mat4x4.hpp \
  /usr/include/glm/ext/matrix_double4x4.hpp \
  /usr/include/glm/detail/type_mat4x4.hpp \

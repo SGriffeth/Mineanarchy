@@ -75,5 +75,7 @@ namespace Mineanarchy {
         const unsigned char* getVoxelData() const;
         unsigned int getGridHalfSideLength() const;
         unsigned int getChunkSize() const;
+
+        unsigned char GetVoxel(unsigned int x, unsigned int y, unsigned int z) const;
     };
 }

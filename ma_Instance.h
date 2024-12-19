@@ -99,7 +99,7 @@ namespace Mineanarchy {
         private:
         const unsigned int chunkSize = 16;
         const unsigned int SEA_LEVEL = 30;
-        const unsigned int gridHalfSideLength = 2;
+        const unsigned int gridHalfSideLength = 10;
         unsigned int currentFrame = 0;
         const int MAX_FRAMES_IN_FLIGHT = 2;
         QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
@@ -136,7 +136,7 @@ namespace Mineanarchy {
         std::vector<DescriptorSetLayout*> descriptorSetLayouts;
         std::vector<DescriptorSet*> descriptorSets;
 
-        std::vector<ma_Vertex> animVertices;
+        //std::vector<ma_Vertex> animVertices;
         std::vector<unsigned int> animIndices;
         std::vector<VoxelVertex> vertices;
         std::vector<unsigned int> indices;

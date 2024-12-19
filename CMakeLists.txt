@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11)
 
-project(vulkantutorial VERSION 1.0)
+project(Mineanarchy VERSION 1.0)
 
 include(ExternalProject)
 

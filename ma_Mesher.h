@@ -6,6 +6,7 @@
 #include <thread>
 #include <mutex>
 #include <tbb/concurrent_hash_map.h>
+#include <tbb/concurrent_vector.h>
 
 namespace Mineanarchy {
     class Mesher {
@@ -13,15 +14,15 @@ namespace Mineanarchy {
         struct ChunkInfo {
             unsigned int iboStartIndex;
             unsigned int iboEndIndex;
-            unsigned int vboStartIndex;
-            unsigned int vboEndIndex;
+            //unsigned int vboStartIndex;
+            //unsigned int vboEndIndex;
             int meshedPreviously;
             ChunkInfo() {
 
             }
-            ChunkInfo(unsigned int index) : vboStartIndex(index) {
+            /*ChunkInfo(unsigned int index) : vboStartIndex(index) {
 
-            }
+            }*/
         };
         
         struct vec3 {
@@ -67,7 +68,6 @@ namespace Mineanarchy {
         //unsigned int numberOfIndices = 0;
         unsigned int numberOfVertices = 0;
         unsigned int cubeSideLength;
-        unsigned int gridHalfSideLength;
         const TerrainGenerator& generator;
         const VisibleChunkGrid& visibleChunkGrid;
         IndexBufferManager& iboManager;
@@ -77,16 +77,18 @@ namespace Mineanarchy {
         std::unordered_map<vec3, ChunkInfo, Vec3Hasher> meshedChunks;
         std::mutex mapMutex; // Mutex for protecting access to vertexMap
         std::mutex verticesMutex; // Mutex for protecting access to vertexMap
-        tbb::concurrent_hash_map<vec3, unsigned int, Vec3Hasher> vertexMap;
+        //std::unordered_map<vec3, unsigned int, Vec3Hasher> vertexMap;
         std::vector<ChunkInfo> chunksToRender;
         void CleanupUnusedIndices();
         unsigned int ConvertToVoxelMapRelativeIndex(unsigned int xi, unsigned int yi, unsigned int zi);
-        void ProcessChunk(unsigned currentChunkX, unsigned currentChunkY, unsigned currentChunkZ, std::vector<glm::vec3>& vertices);
+        //void ProcessChunk(unsigned currentChunkX, unsigned currentChunkY, unsigned currentChunkZ, std::vector<glm::vec3>& vertices);
         //void MergeChunk(std::vector<glm::vec3>& chunkLocalVertices, std::vector<std::pair<vec3, size_t>>& chunkLocalVertexMap);
         //void InsertVertices(const std::vector<std::pair<vec3, size_t>>& verticesToInsert);
         public:
         Mesher(std::vector<VoxelVertex>& vertices, std::vector<unsigned int>& indices, unsigned int cubeSideLength, const VisibleChunkGrid& visibleChunkGrid, const TerrainGenerator& terrainGenerator, IndexBufferManager& vboManager, IndexBufferManager& iboManager);
-        void Mesh();
+        //void Mesh();
+        void ScheduleMeshTask();
+        void MeshChunk(unsigned int x, unsigned int y, unsigned int z, std::vector<unsigned int>& chunkLocalIndices, std::vector<VoxelVertex>& chunkLocalVertices/*, std::unordered_map<vec3, unsigned int, Vec3Hasher>& vertexMap*/);
         void AwaitChunkMeshing();
         unsigned int getVertexCount();
         const std::vector<ChunkInfo>& GetChunksToRender() const;

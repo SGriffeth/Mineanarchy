@@ -932,11 +932,15 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -945,12 +949,14 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -964,6 +970,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -1622,11 +1629,15 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -1635,12 +1646,14 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -1654,6 +1667,7 @@ CMakeFiles/vulkantutorial.dir/ma_CommandPool.cpp.o: /home/sebastiang/prototypevu
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -2313,11 +2327,15 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -2326,12 +2344,14 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -2345,6 +2365,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSet.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -3004,11 +3025,15 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -3017,12 +3042,14 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -3036,6 +3063,7 @@ CMakeFiles/vulkantutorial.dir/ma_DescriptorSetLayout.cpp.o: /home/sebastiang/pro
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -3693,11 +3721,15 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -3706,12 +3738,14 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -3725,6 +3759,7 @@ CMakeFiles/vulkantutorial.dir/ma_GraphicsPipeline.cpp.o: /home/sebastiang/protot
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -4508,11 +4543,15 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -4521,12 +4560,14 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -4540,6 +4581,7 @@ CMakeFiles/vulkantutorial.dir/ma_Instance.cpp.o: /home/sebastiang/prototypevulka
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -5201,11 +5243,15 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -5214,12 +5260,14 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -5233,6 +5281,7 @@ CMakeFiles/vulkantutorial.dir/ma_LogicalDevice.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -5766,6 +5815,7 @@ CMakeFiles/vulkantutorial.dir/ma_Mesher.cpp.o: /home/sebastiang/prototypevulkang
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/tbb/parallel_for.h \
   /usr/include/tbb/tbb.h \
   /usr/include/time.h \
@@ -7057,11 +7107,15 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -7070,12 +7124,14 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -7089,6 +7145,7 @@ CMakeFiles/vulkantutorial.dir/ma_RenderPass.cpp.o: /home/sebastiang/prototypevul
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -7746,11 +7803,15 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -7759,12 +7820,14 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -7778,6 +7841,7 @@ CMakeFiles/vulkantutorial.dir/ma_SwapChain.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -8661,11 +8725,15 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -8674,12 +8742,14 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -8693,6 +8763,7 @@ CMakeFiles/vulkantutorial.dir/ma_UniformBuffer.cpp.o: /home/sebastiang/prototype
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -10235,11 +10306,15 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/nlohmann/ordered_map.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
   /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/oneapi/tbb/blocked_range.h \
+  /usr/include/oneapi/tbb/cache_aligned_allocator.h \
   /usr/include/oneapi/tbb/concurrent_hash_map.h \
+  /usr/include/oneapi/tbb/concurrent_vector.h \
   /usr/include/oneapi/tbb/detail/_allocator_traits.h \
   /usr/include/oneapi/tbb/detail/_assert.h \
   /usr/include/oneapi/tbb/detail/_config.h \
   /usr/include/oneapi/tbb/detail/_containers_helpers.h \
+  /usr/include/oneapi/tbb/detail/_exception.h \
   /usr/include/oneapi/tbb/detail/_export.h \
   /usr/include/oneapi/tbb/detail/_hash_compare.h \
   /usr/include/oneapi/tbb/detail/_machine.h \
@@ -10248,12 +10323,14 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/oneapi/tbb/detail/_range_common.h \
   /usr/include/oneapi/tbb/detail/_rtm_rw_mutex.h \
   /usr/include/oneapi/tbb/detail/_scoped_lock.h \
+  /usr/include/oneapi/tbb/detail/_segment_table.h \
   /usr/include/oneapi/tbb/detail/_string_resource.h \
   /usr/include/oneapi/tbb/detail/_template_helpers.h \
   /usr/include/oneapi/tbb/detail/_utils.h \
   /usr/include/oneapi/tbb/profiling.h \
   /usr/include/oneapi/tbb/spin_rw_mutex.h \
   /usr/include/oneapi/tbb/tbb_allocator.h \
+  /usr/include/oneapi/tbb/version.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -10267,6 +10344,7 @@ CMakeFiles/vulkantutorial.dir/ma_VkBuffer2.cpp.o: /home/sebastiang/prototypevulk
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/tbb/concurrent_hash_map.h \
+  /usr/include/tbb/concurrent_vector.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -10577,8 +10655,6 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/oneapi/tbb/detail/_flow_graph_impl.h:
 
-/usr/include/oneapi/tbb/detail/_exception.h:
-
 /usr/include/assimp/vector3.h:
 
 /usr/include/oneapi/tbb/detail/_attach.h:
@@ -10601,13 +10677,9 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/oneapi/tbb/collaborative_call_once.h:
 
-/usr/include/oneapi/tbb/cache_aligned_allocator.h:
-
 /usr/include/assimp/texture.h:
 
 /usr/include/oneapi/tbb/blocked_range3d.h:
-
-/usr/include/oneapi/tbb/blocked_range.h:
 
 /usr/include/oneapi/tbb.h:
 
@@ -10793,6 +10865,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/vk_video/vulkan_video_codec_av1std.h:
 
+/usr/include/tbb/concurrent_vector.h:
+
 /usr/include/oneapi/tbb/tbb_allocator.h:
 
 /usr/include/oneapi/tbb/spin_rw_mutex.h:
@@ -10823,6 +10897,8 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 
 /usr/include/oneapi/tbb/detail/_hash_compare.h:
 
+/usr/include/oneapi/tbb/detail/_exception.h:
+
 /usr/include/oneapi/tbb/detail/_containers_helpers.h:
 
 /usr/include/oneapi/tbb/detail/_assert.h:
@@ -10832,6 +10908,10 @@ CMakeFiles/vulkantutorial.dir/ma_VoxelVertex.cpp.o: /home/sebastiang/prototypevu
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h:
 
 /usr/include/oneapi/tbb/concurrent_hash_map.h:
+
+/usr/include/oneapi/tbb/cache_aligned_allocator.h:
+
+/usr/include/oneapi/tbb/blocked_range.h:
 
 /usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
 

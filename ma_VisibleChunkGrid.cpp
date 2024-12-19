@@ -195,3 +195,11 @@ unsigned int Mineanarchy::VisibleChunkGrid::getGridHalfSideLength() const {
 unsigned int Mineanarchy::VisibleChunkGrid::getChunkSize() const {
     return chunkSize;
 }
+
+unsigned char Mineanarchy::VisibleChunkGrid::GetVoxel(unsigned int x, unsigned int y, unsigned int z) const {
+    auto it = changedVoxels.find(vec3(x, y, z));
+    if(it == changedVoxels.end()) {
+        return generator.GetBlockType(x, y, z);
+    }
+    return it->second;
+}

@@ -88,5 +88,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ozz-animation.dir/DependInfo.cmake"
-  "CMakeFiles/vulkantutorial.dir/DependInfo.cmake"
+  "CMakeFiles/Mineanarchy.dir/DependInfo.cmake"
   )

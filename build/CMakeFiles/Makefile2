@@ -64,7 +64,7 @@ CMAKE_BINARY_DIR = /home/sebastiang/prototypevulkangame/Mineanarchy/build
 
 # The main recursive "all" target.
 all: CMakeFiles/ozz-animation.dir/all
-all: CMakeFiles/vulkantutorial.dir/all
+all: CMakeFiles/Mineanarchy.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/ozz-animation.dir/clean
-clean: CMakeFiles/vulkantutorial.dir/clean
+clean: CMakeFiles/Mineanarchy.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,7 +83,7 @@ clean: CMakeFiles/vulkantutorial.dir/clean
 CMakeFiles/ozz-animation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ozz-animation.dir/build.make CMakeFiles/ozz-animation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ozz-animation.dir/build.make CMakeFiles/ozz-animation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ozz-animation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29 "Built target ozz-animation"
 .PHONY : CMakeFiles/ozz-animation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,30 +103,30 @@ CMakeFiles/ozz-animation.dir/clean:
 .PHONY : CMakeFiles/ozz-animation.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/vulkantutorial.dir
+# Target rules for target CMakeFiles/Mineanarchy.dir
 
 # All Build rule for target.
-CMakeFiles/vulkantutorial.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 "Built target vulkantutorial"
-.PHONY : CMakeFiles/vulkantutorial.dir/all
+CMakeFiles/Mineanarchy.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target Mineanarchy"
+.PHONY : CMakeFiles/Mineanarchy.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/vulkantutorial.dir/rule: cmake_check_build_system
+CMakeFiles/Mineanarchy.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles 21
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vulkantutorial.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Mineanarchy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastiang/prototypevulkangame/Mineanarchy/build/CMakeFiles 0
-.PHONY : CMakeFiles/vulkantutorial.dir/rule
+.PHONY : CMakeFiles/Mineanarchy.dir/rule
 
 # Convenience name for target.
-vulkantutorial: CMakeFiles/vulkantutorial.dir/rule
-.PHONY : vulkantutorial
+Mineanarchy: CMakeFiles/Mineanarchy.dir/rule
+.PHONY : Mineanarchy
 
 # clean rule for target.
-CMakeFiles/vulkantutorial.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vulkantutorial.dir/build.make CMakeFiles/vulkantutorial.dir/clean
-.PHONY : CMakeFiles/vulkantutorial.dir/clean
+CMakeFiles/Mineanarchy.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mineanarchy.dir/build.make CMakeFiles/Mineanarchy.dir/clean
+.PHONY : CMakeFiles/Mineanarchy.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

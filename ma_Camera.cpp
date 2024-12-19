@@ -138,13 +138,13 @@ void Mineanarchy::Camera::key_callback(GLFWwindow* window, int key, int scancode
     if(key == GLFW_KEY_ENTER && action == GLFW_PRESS)
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-    if (key == GLFW_KEY_W && action == GLFW_PRESS)
+    if (key == GLFW_KEY_W && action == GLFW_REPEAT)
         cameraPosition += cameraSpeed * cameraFront;
-    if (key == GLFW_KEY_S && action == GLFW_PRESS)
+    if (key == GLFW_KEY_S && action == GLFW_REPEAT)
         cameraPosition -= cameraSpeed * cameraFront;
-    if (key == GLFW_KEY_A && action == GLFW_PRESS)
+    if (key == GLFW_KEY_A && action == GLFW_REPEAT)
         cameraPosition -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-    if (key == GLFW_KEY_D && action == GLFW_PRESS)
+    if (key == GLFW_KEY_D && action == GLFW_REPEAT)
         cameraPosition += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 
     cameraPosition.x = std::clamp(cameraPosition.x, .0f, (float)std::numeric_limits<unsigned int>::max());
